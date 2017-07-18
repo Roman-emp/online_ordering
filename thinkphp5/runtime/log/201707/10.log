@@ -1,0 +1,3446 @@
+[ 2017-07-10T07:50:28+08:00 ] ::1 ::1 GET /1707/high/22/thinkphp5/public/
+[ log ] localhost/1707/high/22/thinkphp5/public/ [运行时间：0.048000s][吞吐率：20.83req/s] [内存消耗：1,246.08kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/1707/high/22/thinkphp5/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:14:49+08:00 ] ::1 ::1 GET /1707/high/22/thinkphp5/public/
+[ log ] localhost/1707/high/22/thinkphp5/public/ [运行时间：0.043000s][吞吐率：23.26req/s] [内存消耗：1,246.47kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/1707/high/22/thinkphp5/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7610156032; pgv_si=s8211212288',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:20:59+08:00 ] ::1 ::1 GET /1707/high/22/thinkphp5/public/
+[ log ] localhost/1707/high/22/thinkphp5/public/ [运行时间：0.029000s][吞吐率：34.48req/s] [内存消耗：1,245.59kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/1707/high/22/thinkphp5/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pgv_pvi=7610156032; pgv_si=s8211212288',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:25:07+08:00 ] ::1 ::1 GET /
+[ log ] www.php1707.com/ [运行时间：0.062000s][吞吐率：16.13req/s] [内存消耗：1,244.83kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:26:09+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.php1707.com/index/index/index [运行时间：0.034000s][吞吐率：29.41req/s] [内存消耗：1,244.92kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:26:53+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.036000s][吞吐率：27.78req/s] [内存消耗：1,245.19kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:28:02+08:00 ] ::1 ::1 GET /index/index/user/username/%E4%BF%8A%E5%B3%B0
+[ log ] www.php1707.com/index/index/user/username/%E4%BF%8A%E5%B3%B0 [运行时间：0.032000s][吞吐率：31.25req/s] [内存消耗：1,246.36kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => '俊峰',
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:28:14+08:00 ] ::1 ::1 GET /index/index/login/username/%E4%BF%8A%E5%B3%B0
+[ log ] www.php1707.com/index/index/login/username/%E4%BF%8A%E5%B3%B0 [运行时间：0.040000s][吞吐率：25.00req/s] [内存消耗：1,246.36kb] [文件加载：25]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => '俊峰',
+)
+[ info ] [ RUN ] app\index\controller\Index->login[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:36:22+08:00 ] ::1 ::1 GET /index/user/login
+[ log ] www.php1707.com/index/user/login [运行时间：0.068000s][吞吐率：14.71req/s] [内存消耗：1,603.54kb] [文件加载：31]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->login[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:42:49+08:00 ] ::1 ::1 GET /
+[ log ] www.php1707.com/ [运行时间：0.091000s][吞吐率：10.99req/s] [内存消耗：1,780.87kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:49:16+08:00 ] ::1 ::1 GET /
+[ log ] www.php1707.com/ [运行时间：0.111000s][吞吐率：9.01req/s] [内存消耗：1,782.59kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'url',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:49:35+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.php1707.com/index/index/index [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：1,607.29kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'url',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:50:14+08:00 ] ::1 ::1 GET /index/index/index?username=tom
+[ log ] www.php1707.com/index/index/index?username=tom [运行时间：0.091000s][吞吐率：10.99req/s] [内存消耗：1,607.65kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'url',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:53:18+08:00 ] ::1 ::1 GET /index/index/index?username=tom
+[ log ] www.php1707.com/index/index/index?username=tom [运行时间：0.040000s][吞吐率：25.00req/s] [内存消耗：1,607.62kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'url',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:53:19+08:00 ] ::1 ::1 GET /index/index/index?username=tom
+[ log ] www.php1707.com/index/index/index?username=tom [运行时间：0.062000s][吞吐率：16.13req/s] [内存消耗：1,607.62kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'url',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:53:19+08:00 ] ::1 ::1 GET /index/index/index?username=tom
+[ log ] www.php1707.com/index/index/index?username=tom [运行时间：0.067000s][吞吐率：14.93req/s] [内存消耗：1,607.62kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'url',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:53:20+08:00 ] ::1 ::1 GET /index/index/index?username=tom
+[ log ] www.php1707.com/index/index/index?username=tom [运行时间：0.080000s][吞吐率：12.50req/s] [内存消耗：1,607.62kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'url',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:54:43+08:00 ] ::1 ::1 GET /index/index/index?username=tom
+[ log ] www.php1707.com/index/index/index?username=tom [运行时间：0.051000s][吞吐率：19.61req/s] [内存消耗：1,607.89kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'url',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:54:44+08:00 ] ::1 ::1 GET /index/index/index?username=tom
+[ log ] www.php1707.com/index/index/index?username=tom [运行时间：0.096000s][吞吐率：10.42req/s] [内存消耗：1,607.89kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'url',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:56:14+08:00 ] ::1 ::1 GET /index/index/index?username=tom
+[ log ] www.php1707.com/index/index/index?username=tom [运行时间：0.065000s][吞吐率：15.38req/s] [内存消耗：1,644.34kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:56:29+08:00 ] ::1 ::1 GET /index/index/index?username=tom&pwd=123
+[ log ] www.php1707.com/index/index/index?username=tom&pwd=123 [运行时间：0.072000s][吞吐率：13.89req/s] [内存消耗：1,644.27kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+  'pwd' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:57:44+08:00 ] ::1 ::1 GET /index/index/index?username=tom&pwd=123
+[ log ] www.php1707.com/index/index/index?username=tom&pwd=123 [运行时间：0.062000s][吞吐率：16.13req/s] [内存消耗：1,608.55kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+  'pwd' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'url',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:58:03+08:00 ] ::1 ::1 GET /index/index/index?username=tom&pwd=123
+[ log ] www.php1707.com/index/index/index?username=tom&pwd=123 [运行时间：0.032000s][吞吐率：31.25req/s] [内存消耗：1,608.50kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+  'pwd' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\index\index.html [ array (
+  0 => 'url',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T09:59:52+08:00 ] ::1 ::1 GET /index/index/index?username=tom&pwd=123
+[ log ] www.php1707.com/index/index/index?username=tom&pwd=123 [运行时间：0.046000s][吞吐率：21.74req/s] [内存消耗：1,644.69kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+  'pwd' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:00:12+08:00 ] ::1 ::1 GET /index/index/index?username=tom&pwd=123
+[ log ] www.php1707.com/index/index/index?username=tom&pwd=123 [运行时间：0.042000s][吞吐率：23.81req/s] [内存消耗：1,645.27kb] [文件加载：32]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+  'pwd' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:07:43+08:00 ] ::1 ::1 GET /index/index/index?username=tom&pwd=123
+[ log ] www.php1707.com/index/index/index?username=tom&pwd=123 [运行时间：0.135000s][吞吐率：7.41req/s] [内存消耗：1,902.57kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+  'pwd' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'url',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:07:46+08:00 ] ::1 ::1 GET /index/index/user.html
+[ log ] www.php1707.com/index/index/user.html [运行时间：0.034000s][吞吐率：29.41req/s] [内存消耗：1,609.16kb] [文件加载：31]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.php1707.com/index/index/index?username=tom&pwd=123',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:08:03+08:00 ] ::1 ::1 GET /index/index/user.html
+[ log ] www.php1707.com/index/index/user.html [运行时间：0.054000s][吞吐率：18.52req/s] [内存消耗：1,607.93kb] [文件加载：31]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://www.php1707.com/index/index/index?username=tom&pwd=123',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:08:10+08:00 ] ::1 ::1 GET /index/index/index?username=tom&pwd=123
+[ log ] www.php1707.com/index/index/index?username=tom&pwd=123 [运行时间：0.070000s][吞吐率：14.29req/s] [内存消耗：1,613.88kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+  'pwd' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'url',
+  1 => 'code',
+  2 => 'msg',
+  3 => 'data',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:09:28+08:00 ] ::1 ::1 GET /index/index/index?username=tom
+[ log ] www.php1707.com/index/index/index?username=tom [运行时间：0.058000s][吞吐率：17.24req/s] [内存消耗：1,639.31kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'tom',
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:09:28+08:00 ] ::1 ::1 GET /index/index/login.html
+[ log ] www.php1707.com/index/index/login.html [运行时间：0.068000s][吞吐率：14.71req/s] [内存消耗：1,651.58kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]方法参数错误:username[C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\library\think\App.php:304]
+
+---------------------------------------------------------------
+[ 2017-07-10T10:09:41+08:00 ] ::1 ::1 GET /index/index/login/username=233424
+[ log ] www.php1707.com/index/index/login/username=233424 [运行时间：0.095000s][吞吐率：10.53req/s] [内存消耗：1,651.47kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]方法参数错误:username[C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\library\think\App.php:304]
+
+---------------------------------------------------------------
+[ 2017-07-10T10:10:19+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.php1707.com/index/index/index [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：1,638.88kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:10:19+08:00 ] ::1 ::1 GET /login/username/123.html
+[ log ] www.php1707.com/login/username/123.html [运行时间：0.056000s][吞吐率：17.86req/s] [内存消耗：1,288.79kb] [文件加载：27]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'username',
+    2 => '123',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:10:29+08:00 ] ::1 ::1 GET /index/index/index
+[ log ] www.php1707.com/index/index/index [运行时间：0.099000s][吞吐率：10.10req/s] [内存消耗：1,638.88kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:10:29+08:00 ] ::1 ::1 GET /login/username/123.html
+[ log ] www.php1707.com/login/username/123.html [运行时间：0.033000s][吞吐率：30.30req/s] [内存消耗：1,288.79kb] [文件加载：27]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'login',
+    1 => 'username',
+    2 => '123',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:10:56+08:00 ] ::1 ::1 GET /
+[ log ] www.php1707.com/ [运行时间：0.057000s][吞吐率：17.54req/s] [内存消耗：1,638.80kb] [文件加载：33]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:10:56+08:00 ] ::1 ::1 GET /index/index/login/username/123.html
+[ log ] www.php1707.com/index/index/login/username/123.html [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：1,608.48kb] [文件加载：31]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->login[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:12:07+08:00 ] ::1 ::1 GET /index/index/login/username/123.html
+[ log ] www.php1707.com/index/index/login/username/123.html [运行时间：0.050000s][吞吐率：20.00req/s] [内存消耗：1,608.56kb] [文件加载：31]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'username' => '123',
+)
+[ info ] [ RUN ] app\index\controller\Index->login[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T10:17:47+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.154000s][吞吐率：6.49req/s] [内存消耗：2,514.72kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T10:26:01+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.085000s][吞吐率：11.76req/s] [内存消耗：2,516.47kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  `uid` > 1  AND `type` = 1 [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T10:29:13+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.087000s][吞吐率：11.49req/s] [内存消耗：2,516.48kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  `uid` > 1 LIMIT 2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T10:29:36+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.096000s][吞吐率：10.42req/s] [内存消耗：2,516.71kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 2 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:16:26+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.107000s][吞吐率：9.35req/s] [内存消耗：2,513.77kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `uid` FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:16:27+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.071000s][吞吐率：14.08req/s] [内存消耗：2,513.77kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `uid` FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 1 [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:16:46+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.072000s][吞吐率：13.89req/s] [内存消耗：2,516.71kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:17:19+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.058000s][吞吐率：17.24req/s] [内存消耗：2,514.91kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `type`,`uid` FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:17:30+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.066000s][吞吐率：15.15req/s] [内存消耗：2,514.91kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `type`,`uid` FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:17:31+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.057000s][吞吐率：17.54req/s] [内存消耗：2,514.91kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `type`,`uid` FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:17:31+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：2,514.91kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `type`,`uid` FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 2 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:18:28+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.067000s][吞吐率：14.93req/s] [内存消耗：2,514.91kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `type`,`uid` FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 2 [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:18:55+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：2,514.91kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `type`,`uid` FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:19:20+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.075000s][吞吐率：13.33req/s] [内存消耗：2,513.85kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `uid` FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:20:26+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.056000s][吞吐率：17.86req/s] [内存消耗：2,516.71kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  `uid` > 1 ORDER BY `uid`  desc LIMIT 2 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:38:06+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.082000s][吞吐率：12.20req/s] [内存消耗：2,518.77kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` `c`,`php_blog` `b` WHERE  `c`.`cid` = 'bid' [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:38:55+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.045000s][吞吐率：22.22req/s] [内存消耗：1,293.54kb] [文件加载：27]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected 'bid' (T_STRING), expecting ',' or ')'[C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php:50]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:38:55+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.043000s][吞吐率：23.26req/s] [内存消耗：1,293.54kb] [文件加载：27]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected 'bid' (T_STRING), expecting ',' or ')'[C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php:50]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:39:17+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.071000s][吞吐率：14.08req/s] [内存消耗：2,519.09kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` `c`,`php_blog` `b` WHERE  `c`.`cid` = 'b.cid' [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:39:40+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.068000s][吞吐率：14.71req/s] [内存消耗：2,467.79kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:45:17+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.075000s][吞吐率：13.33req/s] [内存消耗：2,467.79kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:45:52+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.112000s][吞吐率：8.93req/s] [内存消耗：2,466.18kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]Use of undefined constant b - assumed 'b'[C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php:50]
+
+---------------------------------------------------------------
+[ 2017-07-10T11:51:57+08:00 ] ::1 ::1 GET /index/index/user
+[ log ] www.php1707.com/index/index/user [运行时间：0.097000s][吞吐率：10.31req/s] [内存消耗：2,585.99kb] [文件加载：38]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'user',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->user[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_category` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_category` `c`,`php_blog` `b` WHERE  (  c.cid=b.cid ) [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:04:39+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.155000s][吞吐率：6.45req/s] [内存消耗：2,740.48kb] [文件加载：46]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\user\listuser.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: username[C:\wamp64\www\1707\high\22\thinkphp5\runtime\temp\1895df076b61442bb7d079deb6f0ce3c.php:10]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:04:52+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.191000s][吞吐率：5.24req/s] [内存消耗：2,691.15kb] [文件加载：42]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\user\listuser.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:07:04+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.311000s][吞吐率：3.22req/s] [内存消耗：2,518.68kb] [文件加载：40]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\user\listuser.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  `uid` > 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:07:57+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.184000s][吞吐率：5.43req/s] [内存消耗：2,517.43kb] [文件加载：40]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] C:\wamp64\www\1707\high\22\thinkphp5\public/../application/index\view\user\listuser.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  `uid` > 1 [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  (  uid > 2 ) [ RunTime:0.004000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:12:47+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.098000s][吞吐率：10.20req/s] [内存消耗：2,356.37kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T14:13:20+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.172000s][吞吐率：5.81req/s] [内存消耗：2,356.37kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T14:13:45+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.120000s][吞吐率：8.33req/s] [内存消耗：2,356.16kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T14:13:46+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.166000s][吞吐率：6.02req/s] [内存消耗：2,356.16kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T14:13:59+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.140000s][吞吐率：7.14req/s] [内存消耗：2,370.79kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:15:02+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.099000s][吞吐率：10.10req/s] [内存消耗：2,356.16kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-10T14:15:16+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.197000s][吞吐率：5.08req/s] [内存消耗：2,370.88kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.004000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:17:22+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.165000s][吞吐率：6.06req/s] [内存消耗：1,657.73kb] [文件加载：34]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+[ error ] [0]语法解析错误: syntax error, unexpected '->' (T_OBJECT_OPERATOR)[C:\wamp64\www\1707\high\22\thinkphp5\application\index\model\User.php:29]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:17:50+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.199000s][吞吐率：5.03req/s] [内存消耗：2,370.79kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.006000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:19:14+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.160000s][吞吐率：6.25req/s] [内存消耗：2,517.90kb] [文件加载：43]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.011000s ]
+[ error ] [8]未定义数组下标: 1[C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\library\think\db\Builder.php:292]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:20:38+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.152000s][吞吐率：6.58req/s] [内存消耗：2,369.37kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:21:32+08:00 ] ::1 ::1 GET /index/user/listuser
+[ log ] www.php1707.com/index/user/listuser [运行时间：0.102000s][吞吐率：9.80req/s] [内存消耗：2,370.01kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'listuser',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->listUser[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:27:16+08:00 ] ::1 ::1 GET /index/user/multi
+[ log ] www.php1707.com/index/user/multi [运行时间：0.179000s][吞吐率：5.59req/s] [内存消耗：2,515.95kb] [文件加载：42]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'multi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->multi[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.002000s ]
+[ error ] [0]查询表达式错误:= [C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\library\think\db\Builder.php:316]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:28:07+08:00 ] ::1 ::1 GET /index/user/multi
+[ log ] www.php1707.com/index/user/multi [运行时间：0.136000s][吞吐率：7.35req/s] [内存消耗：2,466.10kb] [文件加载：42]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'multi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->multi[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ error ] [8]Use of undefined constant c - assumed 'c'[C:\wamp64\www\1707\high\22\thinkphp5\application\index\model\User.php:47]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:28:26+08:00 ] ::1 ::1 GET /index/user/multi
+[ log ] www.php1707.com/index/user/multi [运行时间：0.080000s][吞吐率：12.50req/s] [内存消耗：2,372.89kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'multi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->multi[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:28:58+08:00 ] ::1 ::1 GET /index/user/multi
+[ log ] www.php1707.com/index/user/multi [运行时间：0.118000s][吞吐率：8.47req/s] [内存消耗：2,372.76kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'multi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->multi[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.004000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:31:59+08:00 ] ::1 ::1 GET /index/user/multi
+[ log ] www.php1707.com/index/user/multi [运行时间：0.110000s][吞吐率：9.09req/s] [内存消耗：2,372.70kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'multi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->multi[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.005000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:36:26+08:00 ] ::1 ::1 GET /index/user/multi
+[ log ] www.php1707.com/index/user/multi [运行时间：0.189000s][吞吐率：5.29req/s] [内存消耗：2,373.26kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'multi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->multi[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.012000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:39:12+08:00 ] ::1 ::1 GET /index/user/multi
+[ log ] www.php1707.com/index/user/multi [运行时间：0.225000s][吞吐率：4.44req/s] [内存消耗：2,493.38kb] [文件加载：37]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'multi',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->multi[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.020000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_blog` `b` INNER JOIN `php_category` `c` ON `b`.`cid`=`c`.`cid` [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:44:36+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.099000s][吞吐率：10.10req/s] [内存消耗：2,518.05kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:44:57+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.117000s][吞吐率：8.55req/s] [内存消耗：2,519.06kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:46:34+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.146000s][吞吐率：6.85req/s] [内存消耗：2,518.26kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  (  uid < 0 ) LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:46:46+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.107000s][吞吐率：9.35req/s] [内存消耗：2,518.25kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  (  uid < 0 ) [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T14:48:35+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.089000s][吞吐率：11.24req/s] [内存消耗：2,518.26kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  (  uid < 0 ) LIMIT 1 [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:07:03+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.086000s][吞吐率：11.63req/s] [内存消耗：2,520.49kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_user` WHERE  (  name like '%天%' or uid <3 ) [ RunTime:0.004000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:08:40+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.079000s][吞吐率：12.66req/s] [内存消耗：2,473.05kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:15:06+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.117000s][吞吐率：8.55req/s] [内存消耗：2,533.03kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `php_blog` WHERE  `create_time` BETWEEN '2017-06-01 00:00:00' AND '2017-07-01 00:00:00' [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:15:40+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.164000s][吞吐率：6.10req/s] [内存消耗：2,475.48kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.018000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:16:35+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.143000s][吞吐率：6.99req/s] [内存消耗：2,475.48kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:20:20+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.089000s][吞吐率：11.24req/s] [内存消耗：2,475.63kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:23:34+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.110000s][吞吐率：9.09req/s] [内存消耗：2,476.73kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:23:37+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.148000s][吞吐率：6.76req/s] [内存消耗：2,476.73kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:23:37+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.100000s][吞吐率：10.00req/s] [内存消耗：2,476.73kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:23:37+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.121000s][吞吐率：8.26req/s] [内存消耗：2,476.73kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:23:50+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.092000s][吞吐率：10.87req/s] [内存消耗：2,475.68kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_blog` [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:27:36+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.096000s][吞吐率：10.42req/s] [内存消耗：2,526.90kb] [文件加载：41]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ error ] [42S02]SQLSTATE[42S02]: Base table or view not found: 1146 Table 'php1707.php_php_user' doesn't exist[C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\library\think\db\connector\Mysql.php:60]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:27:52+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.102000s][吞吐率：9.80req/s] [内存消耗：2,519.30kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `php_user` LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:29:18+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.122000s][吞吐率：8.20req/s] [内存消耗：2,519.44kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(type) AS tp_count FROM `php_user` LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:30:04+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.165000s][吞吐率：6.06req/s] [内存消耗：2,528.27kb] [文件加载：44]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.004000s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'case 0 then 1) AS tp_count FROM `php_user` LIMIT 1' at line 1[C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\library\think\db\Connection.php:362]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:30:26+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.156000s][吞吐率：6.41req/s] [内存消耗：2,528.27kb] [文件加载：44]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'when 0 then 1) AS tp_count FROM `php_user` LIMIT 1' at line 1[C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\library\think\db\Connection.php:362]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:32:55+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.221000s][吞吐率：4.52req/s] [内存消耗：2,528.24kb] [文件加载：44]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.002000s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AS tp_count FROM `php_user` LIMIT 1' at line 1[C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\library\think\db\Connection.php:362]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:32:58+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.096000s][吞吐率：10.42req/s] [内存消耗：2,528.24kb] [文件加载：44]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.001000s ]
+[ error ] [10501]SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') AS tp_count FROM `php_user` LIMIT 1' at line 1[C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\library\think\db\Connection.php:362]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:33:19+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.148000s][吞吐率：6.76req/s] [内存消耗：2,519.59kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(case when type = 0 then 1 end) AS tp_count FROM `php_user` LIMIT 1 [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:34:42+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.109000s][吞吐率：9.17req/s] [内存消耗：2,520.80kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(case when type = 0 then 1 end) AS tp_count FROM `php_user` LIMIT 1 [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:35:08+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.127000s][吞吐率：7.87req/s] [内存消耗：2,519.98kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT count('distinct type') FROM `php_user` WHERE  (  type=0 ) [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-10T15:35:36+08:00 ] ::1 ::1 GET /index/user/test
+[ log ] www.php1707.com/index/user/test [运行时间：0.070000s][吞吐率：14.29req/s] [内存消耗：2,475.44kb] [文件加载：39]
+[ info ] [ LANG ] C:\wamp64\www\1707\high\22\thinkphp5\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'user',
+    2 => 'test',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.php1707.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\User->test[ C:\wamp64\www\1707\high\22\thinkphp5\application\index\controller\User.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=php1707;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `php_user` [ RunTime:0.003000s ]
+
+---------------------------------------------------------------
