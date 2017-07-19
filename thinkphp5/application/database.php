@@ -15,7 +15,7 @@ return [
     // 服务器地址
     'hostname'       => '127.0.0.1',
     // 数据库名
-    'database'       => 'blog',
+    'database'       => 'online_ordering',
     // 用户名
     'username'       => 'root',
     // 密码
@@ -45,7 +45,7 @@ return [
     // 数据集返回类型 array 数组 collection Collection对象
     'resultset_type' => 'array',
     // 是否自动写入时间戳字段
-    'auto_timestamp' => false,
+    'auto_timestamp' => true,
     // 是否需要进行SQL性能分析
     'sql_explain'    => false,
 ];

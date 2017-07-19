@@ -27,7 +27,10 @@ return [
     // 入口自动绑定模块
     'auto_bind_module'       => false,
     // 注册的根命名空间
-    'root_namespace'         => [],
+    'root_namespace'         => [
+                            'extend\Connect2'           => '../extend/Connect2/',
+                            'app\extend\open_example_php'   => '../extend/open_example_php',
+                        ],
     // 扩展函数文件
     'extra_file_list'        => [THINK_PATH . 'helper' . EXT],
     // 默认输出类型
@@ -140,12 +143,11 @@ return [
 
     // 视图输出字符串内容替换
     'view_replace_str'       => [
-
-
-             '__PUBLIC_CSS__' => '/static/index/',
-
-    ],
-
+                    '__INDEX_CSS__'      => '/static/index/css/',
+                    '__INDEX_JS__'       => '/static/index/js/',
+                    '__UPLOAD_IMG__'     => '/uploads/',
+                    '__INDEX_IMG__'      => '/static/index/images/',
+                        ],
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
     'dispatch_error_tmpl'    => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
