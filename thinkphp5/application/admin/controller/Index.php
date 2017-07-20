@@ -5,11 +5,8 @@ use app\admin\model\User;
 
 class Index extends Base
 {
-	public function index(User $user)
+	public function index()
 	{
-		$data = $user->getUserList();
-
-		// echo "首页";
-		return $this->fetch('',['data'=>$data['data'],'render'=>$data['render']]);
+		return $this->fetch();
 	}
 }

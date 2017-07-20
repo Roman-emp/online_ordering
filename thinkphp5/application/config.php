@@ -144,6 +144,9 @@ return [
 
              '__PUBLIC_INDEX__' => '/static/index/',
              '__UPLOAD_IMG__'   => '/uploads/',
+             '__PUBLIC_ADMIN__'   => '/static/admin/',
+
+
 
     ],
 

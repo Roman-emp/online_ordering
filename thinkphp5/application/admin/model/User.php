@@ -20,4 +20,6 @@ class User extends Model
 		$render = $res->render();
 		return ['data'=>$res,'render'=>$render];
 	}
+
+	}
 }

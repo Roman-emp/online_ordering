@@ -1,4 +1,5 @@
 {include file="head"}
+
 <!--Start content-->
 <form action="#">
  <div class="gwc" style=" margin:auto;">
@@ -13,29 +14,40 @@
       <td class="tb1_td7">操作</td>
     </tr>
   </table>
-  {if !empty($shop_cart)}
-   {foreach $shop_cart as $menu_info}
-      <table cellpadding="0" cellspacing="0" class="gwc_tb2" id="table1">
-        <tr>
-         <td colspan="7" class="shopname Font14 FontW">店铺：好味来快餐店</td>
-        </tr>
-        <tr>
-          <td class="tb2_td1"><input type="checkbox" value="{{$menu_info['menu_id']}}" name="newslist" id="newslist-1" /></td>
-          <td class="tb2_td2"><a href="detailsp.html" target="_blank"><img src="{$menu_info['menu_icon']}"/></a></td>
-          <td class="tb2_td3"><a href="detailsp.html" target="_blank">{$menu_info['menu_name']}</a></td>
-          <td class="tb1_td4"><s>￥{$menu_info['menu_price']+20}</s></td>
-           <td class="tb1_td5"><input id="min1" name=""  style="width:30px; height:30px;border:1px solid #ccc;" type="button" value="-" />
-            <input id="text_box1" name="" type="text" value="1" style=" width:40px;height:28px; text-align:center; border:1px solid #ccc;" />
-            <input id="add1" name="" style="width:30px; height:30px;border:1px solid #ccc;" type="button" value="+" />
-          </td>
-          <td class="tb1_td6">
-            <label id="price"  style="color:#ff5500;font-size:14px; font-weight:bold;">{$menu_info['menu_price']}</label>
-          </td>
-          <td class="tb1_td7"><a href="#" id="delcart1">删除</a></td>
-        </tr>
-      </table>
-    {/foreach}
-  {/if}
+  <table cellpadding="0" cellspacing="0" class="gwc_tb2" id="table1">
+    <tr>
+     <td colspan="7" class="shopname Font14 FontW">店铺：好味来快餐店</td>
+    </tr>
+    <tr>
+      <td class="tb2_td1"><input type="checkbox" value="1" name="newslist" id="newslist-1" /></td>
+      <td class="tb2_td2"><a href="detailsp.html" target="_blank"><img src="/uploads/01.jpg"/></a></td>
+      <td class="tb2_td3"><a href="detailsp.html" target="_blank">酸辣土豆丝</a></td>
+      <td class="tb1_td4"><s>￥59.00</s></td>
+      <td class="tb1_td5"><input id="min1" name=""  style="width:30px; height:30px;border:1px solid #ccc;" type="button" value="-" />
+        <input id="text_box1" name="" type="text" value="1" style=" width:40px;height:28px; text-align:center; border:1px solid #ccc;" />
+        <input id="add1" name="" style="width:30px; height:30px;border:1px solid #ccc;" type="button" value="+" />
+      </td>
+      <td class="tb1_td6"><label id="total1" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"></label></td>
+      <td class="tb1_td7"><a href="#" id="delcart1">删除</a></td>
+    </tr>
+  </table>
+  <table cellpadding="0" cellspacing="0" class="gwc_tb2" id="table2">
+    <tr>
+     <td colspan="7" class="shopname Font14 FontW">店铺：肯德基</td>
+    </tr>
+    <tr>
+      <td class="tb2_td1"><input type="checkbox" value="1" name="newslist" id="newslist-2" /></td>
+      <td class="tb2_td2"><a href="detailsp.html" target="_blank"><img src="/uploads/02.jpg"/></a></td>
+      <td class="tb2_td3"><a href="detailsp.html" target="_blank">酸辣土豆丝</a></td>
+      <td class="tb1_td4"><s>￥59.00</s></td>
+      <td class="tb1_td5"><input id="min2" name=""  style=" width:30px; height:30px;border:1px solid #ccc;" type="button" value="-" />
+        <input id="text_box2" name="" type="text" value="1" style=" width:40px;height:28px; text-align:center; border:1px solid #ccc;" />
+        <input id="add2" name="" style=" width:30px; height:30px;border:1px solid #ccc;" type="button" value="+" />
+      </td>
+      <td class="tb1_td6"><label id="total2" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"></label></td>
+      <td class="tb1_td7"><a href="#" id="delcart2">删除</a></td>
+    </tr>
+  </table>
   <table cellpadding="0" cellspacing="0" class="gwc_tb3">
     <tr>
       <td class="tb1_td1"><input id="checkAll" class="allselect" type="checkbox" /></td>
@@ -64,6 +76,7 @@
   <a href="http://www.17sucai.com/pins/17567.html" target="_blank" title="果蔬菜类模板源码">HTML5果蔬菜类模板源码</a>
   <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
  </div>
-  {include file="foot"}
-</body>
-</html>
+{include file="foot"}
+<script type="text/javascript" src="__PUBLIC_INDEX__js/cart.js"></script>
+
+
