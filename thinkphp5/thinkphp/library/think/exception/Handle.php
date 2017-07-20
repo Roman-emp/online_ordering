@@ -52,10 +52,6 @@ class Handle
                 $log = "[{$data['code']}]{$data['message']}";
             }
 
-            if (Config::get('record_trace')) {
-                $log .= "\r\n" . $exception->getTraceAsString();
-            }
-
             Log::record($log, 'error');
         }
     }

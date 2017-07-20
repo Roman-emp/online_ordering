@@ -2,7 +2,7 @@
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006~2017 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006~2016 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
@@ -11,7 +11,10 @@
 
 namespace think;
 
-use think\exception\ClassNotFoundException;
+use think\File;
+use think\Lang;
+use think\Request;
+use think\Session;
 
 class Validate
 {
@@ -102,7 +105,7 @@ class Validate
     protected $batch = false;
 
     /**
-     * 构造函数
+     * 架构函数
      * @access public
      * @param array $rules 验证规则
      * @param array $message 验证提示信息
@@ -165,7 +168,7 @@ class Validate
     }
 
     /**
-     * 设置验证规则的默认提示信息
+     * 获取验证规则的默认提示信息
      * @access protected
      * @param string|array  $type  验证规则类型名称或者数组
      * @param string        $msg  验证提示信息
@@ -435,7 +438,7 @@ class Validate
                 $rule = $field . '_confirm';
             }
         }
-        return $this->getDataValue($data, $rule) === $value;
+        return $this->getDataValue($data, $rule) == $value;
     }
 
     /**
@@ -456,13 +459,11 @@ class Validate
      * @access protected
      * @param mixed     $value  字段值
      * @param mixed     $rule  验证规则
-     * @param array     $data  数据
      * @return bool
      */
-    protected function egt($value, $rule, $data)
+    protected function egt($value, $rule)
     {
-        $val = $this->getDataValue($data, $rule);
-        return !is_null($val) && $value >= $val;
+        return $value >= $rule;
     }
 
     /**
@@ -470,13 +471,11 @@ class Validate
      * @access protected
      * @param mixed     $value  字段值
      * @param mixed     $rule  验证规则
-     * @param array     $data  数据
      * @return bool
      */
-    protected function gt($value, $rule, $data)
+    protected function gt($value, $rule)
     {
-        $val = $this->getDataValue($data, $rule);
-        return !is_null($val) && $value > $val;
+        return $value > $rule;
     }
 
     /**
@@ -484,13 +483,11 @@ class Validate
      * @access protected
      * @param mixed     $value  字段值
      * @param mixed     $rule  验证规则
-     * @param array     $data  数据
      * @return bool
      */
-    protected function elt($value, $rule, $data)
+    protected function elt($value, $rule)
     {
-        $val = $this->getDataValue($data, $rule);
-        return !is_null($val) && $value <= $val;
+        return $value <= $rule;
     }
 
     /**
@@ -498,13 +495,11 @@ class Validate
      * @access protected
      * @param mixed     $value  字段值
      * @param mixed     $rule  验证规则
-     * @param array     $data  数据
      * @return bool
      */
-    protected function lt($value, $rule, $data)
+    protected function lt($value, $rule)
     {
-        $val = $this->getDataValue($data, $rule);
-        return !is_null($val) && $value < $val;
+        return $value < $rule;
     }
 
     /**
@@ -576,7 +571,7 @@ class Validate
                 break;
             case 'ip':
                 // 是否为IP地址
-                $result = $this->filter($value, [FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 | FILTER_FLAG_IPV6]);
+                $result = $this->filter($value, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4 | FILTER_FLAG_IPV6);
                 break;
             case 'url':
                 // 是否为一个URL地址
@@ -599,7 +594,7 @@ class Validate
                 break;
             case 'boolean':
                 // 是否为布尔值
-                $result = in_array($value, [true, false, 0, 1, '0', '1'], true);
+                $result = in_array($value, [0, 1, true, false]);
                 break;
             case 'array':
                 // 是否为数组
@@ -664,7 +659,7 @@ class Validate
         if (!in_array($rule, ['ipv4', 'ipv6'])) {
             $rule = 'ipv4';
         }
-        return $this->filter($value, [FILTER_VALIDATE_IP, 'ipv6' == $rule ? FILTER_FLAG_IPV6 : FILTER_FLAG_IPV4]);
+        return $this->filter($value, FILTER_VALIDATE_IP, 'ipv6' == $rule ? FILTER_FLAG_IPV6 : FILTER_FLAG_IPV4);
     }
 
     /**
@@ -817,16 +812,7 @@ class Validate
         if (is_string($rule)) {
             $rule = explode(',', $rule);
         }
-        if (false !== strpos($rule[0], '\\')) {
-            // 指定模型类
-            $db = new $rule[0];
-        } else {
-            try {
-                $db = Loader::model($rule[0]);
-            } catch (ClassNotFoundException $e) {
-                $db = Db::name($rule[0]);
-            }
-        }
+        $db  = Db::name($rule[0]);
         $key = isset($rule[1]) ? $rule[1] : $field;
 
         if (strpos($key, '^')) {
@@ -880,7 +866,6 @@ class Validate
             list($rule, $param) = explode(',', $rule);
         } elseif (is_array($rule)) {
             $param = isset($rule[1]) ? $rule[1] : null;
-            $rule  = $rule[0];
         } else {
             $param = null;
         }
@@ -1188,15 +1173,13 @@ class Validate
     /**
      * 获取数据值
      * @access protected
-     * @param array $data 数据
-     * @param string $key 数据标识 支持二维
+     * @param array     $data  数据
+     * @param string    $key  数据标识 支持二维
      * @return mixed
      */
     protected function getDataValue($data, $key)
     {
-        if (is_numeric($key)) {
-            $value = $key;
-        } elseif (strpos($key, '.')) {
+        if (strpos($key, '.')) {
             // 支持二维数组验证
             list($name1, $name2) = explode('.', $key);
             $value               = isset($data[$name1][$name2]) ? $data[$name1][$name2] : null;
@@ -1233,9 +1216,9 @@ class Validate
             $msg = Lang::get(substr($msg, 2, -1));
         }
 
-        if (is_string($msg) && is_scalar($rule) && false !== strpos($msg, ':')) {
+        if (is_string($msg) && is_string($rule) && false !== strpos($msg, ':')) {
             // 变量替换
-            if (is_string($rule) && strpos($rule, ',')) {
+            if (strpos($rule, ',')) {
                 $array = array_pad(explode(',', $rule), 3, '');
             } else {
                 $array = array_pad([], 3, '');

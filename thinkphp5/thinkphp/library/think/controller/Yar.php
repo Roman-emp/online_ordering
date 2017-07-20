@@ -18,7 +18,7 @@ abstract class Yar
 {
 
     /**
-     * 构造函数
+     * 架构函数
      * @access public
      */
     public function __construct()

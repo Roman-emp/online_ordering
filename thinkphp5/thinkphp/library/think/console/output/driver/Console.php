@@ -37,11 +37,6 @@ class Console
         $this->formatter->setDecorated($decorated);
     }
 
-    public function getFormatter()
-    {
-        return $this->formatter;
-    }
-
     public function setDecorated($decorated)
     {
         $this->formatter->setDecorated($decorated);
@@ -201,7 +196,7 @@ class Console
     private function getSttyColumns()
     {
         if (!function_exists('proc_open')) {
-            return;
+            return null;
         }
 
         $descriptorspec = [1 => ['pipe', 'w'], 2 => ['pipe', 'w']];
@@ -214,7 +209,7 @@ class Console
 
             return $info;
         }
-        return;
+        return null;
     }
 
     /**
@@ -224,7 +219,7 @@ class Console
     private function getMode()
     {
         if (!function_exists('proc_open')) {
-            return;
+            return null;
         }
 
         $descriptorspec = [1 => ['pipe', 'w'], 2 => ['pipe', 'w']];
@@ -239,7 +234,7 @@ class Console
                 return $matches[2] . 'x' . $matches[1];
             }
         }
-        return;
+        return null;
     }
 
     private function stringWidth($string)
@@ -361,10 +356,10 @@ class Console
     {
         if (DIRECTORY_SEPARATOR === '\\') {
             return
-            '10.0.10586' === PHP_WINDOWS_VERSION_MAJOR . '.' . PHP_WINDOWS_VERSION_MINOR . '.' . PHP_WINDOWS_VERSION_BUILD
-            || false !== getenv('ANSICON')
-            || 'ON' === getenv('ConEmuANSI')
-            || 'xterm' === getenv('TERM');
+                '10.0.10586' === PHP_WINDOWS_VERSION_MAJOR . '.' . PHP_WINDOWS_VERSION_MINOR . '.' . PHP_WINDOWS_VERSION_BUILD
+                || false !== getenv('ANSICON')
+                || 'ON' === getenv('ConEmuANSI')
+                || 'xterm' === getenv('TERM');
         }
 
         return function_exists('posix_isatty') && @posix_isatty($stream);

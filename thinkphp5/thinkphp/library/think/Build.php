@@ -2,7 +2,7 @@
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006~2017 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006~2016 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
@@ -116,7 +116,10 @@ class Build
             if ('__dir__' == $path) {
                 // 生成子目录
                 foreach ($file as $dir) {
-                    self::checkDirBuild($modulePath . $dir);
+                    if (!is_dir($modulePath . $dir)) {
+                        // 创建目录
+                        mkdir($modulePath . $dir, 0755, true);
+                    }
                 }
             } elseif ('__file__' == $path) {
                 // 生成（空白）文件
@@ -141,7 +144,10 @@ class Build
                             break;
                         case 'view': // 视图
                             $filename = $modulePath . $path . DS . $val . '.html';
-                            self::checkDirBuild(dirname($filename));
+                            if (!is_dir(dirname($filename))) {
+                                // 创建目录
+                                mkdir(dirname($filename), 0755, true);
+                            }
                             $content = '';
                             break;
                         default:
@@ -171,7 +177,9 @@ class Build
         if (!is_file($filename)) {
             $content = file_get_contents(THINK_PATH . 'tpl' . DS . 'default_index.tpl');
             $content = str_replace(['{$app}', '{$module}', '{layer}', '{$suffix}'], [$namespace, $module ? $module . '\\' : '', 'controller', $suffix ? 'Controller' : ''], $content);
-            self::checkDirBuild(dirname($filename));
+            if (!is_dir(dirname($filename))) {
+                mkdir(dirname($filename), 0755, true);
+            }
             file_put_contents($filename, $content);
         }
     }
@@ -185,21 +193,12 @@ class Build
     protected static function buildCommon($module)
     {
         $filename = CONF_PATH . ($module ? $module . DS : '') . 'config.php';
-
-        self::checkDirBuild(dirname($filename));
         if (!is_file($filename)) {
             file_put_contents($filename, "<?php\n//配置文件\nreturn [\n\n];");
         }
         $filename = APP_PATH . ($module ? $module . DS : '') . 'common.php';
         if (!is_file($filename)) {
             file_put_contents($filename, "<?php\n");
-        }
-    }
-
-    protected static function checkDirBuild($dirname)
-    {
-        if (!is_dir($dirname)) {
-            mkdir($dirname, 0755, true);
         }
     }
 }

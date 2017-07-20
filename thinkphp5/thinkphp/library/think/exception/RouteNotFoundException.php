@@ -11,6 +11,8 @@
 
 namespace think\exception;
 
+use think\exception\HttpException;
+
 class RouteNotFoundException extends HttpException
 {
 

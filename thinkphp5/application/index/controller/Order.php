@@ -1,14 +1,14 @@
 <?php
+namespace app\index\controller;
 
-	namespace app\index\controller;
+use think\Controller;
+use think\Db;
 
-	use think\Controller;
-	use app\index\model\Online_order;
 
-	class Order extends Controller
+class Order extends Controller
+{
+	public function orderlist()
 	{
-		public function orderlist()
-		{
-			return $this->fetch();
-		}
+		return  $this->fetch();
 	}
+}

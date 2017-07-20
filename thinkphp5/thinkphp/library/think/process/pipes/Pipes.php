@@ -53,6 +53,7 @@ abstract class Pipes
      */
     abstract public function areOpen();
 
+
     /**
      * {@inheritdoc}
      */

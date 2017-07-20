@@ -15,9 +15,10 @@ use think\Process;
 
 class Builder
 {
+
     private $arguments;
     private $cwd;
-    private $env = null;
+    private $env            = null;
     private $input;
     private $timeout        = 60;
     private $options        = [];
@@ -154,7 +155,7 @@ class Builder
             return $this;
         }
 
-        $timeout = (float) $timeout;
+        $timeout = (float)$timeout;
 
         if ($timeout < 0) {
             throw new \InvalidArgumentException('The timeout value must be a valid positive integer or float number.');

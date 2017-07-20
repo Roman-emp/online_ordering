@@ -5,16 +5,16 @@
   <div class="S-time">服务时间：周一~周六<time>09:00</time>-<time>23:00</time></div>
   <div class="C-time">
 
-   <img src="__PUBLIC_CSS__/upload/dc.jpg"/>
+   <img src="__UPLOAD_IMG__/dc.jpg"/>
   </div>
-  <a href="list.html" target="_blank"><img src="__PUBLIC_CSS__/images/by_button.png"></a>
-  <a href="list.html" target="_blank"><img src="__PUBLIC_CSS__/images/dc_button.png"></a>
+  <a href="list.html" target="_blank"><img src="__PUBLIC_INDEX__/images/by_button.png"></a>
+  <a href="list.html" target="_blank"><img src="__PUBLIC_INDEX__/images/dc_button.png"></a>
  </aside>
  <div class="F-middle">
  <ul class="rslides f426x240">
-        <li><a href="javascript:"><img src="__PUBLIC_CSS__/upload/01.jpg"/></a></li>
-        <li><a href="javascript:"><img src="__PUBLIC_CSS__/upload/02.jpg" /></a></li>
-        <li><a href="javascript:"><img src="__PUBLIC_CSS__/upload/03.jpg"/></a></li>
+        <li><a href="javascript:"><img src="__UPLOAD_IMG__/01.jpg"/></a></li>
+        <li><a href="javascript:"><img src="__UPLOAD_IMG__/02.jpg" /></a></li>
+        <li><a href="javascript:"><img src="__UPLOAD_IMG__/03.jpg"/></a></li>
     </ul>
  </div>
  <aside class="N-right">
@@ -92,73 +92,52 @@
      <a href="#">蓝田县 </a>
      </p>
      <div class="SCcontent">
-     <a href="detailsp.html" target="_blank" title="菜品名称">
-      <figure>
-
-       <img src="__PUBLIC_CSS__/upload/05.jpg">
-
-       <figcaption>
-       <span class="title">老李家的糖醋鲤鱼</span>
-       <span class="price"><i>￥</i>169.00</span>
-       </figcaption>
-      </figure>
+    {foreach $menu_list as $menu}
+    
+     <a href="/index/shopping/detail?menu_id={$menu['menu_id']}"  title="菜品名称">
+        <figure>
+           <img src="{$menu['menu_icon']}">
+           <figcaption>
+             <span class="title">{$menu['menu_name']}</span>
+             <span class="price"><i>￥</i>{$menu['menu_price']}</span>
+           </figcaption>
+        </figure>
       </a>
-     <a href="detailsp.html" target="_blank" title="菜品名称">
-      <figure>
-
-       <img src="__PUBLIC_CSS__/upload/04.jpg">
-
-       <figcaption>
-       <span class="title">老李家的糖醋鲤鱼</span>
-       <span class="price"><i>￥</i>169.00</span>
-       </figcaption>
-      </figure>
-      </a>
-     <a href="detailsp.html" target="_blank" title="菜品名称">
-      <figure>
-
-       <img src="__PUBLIC_CSS__/upload/06.jpg">
-
-       <figcaption>
-       <span class="title">老李家的糖醋鲤鱼</span>
-       <span class="price"><i>￥</i>169.00</span>
-       </figcaption>
-      </figure>
-      </a>
+    {/foreach}
      </div>
      <div class="bestshop">
       <a href="shop.html" target="_blank" title="店铺名称">
       <figure>
 
-       <img src="__PUBLIC_CSS__/upload/wpjnewlogo.jpg">
+       <img src="__UPLOAD_IMG__wpjnewlogo.jpg">
 
       </figure>
       </a>
       <a href="shop.html" target="_blank" title="店铺名称">
       <figure>
 
-       <img src="__PUBLIC_CSS__/upload/weijia.jpg">
+       <img src="__UPLOAD_IMG__weijia.jpg">
 
       </figure>
       </a>
       <a href="shop.html" target="_blank" title="店铺名称">
       <figure>
 
-       <img src="__PUBLIC_CSS__/upload/wpjnewlogo.jpg">
+       <img src="__UPLOAD_IMG__wpjnewlogo.jpg">
 
       </figure>
       </a>
       <a href="shop.html" target="_blank" title="店铺名称">
       <figure>
 
-       <img src="__PUBLIC_CSS__/upload/weijia.jpg">
+       <img src="__UPLOAD_IMG__weijia.jpg">
 
       </figure>
       </a>
       <a href="shop.html" target="_blank" title="店铺名称">
       <figure>
 
-       <img src="__PUBLIC_CSS__/upload/wpjnewlogo.jpg">
+       <img src="__UPLOAD_IMG__wpjnewlogo.jpg">
 
       </figure>
       </a>
@@ -183,75 +162,31 @@
      <a href="#">蓝田县 </a>
      </p>
      <div class="DCcontent">
-       <a href="shop.html" target="_blank" title="TITLE:店名">
-       <figure>
 
-       <img src="__PUBLIC_CSS__/upload/cc.jpg">
+       <a href="/index/store/storeDetail" target="_blank" title="TITLE:店名">
+           <figure>
 
-       <figcaption>
-       <span class="title">老重庆川菜馆</span>
-       <span class="price">预定折扣：<i>8.9折</i></span>
-       </figcaption>
-       <p class="p1"><q>仅售169元！价值289元的4-5人餐，提供免费WiFi。</q></p>
-       <p class="p2">
-       店铺评分：
+           <img src="__UPLOAD_IMG__cc.jpg">
 
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-off.png">
+           <figcaption>
+           <span class="title">老重庆川菜馆</span>
+           <span class="price">预定折扣：<i>8.9折</i></span>
+           </figcaption>
+           <p class="p1"><q>仅售169元！价值289元的4-5人餐，提供免费WiFi。</q></p>
+           <p class="p2">
+           店铺评分：
 
-       </p>
-       <p class="p3">店铺地址：西安市雁塔区丈八路***老重庆川菜馆...</p>
-       </figure>
-      </a>
-       <a href="shop.html" target="_blank" title="TITLE:店名">
-       <figure>
+           <img src="__PUBLIC_INDEX__images/star-on.png">
+           <img src="__PUBLIC_INDEX__images/star-on.png">
+           <img src="__PUBLIC_INDEX__images/star-on.png">
+           <img src="__PUBLIC_INDEX__images/star-on.png">
+           <img src="__PUBLIC_INDEX__images/star-off.png">
 
-       <img src="__PUBLIC_CSS__/upload/cc.jpg">
-
-       <figcaption>
-       <span class="title">老重庆川菜馆</span>
-       <span class="price">预定折扣：<i>8.9折</i></span>
-       </figcaption>
-       <p class="p1"><q>仅售169元！价值289元的4-5人餐，提供免费WiFi。</q></p>
-       <p class="p2">
-       店铺评分：
-
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-off.png">
-
-       </p>
-       <p class="p3">店铺地址：西安市雁塔区丈八路***老重庆川菜馆...</p>
-       </figure>
-      </a>
-       <a href="shop.html" target="_blank" title="TITLE:店名">
-       <figure>
-
-       <img src="__PUBLIC_CSS__/upload/cc.jpg">
-
-       <figcaption>
-       <span class="title">老重庆川菜馆</span>
-       <span class="price">预定折扣：<i>8.9折</i></span>
-       </figcaption>
-       <p class="p1"><q>仅售169元！价值289元的4-5人餐，提供免费WiFi。</q></p>
-       <p class="p2">
-       店铺评分：
-
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-on.png">
-       <img src="__PUBLIC_CSS__/images/star-off.png">
-
-       </p>
-       <p class="p3">店铺地址：西安市雁塔区丈八路***老重庆川菜馆...</p>
-       </figure>
-      </a>
+           </p>
+           <p class="p3">店铺地址：西安市雁塔区丈八路***老重庆川菜馆...</p>
+           </figure>
+        </a>
+ 
      </div>
   </li>
   </ul>
@@ -260,20 +195,20 @@
  </article>
  <aside class="A-infor">
 
-  <img src="__PUBLIC_CSS__/upload/2014911.jpg">
+  <img src="__UPLOAD_IMG__2014911.jpg">
 
   <div class="usercomment">
    <span>用户菜品点评</span>
    <ul>
     <li>
 
-     <img src="__PUBLIC_CSS__/upload/01.jpg">
+     <img src="__UPLOAD_IMG__01.jpg">
      用户“DeathGhost”对[ 老李川菜馆 ]“酸辣土豆丝”评说：味道挺不错，送餐速度挺快...
     </li>
     <li>
-     <img src="__PUBLIC_CSS__/upload/02.jpg">
+     <img src="__UPLOAD_IMG__02.jpg">
 
-     用户“DeathGhost”对[ 魏家凉皮 ]“酸辣土豆丝”评说：味道挺不错，送餐速度挺快...
+     用户“lbj”对[ 魏家凉皮 ]“酸辣土豆丝”评说：味道挺不错，送餐速度挺快...
     </li>
    </ul>
   </div>

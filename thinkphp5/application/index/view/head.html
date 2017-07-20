@@ -6,11 +6,12 @@
 <meta name="keywords" content="DeathGhost,DeathGhost.cn,web前端设,移动WebApp开发" />
 <meta name="description" content="DeathGhost.cn::H5 WEB前端设计开发!" />
 <meta name="author" content="DeathGhost"/>
-<link href="__PUBLIC_CSS__css/style.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="__PUBLIC_CSS__js/public.js"></script>
-<script type="text/javascript" src="__PUBLIC_CSS__js/jquery.js"></script>
-
-<script type="text/javascript" src="__PUBLIC_CSS__js/jqpublic.js"></script>
+<link href="__PUBLIC_INDEX__css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC_INDEX__js/public.js"></script>
+<script type="text/javascript" src="__PUBLIC_INDEX__js/jquery.js"></script>
+<!-- <script type="text/javascript" src="{$Think.EXTEND_PATH}jquery-1.11.3/jquery.min.js"></script> -->
+<script type="text/javascript" src="__PUBLIC_INDEX__js/jqpublic.js"></script>
+<script type="text/javascript" src="__PUBLIC_INDEX__js/cart.js"></script>
 <!--
 Author: DeathGhost
 Author URI: http://www.deathghost.cn
@@ -23,19 +24,16 @@ Author URI: http://www.deathghost.cn
  <section class="Topmenubg">
   <div class="Topnav">
    <div class="LeftNav">
-    {if empty(session('user_id'))}
-    <a href="{:url('index/user/register')}">注册</a>/<a href="{:url('index/user/login')}">登录</a>
-    {/if}
-    <a href="#">QQ客服</a><a href="#">微信客服</a><a href="#">手机客户端</a>
+    <a href="{:url('index/user/register')}">注册</a>/<a href="{:url('index/user/login')}">登录</a><a href="#">QQ客服</a><a href="#">微信客服</a><a href="#">手机客户端</a>
    </div>
    <div class="RightNav">
-    <a href="user_center.html">用户中心</a> <a href="user_orderlist.html" target="_blank" title="我的订单">我的订单</a> <a href="cart.html">购物车（0）</a> <a href="user_favorites.html" target="_blank" title="我的收藏">我的收藏</a> <a href="#">商家入驻</a>
+    <a href="/index/user/usercenter.html">用户中心</a> <a href="/index/order/orderlist.html" target="_blank" title="我的订单">我的订单</a> <a href="/index/shopping/cart">购物车（0）</a> <a href="/index/user/userfavorites.html" target="_blank" title="我的收藏">我的收藏</a> <a href="#">商家入驻</a>
    </div>
   </div>
  </section>
  <div class="Logo_search">
   <div class="Logo">
-   <img src="__PUBLIC_CSS__/images/logo.jpg" title="DeathGhost" alt="模板">
+   <a href="{:url('index/index/index')}"><img src="__PUBLIC_INDEX__/images/logo.jpg" title="DeathGhost" alt="模板"></a>
    <i></i>
    <span>西安市 [ <a href="#">莲湖区</a> ]</span>
   </div>
@@ -55,10 +53,10 @@ Author URI: http://www.deathghost.cn
  </div>
  <nav class="menu_bg">
   <ul class="menu">
-   <li><a href="index.html">首页</a></li>
-   <li><a href="list.html">订餐</a></li>
-   <li><a href="category.html">积分商城</a></li>
-   <li><a href="article_read.html">关于我们</a></li>
+   <li><a href="/index/index/index.html">首页</a></li>
+   <li><a href="/index/shopping/list.html">订餐</a></li>
+   <li><a href="/index/shopping/category.html">积分商城</a></li>
+   <li><a href="/index/article/articleRead.html">关于我们</a></li>
   </ul>
  </nav>
 </header>

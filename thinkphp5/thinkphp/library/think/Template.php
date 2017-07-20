@@ -2,7 +2,7 @@
 // +----------------------------------------------------------------------
 // | ThinkPHP [ WE CAN DO IT JUST THINK ]
 // +----------------------------------------------------------------------
-// | Copyright (c) 2006~2017 http://thinkphp.cn All rights reserved.
+// | Copyright (c) 2006~2016 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
@@ -12,6 +12,7 @@
 namespace think;
 
 use think\exception\TemplateNotFoundException;
+use think\Request;
 
 /**
  * ThinkPHP分离出来的模板引擎
@@ -57,7 +58,7 @@ class Template
     protected $storage;
 
     /**
-     * 构造函数
+     * 架构函数
      * @access public
      */
     public function __construct(array $config = [])
@@ -129,7 +130,7 @@ class Template
         } elseif (isset($this->config[$config])) {
             return $this->config[$config];
         } else {
-            return;
+            return null;
         }
     }
 
@@ -668,7 +669,7 @@ class Template
             $content = str_replace($matches[0], '', $content);
             return explode(',', $matches['name']);
         }
-        return;
+        return null;
     }
 
     /**
@@ -927,7 +928,7 @@ class Template
                         if (false === strpos($name, '(')) {
                             $name = '(isset(' . $name . ') && (' . $name . ' !== \'\')?' . $name . ':' . $args[1] . ')';
                         } else {
-                            $name = '(' . $name . ' ?: ' . $args[1] . ')';
+                            $name = '(' . $name . ' !== \'\'?' . $name . ':' . $args[1] . ')';
                         }
                         break;
                     default: // 通用模板函数
