@@ -1,32 +1,25 @@
 <?php
 namespace app\index\model;
-
+use think\DB;
 use think\Model;
-use think\Db;
+
+class User extends Model
+{
 	
-	class User extends Model
+    //判断用户名是否重复
+	public function checkUser($username)
 	{
-		public function getUserInfo()
-		{
-			/*
-				*where()三种使用方式
-			*/
-				//1.where();三个参数:1 查询关键字，2 比较运算符，3 值，第二个参数不传，默认是判等
-			//$data = Db::name('user')->field('uid,username')->where('uid','<',20)->select();
-				//2.where('字符串')
-			//$data = Db::name('user')->where('uid < 20')->select();
-				//3.数组形式
-			// $con['uid'] = ['<',20];
-			// $con['type'] = 0;
-			// $data = Db::name('user')->where($con)->select();
-			$data = Db::getTableInfo('user');
-			return $data;
-		}
-		public function test()
-		{
-			 $data = db('user')->field('uid,username')->select();
-			 return $data;
-			/*db('user')->insert('username'=>'tom','pwd');*/
-		}
-		
+		return DB::name('online_user')->where('user_name',$username)->select();
 	}
+	//注册用户
+	public function doReg($data)
+	{
+		return DB::name('online_user')->insert($data);
+	}
+	//用户登录
+	public function doLogin($name,$pwd)
+	{
+       return DB::name('online_user')->where('user_name',$name)->where('user_pwd',$pwd)->find();
+	}
+}
+

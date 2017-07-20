@@ -27,10 +27,7 @@ return [
     // 入口自动绑定模块
     'auto_bind_module'       => false,
     // 注册的根命名空间
-    'root_namespace'         => [
-                            'extend\Connect2'           => '../extend/Connect2/',
-                            'app\extend\open_example_php'   => '../extend/open_example_php',
-                        ],
+    'root_namespace'         => [],
     // 扩展函数文件
     'extra_file_list'        => [THINK_PATH . 'helper' . EXT],
     // 默认输出类型
@@ -143,11 +140,12 @@ return [
 
     // 视图输出字符串内容替换
     'view_replace_str'       => [
-                    '__INDEX_CSS__'      => '/static/index/css/',
-                    '__INDEX_JS__'       => '/static/index/js/',
-                    '__UPLOAD_IMG__'     => '/uploads/',
-                    '__INDEX_IMG__'      => '/static/index/images/',
-                        ],
+
+
+             '__PUBLIC_CSS__' => '/static/index/',
+
+    ],
+
     // 默认跳转页面对应的模板文件
     'dispatch_success_tmpl'  => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
     'dispatch_error_tmpl'    => THINK_PATH . 'tpl' . DS . 'dispatch_jump.tpl',
@@ -244,4 +242,21 @@ return [
         'var_page'  => 'page',
         'list_rows' => 15,
     ],
+    //验证码配置
+    'captcha' => [
+                // 验证码字符集合
+                'codeSet' => '1234567890',
+                // 验证码字体大小(px)
+                'fontSize' => 16,
+                // 是否画混淆曲线
+                'useCurve' => false,
+                // 验证码图片高度
+                'imageH' => 30,
+                // 验证码图片宽度
+                'imageW' => 150,
+                // 验证码位数
+                'length' => 4,
+                // 验证成功后是否重置
+                'reset' => true
+                ],
 ];
