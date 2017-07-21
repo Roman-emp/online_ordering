@@ -161,18 +161,18 @@
      <a href="#">周至县</a>
      <a href="#">蓝田县 </a>
      </p>
+     
      <div class="DCcontent">
-
-       <a href="/index/store/storeDetail" target="_blank" title="TITLE:店名">
+      {foreach $menu_list as $shop}
+       <a href="/index/store/storeDetail?shop_id={$shop['shop_id']}" target="_blank" title="{$shop['shop_name']}">
            <figure>
-
-           <img src="__UPLOAD_IMG__cc.jpg">
+           <img src="{$shop['shop_icon']}">
 
            <figcaption>
-           <span class="title">老重庆川菜馆</span>
+           <span class="title">{$shop['shop_name']}</span>
            <span class="price">预定折扣：<i>8.9折</i></span>
            </figcaption>
-           <p class="p1"><q>仅售169元！价值289元的4-5人餐，提供免费WiFi。</q></p>
+           <p class="p1"><q>{$shop['shop_open_time']}</q></p>
            <p class="p2">
            店铺评分：
 
@@ -183,11 +183,12 @@
            <img src="__PUBLIC_INDEX__images/star-off.png">
 
            </p>
-           <p class="p3">店铺地址：西安市雁塔区丈八路***老重庆川菜馆...</p>
+           <p class="p3">店铺地址：{$shop['shop_address']}</p>
            </figure>
         </a>
- 
+        {/foreach}
      </div>
+     
   </li>
   </ul>
  </div>

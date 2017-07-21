@@ -24,8 +24,8 @@ class Shopping extends Controller
 		$shop_name = $_GET['shop_name'];
 
 		$this->assign('menu_list',$menu_list);
+		$this->assign('shop_id',$shop_id);
 		$this->assign('shop_name',$shop_name);
-	
 		return $this->fetch();
 	}
 

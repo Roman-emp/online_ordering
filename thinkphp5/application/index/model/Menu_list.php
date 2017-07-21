@@ -12,7 +12,7 @@
 			/*$menu = $this->field('menu_id,menu_name,menu_icon,menu_price')->select();
 			return $menu;*/
 			return Db::name('shop_menu s,online_shop o')
-						->field('menu_id,menu_name,menu_icon,menu_price,s.shop_id,shop_name')
+						->field('*')
 						->where('s.shop_id = o.shop_id')
 						->select();
 		}
