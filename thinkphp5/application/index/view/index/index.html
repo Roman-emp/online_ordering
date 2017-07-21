@@ -94,7 +94,7 @@
      <div class="SCcontent">
     {foreach $menu_list as $menu}
     
-     <a href="/index/shopping/detail?menu_id={$menu['menu_id']}"  title="菜品名称">
+     <a href="/index/shopping/detail?menu_id={$menu['menu_id']}&shop_id={$menu['shop_id']}&shop_name={$menu['shop_name']}"  title="菜品名称">
         <figure>
            <img src="{$menu['menu_icon']}">
            <figcaption>

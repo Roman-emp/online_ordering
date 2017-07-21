@@ -17,10 +17,15 @@ class Shopping extends Controller
 	{
 		//获取菜品id
 		$menu_id = $_GET['menu_id'];
-		$menu = new Menu_list();
-		$menu_list = $menu->select_menu_detail($menu_id);
-		//菜品详情
+		$shop_id = $_GET['shop_id'];
+			//获取菜品详情
+		$menu_list = $this->menu->select_menu_detail($menu_id);
+			//获取商家名字
+		$shop_name = $_GET['shop_name'];
+
 		$this->assign('menu_list',$menu_list);
+		$this->assign('shop_name',$shop_name);
+	
 		return $this->fetch();
 	}
 
@@ -35,6 +40,8 @@ class Shopping extends Controller
 	{
 		$num = $_REQUEST['Number'];//添加商品的数量
 		$menu_id = $_REQUEST['menu_id'];//商品id
+		//$shop_id = $_REQUEST['shop_id'];
+		//dump($shop_id);
 		//商家id缺失
 		//用户id缺失
 		//获取商品详情
@@ -74,12 +81,30 @@ class Shopping extends Controller
 		return $this->fetch();
 	}
 
+	//购物车删除菜单
+	public function menu_delete()
+	{
+
+	}
+
 	//商品分类
 	public function category()
 	{
 		return $this->fetch();
 	}
 
-
+	//生成/删除订单
+	public function confirm_order()
+	{
+		if($_REQUEST['delete'])
+		{
+			$menu_id = implode(',',$_REQUEST['menu_id']);//获取菜单id
+			$delete_cart = $this->menu->clean_cart($menu_id);//删除购物车菜品
+			if ($delete_cart)
+			{
+				$this->success('菜品删除成功');
+			}
+		}
+	}
 	
 }

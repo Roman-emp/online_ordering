@@ -1,8 +1,84 @@
-{include file="head"}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>酸辣土豆丝 - DeathGhost</title>
+<meta name="keywords" content="DeathGhost,DeathGhost.cn,web前端设,移动WebApp开发" />
+<meta name="description" content="DeathGhost.cn::H5 WEB前端设计开发!" />
+<meta name="author" content="DeathGhost"/>
+<link href="__PUBLIC_INDEX__/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC_INDEX__js/public.js"></script>
+<script type="text/javascript" src="__PUBLIC_INDEX__js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC_INDEX__js/jqpublic.js"></script>
+<!--
+Author: DeathGhost
+Author URI: http://www.deathghost.cn
+-->
+<script>
+$(function(){   
+  $('.title-list li').click(function(){
+    var liindex = $('.title-list li').index(this);
+    $(this).addClass('on').siblings().removeClass('on');
+    $('.menutab-wrap div.menutab').eq(liindex).fadeIn(150).siblings('div.menutab').hide();
+    var liWidth = $('.title-list li').width();
+    $('.shopcontent .title-list p').stop(false,true).animate({'left' : liindex * liWidth + 'px'},300);
+  });
+  
+  $('.menutab-wrap .menutab li').hover(function(){
+    $(this).css("border-color","#ff6600");
+    $(this).find('p > a').css('color','#ff6600');
+  },function(){
+    $(this).css("border-color","#fafafa");
+    $(this).find('p > a').css('color','#666666');
+  });
+  });
+</script>
+</head>
+<body>
+<header>
+ <section class="Topmenubg">
+  <div class="Topnav">
+   <div class="LeftNav">
+    <a href="register.html">注册</a>/<a href="login.html">登录</a><a href="#">QQ客服</a><a href="#">微信客服</a><a href="#">手机客户端</a>
+   </div>
+   <div class="RightNav">
+    <a href="user_center.html">用户中心</a> <a href="user_orderlist.html" target="_blank" title="我的订单">我的订单</a> <a href="cart.html">购物车（0）</a> <a href="user_favorites.html" target="_blank" title="我的收藏">我的收藏</a> <a href="#">商家入驻</a>
+   </div>
+  </div>
+ </section>
+ <div class="Logo_search">
+  <div class="Logo">
+   <a href="/index/index/index"><img src="__PUBLIC_INDEX__images/logo.jpg" title="DeathGhost" alt="模板"></a>
+   <i></i>
+   <span>西安市 [ <a href="#">莲湖区</a> ]</span>
+  </div>
+  <div class="Search"> 
+   <form method="get" id="main_a_serach" onsubmit="return check_search(this)">
+   <div class="Search_nav" id="selectsearch">
+    <a href="javascript:;" onClick="selectsearch(this,'restaurant_name')" class="choose">餐厅</a>
+    <a href="javascript:;" onClick="selectsearch(this,'food_name')">食物名</a>
+   </div>
+   <div class="Search_area"> 
+   <input type="search" id="fkeyword" name="keyword" placeholder="请输入您所需查找的餐厅名称或食物名称..." class="searchbox" />
+   <input type="submit" class="searchbutton" value="搜 索" />
+   </div>
+   </form>
+   <p class="hotkeywords"><a href="#" title="酸辣土豆丝">酸辣土豆丝</a><a href="#" title="这里是产品名称">螃蟹炒年糕</a><a href="#" title="这里是产品名称">牛奶炖蛋</a><a href="#" title="这里是产品名称">芝麻酱凉面</a><a href="#" title="这里是产品名称">滑蛋虾仁</a><a href="#" title="这里是产品名称">蒜汁茄子</a></p>
+  </div>
+ </div>
+ <nav class="menu_bg">
+  <ul class="menu">
+   <li><a href="index.html">首页</a></li>
+   <li><a href="list.html">订餐</a></li>
+   <li><a href="category.html">积分商城</a></li>
+   <li><a href="article_read.html">关于我们</a></li>
+  </ul>
+ </nav>
+</header>
 <!--Start content-->
-<section class="slp">
- <section class="food-hd">
-  <!-- 商品详情开始 -->
+
+  <section class="slp">
+   <section class="food-hd">
   {foreach $menu_list as $menu}
     <div class="foodpic">
      <img src="{$menu['menu_icon']}" id="showimg">
@@ -13,11 +89,11 @@
     <div class="foodtext">
      <div class="foodname_a">
       <h1>{$menu['menu_name']}</h1>
-      <p>西安市丈八路220号</p>
+      <p>{$shop_name}</p>
      </div>
      <div class="price_a">
-      <p class="price01">促销：￥<span>59.00</span></p>
-      <p class="price02">价格：￥<s>{$menu['menu_price']}</s></p>
+      <p class="price01">促销：￥<span>{$menu['menu_price']}</span></p>
+      <p class="price02">价格：￥<s>{$menu['menu_price']+25}</s></p>
      </div>
      <div class="Freight">
       <span>配送费用：</span>
@@ -38,29 +114,28 @@
         <p>送幸福积分</p>
        </li>
      </ul>
-        <form action="/index/shopping/add_menu?menu_id={$menu['menu_id']}" method="post">
-           <div class="BuyNo">
-              <span>我要买：<input type="number" name="Number" required autofocus min="1" value="1"/>份</span>
-              <span>库存：3258</span>
-              <div class="Buybutton">
-               <input name="" type="submit" value="加入购物车" class="BuyB">
-               <a href="/index/store/storeDetail.html"><span class="Backhome">进入店铺首页</span></a>
-            </div>
-        </form>
+     <form action="/index/shopping/add_menu?menu_id={$menu['menu_id']}" method="post">
+     <div class="BuyNo">
+      <span>我要买：<input type="number" name="Number" required autofocus min="1" value="1"/>份</span>
+      <span>库存：3258</span>
+      <div class="Buybutton">
+       <input name="" type="submit" value="加入购物车" class="BuyB">
+       <a href="shop.html"><span class="Backhome">进入店铺首页</span></a>
+      </div>
+      </form>
      </div>
     </div>
   {/foreach}
-   <!-- 商品详情结束 -->
   <div class="viewhistory">
    <span class="VHtitle">看了又看</span>
    <ul class="Fsulist">
     <li>
-     <a href="detail.html"  title="酱爆茄子"><img src="/uploads/03.jpg"></a>
+     <a href="detailsp.html" target="_blank" title="酱爆茄子"><img src="upload/03.jpg"></a>
      <p>酱爆茄子</p>
      <p>￥12.80</p>
     </li>
     <li>
-     <a href="detail.html"  title="酱爆茄子"><img src="/uploads/02.jpg"></a>
+     <a href="detailsp.html" target="_blank" title="酱爆茄子"><img src="upload/02.jpg"></a>
      <p>酱爆茄子</p>
      <p>￥12.80</p>
     </li>
@@ -83,10 +158,10 @@
     <!--case1-->
     <div class="menutab show">
       <div class="cont_padding">
-      {foreach $menu_list as $menu}
-       <img src="{$menu['menu_icon']}">
-       <p>{$menu['menu_info']}</p>
-      {/foreach}
+        {foreach $menu_list as $menu}
+         <img src="{$menu['menu_icon']}">
+         <p>{$menu['menu_info']}</p>
+        {/foreach}
       </div>
     </div>
     <!--case2-->
@@ -148,7 +223,7 @@
   <!--ad&other infor-->
   <aside>
    <!--广告位或推荐位-->
-   <a href="#" title="广告位占位图片" target="_blank"><img src="/uploads/2014912.jpg"></a>
+   <!-- <a href="#" title="广告位占位图片" target="_blank"><img src="/static/upload/2014912.jpg"></a> -->
   </aside>
  </section>
 </section>
@@ -160,23 +235,6 @@
   <a href="http://www.17sucai.com/pins/17567.html" target="_blank" title="果蔬菜类模板源码">HTML5果蔬菜类模板源码</a>
   <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
  </div>
-{include file="foot"}
-<script>
-$(function(){   
-  $('.title-list li').click(function(){
-    var liindex = $('.title-list li').index(this);
-    $(this).addClass('on').siblings().removeClass('on');
-    $('.menutab-wrap div.menutab').eq(liindex).fadeIn(150).siblings('div.menutab').hide();
-    var liWidth = $('.title-list li').width();
-    $('.shopcontent .title-list p').stop(false,true).animate({'left' : liindex * liWidth + 'px'},300);
-  });
-  
-  $('.menutab-wrap .menutab li').hover(function(){
-    $(this).css("border-color","#ff6600");
-    $(this).find('p > a').css('color','#ff6600');
-  },function(){
-    $(this).css("border-color","#fafafa");
-    $(this).find('p > a').css('color','#666666');
-  });
-  });
-</script>
+    {include file="foot"}
+</body>
+</html>
