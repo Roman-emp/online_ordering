@@ -58,9 +58,6 @@ class User extends Controller
     		
     	return json_encode($data);
     }
-   
-
-
 
 	//用户登录
 		public function login()
@@ -94,7 +91,16 @@ class User extends Controller
 		{
 			return $this->fetch();
 		}
-
+    //用户中心首页
+		public function user_center()
+		{
+           return $this->fetch();
+		}
+		//用户账户管理
+		public function user_account()
+		{
+			return  $this->fetch();
+		}
 		//我的收藏
 		public function userfavorites()
 		{
@@ -102,11 +108,7 @@ class User extends Controller
 		}
 
 
-		//用户账户管理
-		public function userAccount()
-		{
-			return  $this->fetch();
-		}
+	
 
 		//用户退出登录
 		public function userExit()
