@@ -48,7 +48,7 @@ class Dishes extends Base
 				$this->error('添加失败......', 'add');
 			}
  
-			//return $this->fetch();
+			
 		}
 
 		
@@ -103,9 +103,10 @@ class Dishes extends Base
 		public function delete()
 		{
 			$id = $_GET['id'];
-			dump($id); exit;
+			
 			$mlM = Db('menu_list');
 			$check = $mlM->where("menu_id={$id}")->find();
+		
 			if($check == false)
 			{
 				$this->error('非法操作','getAllDishesList');
