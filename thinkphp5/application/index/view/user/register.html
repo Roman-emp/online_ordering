@@ -1,40 +1,40 @@
 
 {include file="head"}
 <section class="Psection MT20">
- <form>
+ <form action="/index/user/upregister"  method="post" >
   <table class="Register">
   <tr>
   <td width="40%" align="right" class="FontW">用户名：</td>
-  <td><input type="text" name="" id="name"  ></td>
+  <td><input type="text" name="name" id="name" autofocus  ></td>
   </tr>
   <tr>
   <td width="40%" align="right" class="FontW">密码：</td>
-  <td><input type="password" name=""  id="pwd"></td>
+  <td><input type="password" name="pwd"  id="pwd"></td>
   </tr>
   <tr>
   <td width="40%" align="right" class="FontW">再次确认：</td>
-  <td><input type="password" name="" id="repwd"></td>
+  <td><input type="password" name="repwd" id="repwd"></td>
   </tr>
   <tr>
   <td width="40%" align="right" class="FontW">电子邮件：</td>
-  <td><input type="email" name="" id="email" ></td>
+  <td><input type="email" name="email" id="email" ></td>
   </tr>
   <tr>
   <td width="40%" align="right" class="FontW">手机号码：</td>
-  <td><input type="text" name=""  pattern="[0-9]{11}"></td>
+  <td><input type="text" name="tell"  id = "tell"></td>
   </tr>
   <tr>
   <td width="40%" align="right" class="FontW">手机校验码：</td>
-  <td><input type="text" name=""  pattern="[0-9]{6}"></td>
+  <td><input type="text" name="tellcode"  pattern="[0-9]{6}"></td>
   </tr>
   <tr>
   <td width="40%" align="right" class="FontW">验证码：</td>
-  <td><input type="text" name="" ><img src="upload/captcha.png" style="margin-left:8px; vertical-align:bottom" width="83" height="36"></td>
+  <td><input type="text" name="img" ><img src="{:captcha_src()}"  style="margin-left:8px; vertical-align:bottom" width="83" height="36" id = "yzm" onClick="this.src=this.src+'?'+Math.random()" ></td>
 
   </tr>
   <tr>
   <td width="40%" align="right"></td>
-  <td><input type="submit" name="" class="Submit_b" value="注 册">( 已经是会员，<a href="login.html" class="BlueA">请登录</a> )</td>
+  <td><input type="submit" class="Submit_b" value="注 册">( 已经是会员，<a href="login.html" class="BlueA">请登录</a> )</td>
   </tr>
   </table>
  </form>
@@ -45,26 +45,33 @@
   
  </div>
  <script type="text/javascript">
+  
+
 //为表单元素添加失去焦点事件
     $("form :input").blur(function(){
         var $parent = $(this).parent();
         //验证名称
         if($(this).is("#name")){
-        	$("span").remove();
-            if($.trim(this.value) == "" || $.trim(this.value).length < 6){
+          $("span").remove();
+            $.post("{:url('index/user/upName')}",{'name':$("#name").val()},function(msg){
+                var ms = eval('('+msg+')');
+                if(ms.length){
+                   var errorMsg = " 用户已被注册";
+                   $parent.append("<span >" + errorMsg + "</span>");
+                   
+                }
+             
+            });
+            if($.trim(this.value) == "" || $.trim(this.value).length < 3){
                 var errorMsg = " 请输入至少6位的名称！";
                 $parent.append("<span >" + errorMsg + "</span>");
                  $(this).focus();
             }
-            else{
-                var okMsg=" 输入正确";
-                $parent.find(".high").remove();
-                $parent.append("<span >" + okMsg + "</span>");
-            }
+
         }
         //验证邮箱
         if($(this).is("#email")){
-        	$("span").remove();
+          $("span").remove();
             if($.trim(this.value) == "" || ($.trim(this.value) != "" && !/.+@.+\.[a-zA-Z]{2,4}$/.test($.trim(this.value)))){
                 var errorMsg = " 请输入正确的E-Mail地址！";
                 $parent.append("<span >" + errorMsg + "</span>");
@@ -76,7 +83,77 @@
                 $parent.append("<span >" + okMsg + "</span>");
             }
         }
+        //密码验证
+        if($(this).is('#pwd'))
+        {
+           $("span").remove();
+            if($.trim(this.value) == "" ||  !/^[a-zA-Z][a-zA-Z0-9_]{5,20}$/.test($.trim(this.value))){
+                var errorMsg = " 请输入6位以上密码不能以数字开头！";
+                $parent.append("<span >" + errorMsg + "</span>");
+                 $(this).focus();
+            }
+            else{
+                var okMsg=" 输入正确";
+                $parent.find(".high").remove();
+                $parent.append("<span >" + okMsg + "</span>");
+            }
+
+        }
+        if($(this).is('#repwd'))
+        {
+           $("span").remove();
+          if($("#pwd").val() != $("#repwd").val())
+          {
+             var errorMsg = " 两次输入的密码不一致！";
+                  $parent.append("<span >" + errorMsg + "</span>");
+                   $(this).focus();
+          } else{
+                var okMsg=" 输入正确";
+                $parent.find(".high").remove();
+                $parent.append("<span >" + okMsg + "</span>");
+            }
+
+        }
+       
+        //手机号码验证
+        if($(this).is('#tell'))
+        {
+           $("span").remove();
+            if($.trim(this.value) == "" ||  !/^[\d]{10,20}$/.test($.trim(this.value))){
+                var errorMsg = " 请输入正确的手机号！";
+                $parent.append("<span >" + errorMsg + "</span>");
+                 $(this).focus();
+            }
+            else{
+                var okMsg=" 输入正确";
+                $parent.find(".high").remove();
+                $parent.append("<span >" + okMsg + "</span>");
+            }
+
+        }
+       
     });
+   /* //建立ajax对象
+    var xhr = new XMLHttpRequest();
+    //创建请求
+
+    xhr.open('请求方式','请求地址')
+
+    //发送请求
+    xhr.send(null);
+
+
+    //接收服务器返回的数据
+    //xhr.readyState 状态码
+    //xhr.responseText 返回内容
+
+    xhr.onreadystatechange = function(data)
+    {
+
+    } */
+
+
+
 
  </script>
  {include file="foot"}

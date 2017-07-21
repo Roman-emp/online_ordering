@@ -10,7 +10,7 @@ class Dishes extends Model
 		//实例化对象
 		$mlM = Db('menu_list');
 		$result = $mlM->select();
-		dump($result);
+
 		return $result;
 	}
 }
