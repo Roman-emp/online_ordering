@@ -13,7 +13,7 @@ class User extends Model
 		return $data?true:false;
 	}
 
-	//返回用户列表
+	//获取用户列表
 	public function getUserList()
 	{
 		$res = $this->paginate(3);
@@ -21,5 +21,14 @@ class User extends Model
 		return ['data'=>$res,'render'=>$render];
 	}
 
+	//获取管理员列表
+	public function adminlist()
+	{
+		//实例化对象
+		$adM = Db('online_admin');
+		$res = $adM->select();
+		return $res;
 	}
+
+	
 }
