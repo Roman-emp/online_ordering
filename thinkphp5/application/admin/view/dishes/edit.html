@@ -6,17 +6,17 @@
 </head>
 <body>
 <article class="page-container">
-	<form class="form form-horizontal" id="form-article-add">
+	<form action = '/admin/dishes/update' class="form form-horizontal" id="form-article-add" method = 'post' enctype="multipart/form-data" >
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>商品名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="">
+				<input type="text" class="input-text"  placeholder="" value="{$mlM_info['menu_name']}" name="menu_name" />
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">商品价格：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="">
+				<input type="text" class="input-text"  placeholder="" value="{$mlM_info['menu_price']}" name="menu_price">
 			</div>
 		</div>
 		<div class="row cl">
@@ -34,19 +34,30 @@
 		
 	
 		
+	<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">缩略图：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<div class="uploader-thum-container">
+					<div id="fileList" class="uploader-list" name="menu_icon"></div>
+					<div id="filePicker">选择图片</div>
+					
+				</div>
+			</div>
+		</div>			
+		
 	
 			<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">文章内容：</label>
+			<label class="form-label col-xs-4 col-sm-2">描述：</label>
 			<div class="formControls col-xs-8 col-sm-9"> 
-				<script id="editor" type="text/plain" style="width:100%;height:400px;"></script> 
+			     <textarea name="menu_info"  type="text/plain" style="width:100%;height:500px;">{$mlM_info['menu_info']}</textarea>
+				 
 			</div>
 		</div>
 		
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-				<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
-				
-				<button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;清空&nbsp;&nbsp;</button>
+				<input type="hidden" name="id" value="{$mlM_info['menu_id']}">
+                <input style="width:60px; height:30px; background-color: cyan; " type="submit" name="update" value="更新" />
 			</div>
 		</div>
 	</form>

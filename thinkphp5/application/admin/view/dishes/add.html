@@ -6,17 +6,17 @@
 </head>
 <body>
 <article class="page-container">
-	<form class="form form-horizontal" id="form-article-add">
+	<form action = '/admin/dishes/addDishes' class="form form-horizontal" id="form-article-add" method = 'post' enctype="multipart/form-data">
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>商品名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="">
+				<input type="text" class="input-text" value="" placeholder="" id="" name="menu_name">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">商品价格：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="">
+				<input type="text" class="input-text" value="" placeholder="" id="" name="menu_price">
 			</div>
 		</div>
 		<div class="row cl">
@@ -32,13 +32,23 @@
 				</span> </div>
 		</div>
 		
-	
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2">缩略图：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<div class="uploader-thum-container">
+					<div id="fileList" class="uploader-list" name="menu_icon"></div>
+					<div id="filePicker">选择图片</div>
+					
+				</div>
+			</div>
+		</div>			
 		
 	
 			<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">文章内容：</label>
+			<label class="form-label col-xs-4 col-sm-2">描述：</label>
 			<div class="formControls col-xs-8 col-sm-9"> 
-				<script id="editor" type="text/plain" style="width:100%;height:400px;"></script> 
+			     <textarea name="menu_info" id="yceditor" type="text/plain" style="width:100%;height:500px;"></textarea>
+				 
 			</div>
 		</div>
 		
