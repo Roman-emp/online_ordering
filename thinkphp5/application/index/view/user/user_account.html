@@ -10,17 +10,17 @@
    <li><i></i><a href="user_coupon.html">我的优惠券</a></li>
    <li><i></i><a href="user_favorites.html">我的收藏</a></li>
    <li><i></i><a href="user_account.html">账户管理</a></li>
-   <li><i></i><a href="#">安全退出</a></li>
+   <li><i></i><a href="">安全退出</a></li>
   </ul>
  </nav>
  <article class="U-article Overflow">
   <!--user Account-->
   <section class="AccManage Overflow">
    <span class="AMTitle Block Font14 FontW Lineheight35">账户管理</span>
-   <p>登陆邮箱：232***413@qq.com ( <a href="#" target="_blank">更换手机号码</a> )</p>
-   <p>手机号码：183****5673 ( <a href="#" target="_blank">更换手机号码</a> ) ( <a href="#" target="_blank">解绑手机</a> )</p>
-   <p>上次登陆：2014年09月22日 11:40:36( *如非本人登陆，请立即<a href="#" target="_blank">修改您的密码</a>！ )</p>
-   <form >
+   <p>登陆邮箱：{$data['user_email']} ( <a href="#" target="_blank">更换手机号码</a> )</p>
+   <p>手机号码：{$data['user_tel']} ( <a href="#" target="_blank">更换手机号码</a> ) ( <a href="#" target="_blank">解绑手机</a> )</p>
+   <p>上次登陆：{$data['user_last_login_time']}( *如非本人登陆，请立即<a href="#" target="_blank">修改您的密码</a>！ )</p>
+   <form action="/index/user/upload" enctype="multipart/form-data" method="post">
     <table>
     <tr>
     <td width="30%" align="right">*修改头像：</td>
@@ -28,15 +28,15 @@
     </tr>
     <tr>
     <td width="30%" align="right">*昵称：</td>
-    <td><input type="text" name="name" value="DeathGhost"></td>
+    <td><input type="text" name="name" value="{$data['user_name']}"></td>
     </tr>
     <tr>
     <td width="30%" align="right">*邮箱：</td>
-    <td><input type="email" name="email" value="232650413@qq.com"></td>
+    <td><input type="email" name="email" value="{$data['user_email']}"></td>
     </tr>
     <tr>
     <td width="30%" align="right">*手机：</td>
-    <td><input type="tel" name="tell" value="18309275673"></td>
+    <td><input type="tel" name="tell" value="{$data['user_tel']}"></td>
     </tr>
     <tr>
     <td></td>
