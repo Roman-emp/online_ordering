@@ -1,11 +1,13 @@
 {include file="head"}
 <!--Start content-->
 <section class="Shop-index">
+  
  <article>
+ 
   <div class="shopinfor">
    <div class="title">
     <img src="/uploads/wpjnewlogo.jpg" class="shop-ico">
-    <span>含山路外婆家</span>
+    <span>{$shop['shop_name']}</span>
     <span>
      <img src="/static/index/images/star-on.png">
      <img src="/static/index/images/star-on.png">
@@ -17,20 +19,20 @@
    </div>
    <div class="imginfor">
     <div class="shopimg">
-     <img src="/uploads/cc.jpg" id="showimg">
+     <img src="{$shop['shop_icon']}" id="showimg">
       <ul class="smallpic">
-       <li><img src="/uploads/cc.jpg" onmouseover="show(this)" onmouseout="hide()"></li>
+       <li><img src="{$shop['shop_icon']}" onmouseover="show(this)" onmouseout="hide()"></li>
       </ul>
     </div>
     <div class="shoptext">
-     <p><span>地址：</span>陕西省西安市雁塔区丈八北路***号</p>
-     <p><span>电话：</span>029-88888888</p>
-     <p><span>特色菜品：</span>毛肚、牛丸、滑虾、羊肉、香辣虾...</p>
-     <p><span>优惠活动：</span>暂无信息</p>
-     <p><span>停车位：</span>4个停车位（免费）</p>
-     <p><span>营业时间：</span>09:00~22:00</p>
-     <p><span>WIFI：</span>免费WIFI</p>
-     <p><span>价格：</span>50元</p>
+     <p><span>地址：</span>{$shop['shop_address']}</p>
+     <p><span>电话：</span>{$shop['shop_tel']}</p>
+     <p><span>特色菜品：</span>{$shop['menu_name']}</p>
+     <p><span>优惠活动：</span>{$shop['shop_activity']}</p>
+     <p><span>停车位：</span>{$shop['shop_parking_space']}个停车位（免费）</p>
+     <p><span>营业时间：</span>{$shop['shop_open_time']}</p>
+     <p><span>WIFI：</span>免费WIFI:{$shop['shop_WIFI']}</p>
+     <p><span>人均消费：</span>{$shop['shop_avg_consume']}元</p>
      <div class="Button">
       <a href="#ydwm"><span class="DCbutton">查看菜谱点菜</span></a>
      </div>
@@ -41,6 +43,7 @@
      </div>
    </div>
   </div>
+ 
   <div class="shopcontent">
   <div class="title2 cf">
     <ul class="title-list fr cf ">
@@ -51,55 +54,26 @@
       <p><b></b></p>
     </ul>
   </div>
+
   <div class="menutab-wrap">
    <a name="ydwm">
     <!--case1-->
+
     <div class="menutab show">
      <ul class="products">
+    {foreach $shop_detail as $shop_info}
 		<li>
-		 <a href="/static/shopping/detail.html" target="_blank" title="酸辣土豆丝">
-         <img src="/uploads/01.jpg" class="foodsimgsize">
+		 <a href="/index/shopping/detail?shop_id={$shop_info['shop_id']}&shop_name={$shop_info['shop_name']}&menu_id={$shop_info['menu_id']}" target="_blank" title="{$shop_info['menu_name']}">
+         <img src="{$shop_info['menu_icon']}" class="foodsimgsize">
          </a>
           <a href="#" class="item">
 		 <div>
-		  <p>酸辣土豆丝</p>
-		  <p class="AButton">拖至购物车:￥50.00</p>
+		  <p>{$shop_info['menu_name']}</p>
+		  <p class="AButton">拖至购物车:￥{$shop_info['menu_price']}</p>
 		 </div>
 		 </a>
 		</li>
-		<li>
-		 <a href="/static/shopping/detail.html" target="_blank" title="酸辣土豆丝">
-         <img src="/uploads/02.jpg" class="foodsimgsize">
-         </a>
-          <a href="#" class="item">
-		 <div>
-		  <p>酸辣土豆丝</p>
-		  <p class="AButton">拖至购物车:￥50.00</p>
-		 </div>
-		 </a>
-		</li>
-		<li>
-		 <a href="/static/shopping/detail.html" target="_blank" title="酸辣土豆丝">
-         <img src="/uploads/04.jpg" class="foodsimgsize">
-         </a>
-          <a href="#" class="item">
-		 <div>
-		  <p>酸辣土豆丝</p>
-		  <p class="AButton">拖至购物车:￥50.00</p>
-		 </div>
-		 </a>
-		</li>
-		<li>
-		 <a href="/static/shopping/detail.html" target="_blank" title="酸辣土豆丝">
-         <img src="/uploads/03.jpg" class="foodsimgsize">
-         </a>
-          <a href="#" class="item">
-		 <div>
-		  <p>酸辣土豆丝</p>
-		  <p class="AButton">拖至购物车:￥50.00</p>
-		 </div>
-		 </a>
-		</li>
+		{/foreach}
        <div class="TurnPage">
      <a href="#">
       <span class="Prev"><i></i>首页</span>
@@ -113,11 +87,12 @@
 	 </ul>
     </div>
     </a>
+
     <!--case2-->
     <div class="menutab">
      <div class="shopcomment">
       <div class="Spname">
-       <a href="#" target="_blank" title="酸辣土豆丝">酸辣土豆丝</a>
+       <a href="#" target="_blank" title="{$shop['menu_name']}">{$shop['menu_name']}</a>
       </div>
       <div class="C-content">
        <q>还不错，速度挺快,还不错，速度挺快还不错，速度挺快还不错，速度挺快还不错，速度挺快还不错，速度挺快还不错，速度挺快。。。</q>
@@ -135,11 +110,11 @@
       <img src="/uploads/testimg.jpg"><!--此处占位图调用动态地图后将其删除即可-->
      </div>
      <div class="shopdetailsT">
-      <p><span>店铺：外婆家</span></p>
-      <p><span>地址：</span>陕西省西安市雁塔区丈八北路***号</p>
-      <p><span>电话：</span>029-88888888</p>
-      <p><span>乘车路线：</span>300路、115路、14路、800路到西辛庄站下车往东100米</p>
-      <p><span>店铺介绍：</span>***于2005年3月28日开业，立于西安市碑林区***于2005年3月28日开业，立于西安市碑林区***于2005年3月28日开业，立于西安市碑林区***于2005年3月28日开业，立于西安市碑林区***</p>
+      <p><span>店铺：{$shop['shop_name']}</span></p>
+      <p><span>地址：</span>{$shop['shop_address']}</p>
+      <p><span>电话：</span>{$shop['shop_tel']}</p>
+      <p><span>乘车路线：</span>{$shop['shop_route']}</p>
+      <p><span>店铺介绍：</span>{$shop['shop_info']}</p>
      </div>
     </div>
     </div>
@@ -198,7 +173,7 @@
     </li>
    </ul>
   </div>
-  
+
   <div class="History">
    <span class="Htitle">浏览历史</span>
    <ul>
@@ -215,6 +190,7 @@
  </aside>
  
 </section>
+
 <!--End content-->
 <div class="F-link">
   <span>友情链接：</span>
