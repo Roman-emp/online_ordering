@@ -14,7 +14,7 @@
 				<button type="submit" class="btn btn-success" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜用户</button>
 			</div>
 			<div class="cl pd-5 bg-1 bk-gray mt-20">
-				<span class="l"> <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="admin_add('添加管理员','admin-add.html','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加管理员</a> </span>
+				<span class="l"> <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="admin_add('添加管理员','add.html','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加管理员</a> </span>
 				<span class="r">共有数据：<strong>54</strong> 条</span>
 			</div>
 			<table class="table table-border table-bordered table-bg">
@@ -31,7 +31,7 @@
 						<th>角色</th>
 						<th width="130">加入时间</th>
 						<th width="100">是否启用</th>
-						<th width="100">操作</th>
+						<th width="150">操作</th>
 					</tr>
 				</thead>
 				{foreach $res as $key => $value}
@@ -42,16 +42,23 @@
 						<td>{$value['name']}</td>
 						<td>{$value['telephone']}</td>
 						<td>{$value['email']}</td>
-						<td>{$value['role']}</td>
+						<td class="td-status"><span class="label label-success radius">
+						{if($value['role'] == 0)}
+								主管
+								{else if($value['role'] == 1)}
+								副管
+						{/if}
 						<td>{$value['create_time']}</td>
 						<td class="td-status"><span class="label label-success radius">
 						{if($value['is_use'] == 0)}
-								主管
+								是
 								{else if($value['is_use'] == 1)}
-								副管
+								否
 						{/if}
 						</span></td>
-						<td class="td-manage"><a style="text-decoration:none" onClick="admin_stop(this,'10001')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe631;</i></a> <a title="编辑" href="javascript:;" onclick="admin_edit('管理员编辑','admin-add.html','1','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> <a title="删除" href="javascript:;" onclick="admin_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+						<td class="td-manage">
+						<a href="edit?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
+							<a href="delete?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="删除" onclick="return del(1)"/></a></td>
 					</tr>
 				
 				</tbody>

@@ -30,5 +30,22 @@ class User extends Model
 		return $res;
 	}
 
+	//添加管理员
+	public function add($data)
+	{
+
+		//实例化对象
+		$adM = Db('online_admin');
+		$res = $adM->insert($data);
+		return $res;
+	}
+
+	//编辑管理员信息
+	// public  function updateModel()
+	// {
+	// 	//实例化对象
+	// 	$adM = Db('online_admin');
+	// }
+
 	
 }
