@@ -1,11 +1,19 @@
 <?php
 namespace app\admin\controller;
 use think\Controller;
-
 use app\admin\model\User as UserModel;
 
 class User extends Controller
 {
+    
+   public function _initialize()
+   {
+
+      $this->usermode = new UserModel();
+
+    }
+   
+ 
 
 	public function login()
 	{

@@ -21,20 +21,27 @@ class User extends Controller
 //注册内容的处理
 	    public function upregister()
 	    {
-	    	 $data = $_POST;
-	        if(!captcha_check($data['img'])){
+
+             $data = input();
+	    	if(!captcha_check($data['img'])){
 	               $this->error('验证码错误');
 	            };
+	           $res = $this->validate($data,'User');
 	         
-	           
-	            $name = $_POST['name'];
-	            $pwd  = $_POST['pwd'];
+	      
+	          if($res == true )
+	          {
+	          
+	            $name = input('post.name');
+                 dump($name);
+	            
+	            $pwd  = input('post.pwd');
 	            $pwd  = md5($pwd);
-	            $email = $_POST['email'];
-	            $tell  = $_POST['tell'];
+	            $email = input('post.email');
+	            $tell  = input('post.tell');
 	            $time  = date('Y-m-d H:i:s',time());
 
-	            $data = [
+	           $data = [
 	                      'user_name'   => $name,
 	                      'user_pwd'    => $pwd,
 	                      'user_email'  => $email,
@@ -49,12 +56,15 @@ class User extends Controller
 	          }else{
 	            $this->error('注册失败');
 	          }
+	      } else{
+	      	$this->error($res);
+	      }
 
 	    }
 //判断注册用户名是否存在
 	    public function upName()
 	    {
-	       $data = $this->usermode->checkUser($_POST['name']);
+	       $data = $this->usermode->checkUser(input('name'));
 	    		
 	    	return json_encode($data);
 	    }
@@ -72,12 +82,12 @@ class User extends Controller
 	    public function dologin()
 	    {
 	     //var_dump(session('user_id'));
-	       $data = $_POST;
+	       $data = input();
 	        if(!captcha_check($data['yzm'])){
 	               $this->error('验证码错误');
 	            };
-	          $name = $_POST['name'];
-	          $pwd  = $_POST['pwd'];
+	          $name = input('name');
+	          $pwd  = input('pwd');
 	          $pwd  = md5($pwd);
 	          $re = $this->usermode->doLogin($name,$pwd);
 	          $id = $re['user_id'];
