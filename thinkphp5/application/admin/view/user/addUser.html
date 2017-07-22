@@ -6,69 +6,52 @@
 </head>
 <body>
 <article class="page-container">
-	<form action = '/admin/user/update' class="form form-horizontal" id="form-article-add" method = 'post' enctype="multipart/form-data" >
+	<form action = '/admin/user/userInsert' class="form form-horizontal" id="form-article-add" method = 'post' enctype="multipart/form-data">
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>名称：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>用户名：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text"  placeholder="" value="{$adM_info['name']}" name="name" />
+				<input type="text" class="input-text" value="" placeholder="" id="" name="username">
 			</div>
 		</div>
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">密码：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>密码：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text"  placeholder="" value="{$adM_info['password']}" name="password">
+				<input type="password" class="input-text" value="" placeholder="" id="" name="user_pwd">
 			</div>
 		</div>
-			<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">性别：</label>
-			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
-				<div class="radio-box">
-					<input name="sex" type="radio" value="1" checked>
-					<label for="1">男</label>
-				</div>
-				<div class="radio-box">
-					<input type="radio" value="2" name="sex">
-					<label for="2">女</label>
-				</div>
-			</div>
-		</div>
-
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">手机：</label>
+			<label class="form-label col-xs-4 col-sm-2">联系电话：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text"  placeholder="" value="{$adM_info['telephone']}" name="telephone">
+				<input type="text" class="input-text" value="" placeholder="" id="" name="user_tel">
 			</div>
 		</div>
-
+		
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2">邮箱：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text"  placeholder="" value="{$adM_info['email']}" name="email">
+				<input type="text" class="input-text" value="" placeholder="" id="" name="email">
 			</div>
 		</div>
+		
+		
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">角色：</label>
-			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
-				<select class="select" name="role" size="1">
-					<option value="0">主管</option>
-					<option value="1">副管</option>
-					
-				</select>
-				</span> </div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">备注：</label>
+			<label class="form-label col-xs-4 col-sm-2">头像：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<textarea name="remark" cols="" rows="" class="textarea"  placeholder="说点什么...100个字符以内" dragonfly="true" onKeyUp="textarealength(this,100)">{$adM_info['remark']}</textarea>
-				<p class="textarea-numberbar"><em class="textarea-length">0</em>/100</p>
+				<div class="uploader-thum-container">
+					<div id="fileList" class="uploader-list" name="user_icon"></div>
+					<div id="filePicker">选择图片</div>
+					
+				</div>
 			</div>
-		</div>
+		</div>			
+		
 
 		
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-				<input type="hidden" name="id" value="{$adM_info['id']}">
-                <input style="width:60px; height:30px; background-color: cyan; " type="submit" name="update" value="更新" />
+				<button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存</button>
+				
+				<button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;清空&nbsp;&nbsp;</button>
 			</div>
 		</div>
 	</form>
