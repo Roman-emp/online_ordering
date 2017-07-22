@@ -4,7 +4,7 @@
  <div class="gwc" style=" margin:auto;">
   
   {if !empty($shop_cart)}
-   {foreach $shop_cart as $menu_info}
+  
        <table cellpadding="0" cellspacing="0" class="gwc_tb1">
         <tr>
           <td class="tb1_td1"><input id="Checkbox1" type="checkbox"  class="allselect"/></td>
@@ -15,7 +15,8 @@
           <td class="tb1_td6">单价</td>
           <td class="tb1_td7">操作</td>
         </tr>
-      </table>
+      </table> 
+      {foreach $shop_cart as $menu_info}
         <table cellpadding="0" cellspacing="0" class="gwc_tb2" class="table2">
           <tr>
            <td colspan="7" class="shopname Font14 FontW">店铺：肯德基</td>
@@ -47,6 +48,7 @@
             <td class="tb1_td7"><button name="delete" value="delete">删除</button></td>
           </tr>
         </table>
+         {/foreach}
         <table cellpadding="0" cellspacing="0" class="gwc_tb3">
           <tr>
             <td class="tb1_td1"><input id="checkAll" class="allselect" type="checkbox" /></td>
@@ -71,7 +73,7 @@
         </table>
       </div>
   </form>
-    {/foreach}
+   
   {/if}
   {if empty($shop_cart)}
     <div class="gwc" style=" margin:auto;">

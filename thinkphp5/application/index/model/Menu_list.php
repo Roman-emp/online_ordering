@@ -12,7 +12,16 @@
 			/*$menu = $this->field('menu_id,menu_name,menu_icon,menu_price')->select();
 			return $menu;*/
 			return Db::name('shop_menu s,online_shop o')
-						->field('*')
+						->field('distinct s.shop_id
+								,menu_name
+								,menu_id
+								,menu_price
+								,menu_icon
+								,shop_name
+								,shop_menu_type
+								,shop_open_time
+								,shop_icon
+								,shop_address')
 						->where('s.shop_id = o.shop_id')
 						->select();
 		}
@@ -34,8 +43,10 @@
 		//查询购物车----------(对应店铺暂缺)
 		public function select_cart($user_id)
 		{
-			$cart_details = Db::name('shop_cart')->field('menu_id,menu_name,menu_price,menu_icon,menu_num')->where('user_id','=',$user_id)->select();
-			return $cart_details;
+			return  Db::name('shop_cart')
+						->field('menu_id,menu_name,menu_price,menu_icon,menu_num')
+						->where('user_id','=',$user_id)
+						->select();	
 		}
 
 		//清空购物车

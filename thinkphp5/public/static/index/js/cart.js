@@ -69,40 +69,28 @@ function GetCount() {
 		$("#delcart2").click(function(){
 <<<<<<< HEAD
 			$(".table2").remove();
-=======
-			$("#table2").remove();
->>>>>>> 0772dd8056caea9867ccb0516c33da9a80447cb0
+
 			});
 		});
 <!---商品加减算总数---->
 	$(function () {
-<<<<<<< HEAD
+
 		var t = $(".text_box2");
 		$(".add2").click(function () {
 			t.val(parseInt(t.val()) + 1)
 			setTotal(); GetCount();
 		})
 		$(".min2").click(function () {
-=======
-		var t = $("#text_box2");
-		$("#add2").click(function () {
-			t.val(parseInt(t.val()) + 1)
-			setTotal(); GetCount();
-		})
-		$("#min2").click(function () {
->>>>>>> 0772dd8056caea9867ccb0516c33da9a80447cb0
+
 			t.val(parseInt(t.val(1)) - 1)
 			t.val(1)//初始值防止为负数ADD deathghost
 			setTotal(); GetCount();
 		})
 		function setTotal() {
-<<<<<<< HEAD
+
 			$(".total2").html((parseInt(t.val()) ).toFixed(2));
 			$(".newslist-2").val(parseInt(t.val()) );
-=======
-			$("#total2").html((parseInt(t.val()) * 59).toFixed(2));
-			$("#newslist-2").val(parseInt(t.val()) * 59);
->>>>>>> 0772dd8056caea9867ccb0516c33da9a80447cb0
+
 		}
 		setTotal();
 	})

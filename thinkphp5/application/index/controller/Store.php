@@ -20,7 +20,7 @@ class  Store extends Controller
 			//获取商铺详情
 		$shop_info = $this->shop->select_shop_detail($shop_id);
 		$shop_detail = $shop_info;
-		$shop = $shop_info[0];
+		$shop = $shop_info[0];//获取商店信息
 	
 		$this->assign('shop_info',$shop_info);
 		$this->assign('shop_detail',$shop_detail);

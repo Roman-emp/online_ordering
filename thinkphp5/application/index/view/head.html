@@ -71,7 +71,7 @@ Author URI: http://www.deathghost.cn
 <script type="text/javascript">
 
   var uid = "<?php echo session('user_id');?>";
-  console.log(uid);
+  
   $("#yonghu").click(function(){
         if( uid == '') {window.location.href="{:url('index/user/login')}" ;
          }else{window.location.href="{:url('index/user/user_center')}";} 
@@ -82,7 +82,7 @@ Author URI: http://www.deathghost.cn
   });
       $("#cart").click(function(){
         if( uid == '') {window.location.href="{:url('index/user/login')}" ;
-         }else{window.location.href="{:url('index/user/user_center')}";} 
+         }else{window.location.href="{:url('index/shopping/cart')}";} 
   });
       $("#dingdan").click(function(){
         if( uid == '') {window.location.href="{:url('index/user/login')}" ;
