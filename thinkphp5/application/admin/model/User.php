@@ -1,5 +1,6 @@
 <?php
 namespace app\admin\model;
+use think\DB;
 use think\Model;
 
 class User extends Model
@@ -56,7 +57,11 @@ class User extends Model
 	{
 		return $this->fetch();
 	}
-	
+	public function dologin($name,$pwd)
+	{
+       return Db::name('online_admin')->where('name',$name)
+                                     ->where('password',$pwd)->find();
+	}
 
 	
 }
