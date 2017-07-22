@@ -29,10 +29,31 @@
 		//根据菜品id，查询菜品详情
 		public function select_menu_detail($menu_id)
 		{
-			return Db::table('menu_list')
+			return Db::table('shop_menu')
 						->field('menu_id,menu_name,menu_icon,menu_price,menu_info')
 						->where("menu_id=$menu_id")
 						->select();
+		}
+		//根据商家id,查询商家信息
+		public function select_shop_detail($id)
+		{
+			return Db::name('online_shop')
+					->field('shop_name,shop_menu_type')
+					->where("shop_id=$id")
+					->find();
+		}
+		//根据搜索菜品词,查询相关类型的菜
+		public function search_menu($con)
+		{
+			return Db::name('shop_menu s','online_shop o')
+					->field(' shop_id,
+							  menu_name,
+							  menu_icon,
+							  menu_price,
+							  menu_info,
+							  menu_id')
+					->where('menu_name','like',"%$con%")
+					->select();
 		}
 		//商品加入购物车
 		public function add_cart($data)

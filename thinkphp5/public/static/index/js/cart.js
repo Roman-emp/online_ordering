@@ -61,36 +61,35 @@ function GetCount() {
 	$("#jz1").css("display", "none");
 	$("#jz2").css("display", "block");
 }
+/////////////////////////////
+	
+	
+	
+////////////////////////
 //ADD:对删除链接进行处理2014-9-20DeathGhost
     $(document).ready(function(){
 		$("#delcart1").click(function(){
 			$("#table1").remove();
 			});
 		$("#delcart2").click(function(){
-<<<<<<< HEAD
-			$(".table2").remove();
-
+			$("#table2").remove();
 			});
 		});
 <!---商品加减算总数---->
 	$(function () {
-
-		var t = $(".text_box2");
-		$(".add2").click(function () {
+		var t = $("#text_box2");
+		$("#add2").click(function () {
 			t.val(parseInt(t.val()) + 1)
 			setTotal(); GetCount();
 		})
-		$(".min2").click(function () {
-
+		$("#min2").click(function () {
 			t.val(parseInt(t.val(1)) - 1)
 			t.val(1)//初始值防止为负数ADD deathghost
 			setTotal(); GetCount();
 		})
 		function setTotal() {
-
-			$(".total2").html((parseInt(t.val()) ).toFixed(2));
-			$(".newslist-2").val(parseInt(t.val()) );
-
+			$("#total2").html((parseInt(t.val()) * 59).toFixed(2));
+			$("#newslist-2").val(parseInt(t.val()) * 59);
 		}
 		setTotal();
 	})

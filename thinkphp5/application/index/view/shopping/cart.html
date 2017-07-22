@@ -17,37 +17,38 @@
         </tr>
       </table> 
       {foreach $shop_cart as $menu_info}
-        <table cellpadding="0" cellspacing="0" class="gwc_tb2" class="table2">
-          <tr>
-           <td colspan="7" class="shopname Font14 FontW">店铺：肯德基</td>
-          </tr>
-          <tr>
-            <td class="tb2_td1">
-              <input type="checkbox" value="{$menu_info['menu_id']}" name="newslist" class="newslist-2" />
-              <input type="hidden" value="{$menu_info['menu_id']}" name="menu_id[]"> 
-            </td>
-            <td class="tb2_td2">
+       <table cellpadding="0" cellspacing="0" class="gwc_tb2" class="table2">
+        <tr>
+         <td colspan="7" class="shopname Font14 FontW">店铺：肯德基</td>
+        </tr>
+        <tr>
+          <td class="tb2_td1">
+            <input type="checkbox"   name="menu_id[]" value="{$menu_info['menu_id']}"  class="newslist" class="newslist-2" />
+          </td>
+          <td class="tb2_td2">
               <a href="/index/shopping/detail?menu_id={$menu_info['menu_id']}" target="_blank">
                 <img src="{$menu_info['menu_icon']}"/>
               </a>
-            </td>
-            <td class="tb2_td3">
-              <a href="/index/shopping/detail?menu_id={$menu_info['menu_id']}" target="_blank">{$menu_info['menu_name']}</a>
-            </td>
-            <td class="tb1_td4">
-              <s>￥{$menu_info['menu_price']+15}</s>
-            </td>
-            <td class="tb1_td5">
-              <input class="min2" name=""  style=" width:30px; height:30px;border:1px solid #ccc;" type="button" value="-" />
-              <input class="text_box2" name="" type="text" value="1" style=" width:40px;height:28px; text-align:center; border:1px solid #ccc;" />
-              <input class="add2" name="" style=" width:30px; height:30px;border:1px solid #ccc;" type="button" value="+" />
-            </td>
-            <td class="tb1_td6">
-              <label class="total2" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;">{$menu_info['menu_price']}</label>
-            </td>
-            <td class="tb1_td7"><button name="delete" value="delete">删除</button></td>
-          </tr>
-        </table>
+            </a>
+          </td>
+          <td class="tb2_td3">
+            <a href="/index/shopping/detail?menu_id={$menu_info['menu_id']}" target="_blank">{$menu_info['menu_name']}</a>
+          </td>
+          <td class="tb1_td4">
+            <s>￥{$menu_info['menu_price']+15}</s>
+          </td>
+          <td class="tb1_td5">
+            <input class="min2" name=""  style=" width:30px; height:30px;border:1px solid #ccc;" type="button" value="-" />
+            <input class="text_box2" name="" type="text" value="1" style=" width:40px;height:28px; text-align:center; border:1px solid #ccc;" />
+            <input class="add2" name="" style=" width:30px; height:30px;border:1px solid #ccc;" type="button" value="+" />
+          </td>
+          <td class="tb1_td6">
+            <label class="total2" name="price[]" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;">{$menu_info['menu_price']}
+            </label>
+          </td>
+          <td class="tb1_td7"><button name="delete" value="delete">删除</button></td>
+        </tr>
+      </table>
          {/foreach}
         <table cellpadding="0" cellspacing="0" class="gwc_tb3">
           <tr>
@@ -59,10 +60,10 @@
               取消 </td>
             <td class="tb3_td2 GoBack_Buy Font14"><a href="#" target="_blank">继续购物</a></td>
             <td class="tb3_td2">已选商品
-              <label id="shuliang" style="color:#ff5500;font-size:14px; font-weight:bold;">0</label>
+              <label class="shuliang" style="color:#ff5500;font-size:14px; font-weight:bold;">0</label>
               件</td>
             <td class="tb3_td3">合计(不含运费):<span>￥</span><span style=" color:#ff5500;">
-              <label id="zong1" style="color:#ff5500;font-size:14px; font-weight:bold;">0.00</label>
+              <label class="zong1" style="color:#ff5500;font-size:14px; font-weight:bold;">0.00</label>
               </span></td>
             <td class="tb3_td4">
               <span id="jz1">结算</span>
