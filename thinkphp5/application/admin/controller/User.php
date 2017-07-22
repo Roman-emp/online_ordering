@@ -179,9 +179,11 @@ class User extends Controller
 	//编辑用户信息
 	public function editUser()
 	{
-
+		$id = input('user_id');
+		
 		$usM = Db('online_user');
-		$usM_info= $usM->where("id={$id}")->find();
+		$usM_info= $usM->where("use_id=$id")->find();
+	
 		$this->assign('usM_info', $usM_info);
 		return $this->fetch();
 	}

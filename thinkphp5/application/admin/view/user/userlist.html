@@ -90,13 +90,11 @@ function admin_del(obj,id){
 	});
 }
 /*管理员-编辑*/
-function admin_edit(){
-	 $.get('/admin/user/editUser',{user_id:user_id},function(data){
-	 	alert('确定删除');
-	 	if(data){
-
-	 		window.location.reload();
-	 	}
+function admin_edit(user_id){
+	console.log(user_id);
+	 $.get('/admin/user/editUser',{user_id:user_id},function (data){
+	 	
+	 	
 
 	},'json');
 }
