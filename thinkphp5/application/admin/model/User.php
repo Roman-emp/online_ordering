@@ -4,23 +4,6 @@ use think\Model;
 
 class User extends Model
 {
-	public function checkUser($username,$password)
-	{
-
-		$data = $this->where('name',$username)
-					 ->where('password',md5($password))
-					 ->find();
-		return $data?true:false;
-	}
-
-	//获取用户列表
-	public function getUserList()
-	{
-		$res = $this->paginate(3);
-		$render = $res->render();
-		return ['data'=>$res,'render'=>$render];
-	}
-
 	//获取管理员列表
 	public function adminlist()
 	{
@@ -29,6 +12,51 @@ class User extends Model
 		$res = $adM->select();
 		return $res;
 	}
+
+	//添加管理员
+	public function add($data)
+	{
+
+		//实例化对象
+		$adM = Db('online_admin');
+		$res = $adM->insert($data);
+		return $res;
+	}
+
+	//编辑管理员信息
+	public  function updateModel($id, $data)
+	{
+
+		//实例化对象
+		$adM = Db('online_admin');
+		$result = $adM->where("id={$id}")->update($data);
+		return $result;
+	}
+
+	//获取用户列表信息
+	public function getUserList()
+	{
+		//实例化对象
+		$adM = Db('online_user');
+		$result = $adM->select();
+		return $result;
+	}
+
+	//添加用户信息
+	public function addUser($data)
+	{
+		$usM = Db('online_user');
+		$result = $usM->insert($data);
+		return $result;
+	}
+
+
+	//编辑用户信息
+	public function editUser()
+	{
+		return $this->fetch();
+	}
+	
 
 	
 }

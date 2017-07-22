@@ -93,7 +93,6 @@
      </p>
      <div class="SCcontent">
     {foreach $menu_list as $menu}
-    
      <a href="/index/shopping/detail?menu_id={$menu['menu_id']}&shop_id={$menu['shop_id']}&shop_name={$menu['shop_name']}"  title="菜品名称">
         <figure>
            <img src="{$menu['menu_icon']}">
@@ -163,7 +162,7 @@
      </p>
      
      <div class="DCcontent">
-      {foreach $menu_list as $shop}
+      {foreach $shop_info as $shop}
        <a href="/index/store/storeDetail?shop_id={$shop['shop_id']}" target="_blank" title="{$shop['shop_name']}">
            <figure>
            <img src="{$shop['shop_icon']}">
