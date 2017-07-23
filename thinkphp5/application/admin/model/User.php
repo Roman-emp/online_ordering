@@ -55,8 +55,13 @@ class User extends Model
 	//编辑用户信息
 	public function editUser()
 	{
+		$usM = Db('online_user');
+		$result = $usM->
+
 		return $this->fetch();
 	}
+
+	//用户登录
 	public function dologin($name,$pwd)
 	{
        return Db::name('online_admin')->where('name',$name)
