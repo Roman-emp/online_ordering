@@ -7,9 +7,9 @@ function selectsearch(theA,word){
  }
  theA.className='choose';
   if(word=='restaurant_name'){
-   document.getElementById('main_a_serach').action="search_s.html";//Test url
+   document.getElementById('main_a_serach').action="/index/shopping/search_shop";//Test url
   }else if(word=='food_name'){
-   document.getElementById('main_a_serach').action="search_p.html";//Test url
+   document.getElementById('main_a_serach').action="/index/shopping/search_menu";//Test url
   }
 }
 //INDEX TAB LIST

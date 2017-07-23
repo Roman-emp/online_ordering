@@ -43,7 +43,7 @@
       <span>我要买：<input type="number" name="Number" required autofocus min="1" value="1"/>份</span>
       <span>库存：3258</span>
       <div class="Buybutton">
-       <input name="" type="submit" value="加入购物车" class="BuyB" id="cart">
+       <input name="" type="submit" value="加入购物车" class="BuyB" id="carts">
        <a href="/index/store/storeDetail?menu_id={$menu['menu_id']}&shop_id={$shop_id}"><span class="Backhome">进入店铺首页</span></a>
       </div>
       </form>
@@ -178,10 +178,7 @@ $(function(){
   });
   });
 
-  $("#cart").click(function(){
-        if( uid == '') {window.location.href="{:url('index/user/login')}" ;
-         }else{window.location.href="{:url('index/user/user_center')}";} 
-  });
+ 
 </script>
     {include file="foot"}
 </body>

@@ -8,9 +8,11 @@ use app\index\model\Menu_list;
 class Shopping extends Controller
 {
 	protected $menu;
+	protected $shop;
 	public function _initialize()
 	{
 		$this->menu = new Menu_list();
+		$this->shop = new Menu_list();
 	}
 	//商品详情
 	public function detail()
@@ -84,11 +86,14 @@ class Shopping extends Controller
 	//购物车展示所选菜品
 	public  function  cart()
 	{
-		$user_id = session('user_id');//用户id
-		
-		//查询登录用户的购物车信息
+		/*商家名字暂未获取*/
+		/*用户id暂未添加*/
+			//$user_id = session('user_id');//用户id
+		//测试id
+			$user_id = 2;
+		//查询登录用户的购物车信息-------商品未进行去重
 		$shop_cart = $this->menu->select_cart($user_id);
-	
+
 		$this->assign('shop_cart',$shop_cart);
 		return $this->fetch();
 	}
@@ -108,15 +113,45 @@ class Shopping extends Controller
 	//生成/删除订单
 	public function confirm_order()
 	{
+		dump($_REQUEST);
+		die;
 		if($_REQUEST['delete'])
 		{
 			$menu_id = implode(',',$_REQUEST['menu_id']);//获取菜单id
+			die;
 			$delete_cart = $this->menu->clean_cart($menu_id);//删除购物车菜品
 			if ($delete_cart)
 			{
 				$this->success('菜品删除成功');
 			}
 		}
+	}
+	//搜索对应菜单
+	public function search_menu()
+	{
+		dump(input('keyword'));
+		$con = input('keyword');//搜索关键字
+			//查询匹配内容
+		$menus = $this->menu->search_menu($con);
+		
+			//查询对应商家
+		foreach ($menus as $key => $value) 
+		{
+			$shop_id[] = $value['shop_id'];
+
+			$id = array_pop($shop_id);
+			//dump($id);
+			$shop = $this->shop->select_shop_detail($id);
+		}
+
+		$this->assign('shop',$shop);
+		$this->assign('menus',$menus);
+		return $this->fetch();
+	}
+	//搜索对应商铺
+	public function search_shop()
+	{
+		return $this->fetch();
 	}
 	
 }

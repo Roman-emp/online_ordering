@@ -26,24 +26,27 @@
 <div class="header"></div>
 <div class="loginWraper">
     <div id="loginform" class="loginBox">
-        <form class="form form-horizontal" action="index.html" method="post">
+        <form class="form form-horizontal" action="{:url('admin/user/dologin')}" method="post">
             <div class="row cl">
                 <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
                 <div class="formControls col-xs-8">
-                    <input id="" name="" type="text" placeholder="账户" class="input-text size-L">
+                    <input id="" name="name" type="text" placeholder="账户" class="input-text size-L">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
                 <div class="formControls col-xs-8">
-                    <input id="" name="" type="password" placeholder="密码" class="input-text size-L">
+                    <input id="" name="pwd" type="password" placeholder="密码" class="input-text size-L">
                 </div>
             </div>
             <div class="row cl">
                 <div class="formControls col-xs-8 col-xs-offset-3">
-                    <input class="input-text size-L" type="text" placeholder="验证码" onblur="if(this.value==''){this.value='验证码:'}" onclick="if(this.value=='验证码:'){this.value='';}" value="验证码:" style="width:120px;">
-                    <img src="{:captcha_src()}">
-                    <a id="kanbuq" href="javascript:;">看不清，换一张</a>
+                    <input class="input-text size-L" type="text" name = "yzm" placeholder="验证码" onblur="if(this.value==''){this.value='验证码:'}" onclick="if(this.value=='验证码:'){this.value='';}" value="验证码:" style="width:120px;">
+                    
+                       
+                    <img src="{:captcha_src()}" onClick="this.src=this.src+'?'+Math.random()">
+                   <!--  <a id="kanbuq" href="javascript:;"> 看不清，换一张</a> -->
+                    
                 </div>
             </div>
             <div class="row cl">
@@ -66,4 +69,5 @@
 <script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="__PUBLIC_ADMIN__admin1/js/H-ui.js"></script>
 </body>
+
 </html>
