@@ -53,10 +53,11 @@ class User extends Model
 
 
 	//编辑用户信息
-	public function editUser()
+	public function editUser($user_id,$data)
 	{
+
 		$usM = Db('online_user');
-		$result = $usM->
+		$result = $usM->where("user_id={$user_id}")->update();
 
 		return $this->fetch();
 	}

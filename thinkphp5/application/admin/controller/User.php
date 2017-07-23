@@ -204,7 +204,14 @@ class User extends Controller
 
 		];
 
-		dump($data); exit;
+		$result = $this->usermode->editUser($user_id,$data);
+		if($result ==false)
+		{
+			$this->error('编辑失败...', 'editUser');
+		}else{
+			$this->success('编辑成功','userlist');
+		}
+
 
 
 	}
