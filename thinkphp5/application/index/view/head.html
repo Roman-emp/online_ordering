@@ -71,11 +71,9 @@ Author URI: http://www.deathghost.cn
 <script type="text/javascript">
 
   var uid = "<?php echo session('user_id');?>";
-<<<<<<< HEAD
+
   //console.log(uid);
-=======
-  
->>>>>>> 881b73035eab6ce06a848f017a295cd65f771f4a
+
   $("#yonghu").click(function(){
         if( uid == '') {window.location.href="{:url('index/user/login')}" ;
          }else{window.location.href="{:url('index/user/user_center')}";} 
