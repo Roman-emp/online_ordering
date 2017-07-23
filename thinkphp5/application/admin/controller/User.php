@@ -194,15 +194,18 @@ class User extends Controller
 	public function updateUser()
 	{
 		$user_id = $_REQUEST['user_id'];
+
 		//接受提交过来的用户信息
 		$data = [
-			'user_name'     =>input('username'),
+			'user_name'     =>input('user_name'),
 			'user_pwd'      =>md5(input('user_pwd')),
-			'user_email'    =>input('email'),
+			'user_email'    =>input('user_email'),
 			'user_tel'      =>input('user_tel'),
 			'user_icon'   => input('user_icon'),
 
 		];
+
+
 
 		$result = $this->usermode->editUser($user_id,$data);
 		if($result ==false)
@@ -212,8 +215,28 @@ class User extends Controller
 			$this->success('编辑成功','userlist');
 		}
 
+	}
+
+	//删除用户信息
+	public function delUser()
+	{
+		$user_id = $_GET['user_id'];
+
+		//实例化对象
+		$usM = Db('online_user');
+		$check = $usM ->where("user_id = {$user_id}")->find();
+
+		if($check == false)
+		{
+			$this->error('非法操作', 'userlist');
+		}
+		$result = $usM ->where("user_id = {$user_id}")->delete();
 
 
+		if($result == true)
+		{
+			$this->success('删除成功', 'userlist');
+		}
 	}
 
 

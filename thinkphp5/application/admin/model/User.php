@@ -57,9 +57,10 @@ class User extends Model
 	{
 
 		$usM = Db('online_user');
-		$result = $usM->where("user_id={$user_id}")->update();
-
-		return $this->fetch();
+		
+		$result = $usM->where("user_id = {$user_id}")->update($data);
+    
+		return $result;
 	}
 
 	//用户登录
