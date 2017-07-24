@@ -16,7 +16,7 @@ class Index extends Controller
 	{
 		
 		$menu_list = $this->menu->select_menu();
-
+		dump(session('user_id'));
 		//查询商家的id,去除重复商家的id
 		foreach ($menu_list as $key => $value) 
 		{

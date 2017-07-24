@@ -6,54 +6,43 @@
 </head>
 <body>
 <article class="page-container">
-	<form action = '/admin/user/updateUser' class="form form-horizontal" id="form-article-add" method = 'post' enctype="multipart/form-data" >
+	<form action = '/admin/storejoin/update' class="form form-horizontal" id="form-article-add" method = 'post' enctype="multipart/form-data" >
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>用户名：</label>
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>商家账户：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text"  placeholder="" value="{$usM_info['user_name']}" name="user_name" />
-			</div>
-		</div>
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">密码：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text"  placeholder="" value="{$usM_info['user_pwd']}" name="user_pwd">
-			</div>
-		</div>
-		
-
-		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">手机：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text"  placeholder="" value="{$usM_info['user_tel']}" name="user_tel">
+				<input type="text" class="input-text"  placeholder="" value="{$stM_info['store_name']}" name="store_name" />
 			</div>
 		</div>
 
+		
+
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">邮箱：</label>
+			<label class="form-label col-xs-4 col-sm-2">联系电话：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text"  placeholder="" value="{$usM_info['user_email']}" name="user_email">
+				<input type="text" class="input-text"  placeholder="" value="{$stM_info['store_tel']}" name="store_tel">
 			</div>
 		</div>
-		
-		
 		<div class="row cl">
-			<label class="form-label col-xs-4 col-sm-2">头像：</label>
-			<div class="formControls col-xs-8 col-sm-9">
-				<div class="uploader-thum-container">
-					<div id="fileList" class="uploader-list" name="user_icon"></div>
-					<div id="filePicker">选择图片</div>
-					
+			<label class="form-label col-xs-4 col-sm-2">是否审核：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="radio-box">
+					<input name="is_check" type="radio" value="1" >
+					<label for="1">是</label>
+				</div>
+				<div class="radio-box">
+					<input type="radio" value="0" name="is_check" checked>
+					<label for="0">否</label>
 				</div>
 			</div>
-		</div>	
-
+		</div>
 		
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-				<input type="hidden" name="user_id" value="{$usM_info['user_id']}">
-                <input style="width:60px; height:30px; background-color: cyan; " type="submit" name="updateUser" value="更新" />
+				<input type="hidden" name="store_id" value="{$stM_info['store_id']}">
+                <input style="width:60px; height:30px; background-color: cyan; " type="submit" name="update" value="更新" />
 			</div>
 		</div>
+		
 	</form>
 </article>
 

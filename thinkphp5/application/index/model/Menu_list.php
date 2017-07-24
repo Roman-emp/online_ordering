@@ -6,6 +6,12 @@
 
 	class Menu_list extends Model
 	{
+		/*protected $menu;
+	
+		public function _initialize()
+		{
+			$this->menu = new Menu_list();
+		}*/
 		//查询商家对应的菜单
 		public function select_menu()
 		{
@@ -38,9 +44,17 @@
 		public function select_shop_detail($id)
 		{
 			return Db::name('online_shop')
-					->field('shop_name,shop_menu_type')
+					->field('shop_name,shop_menu_type,shop_icon,shop_address')
 					->where("shop_id=$id")
 					->find();
+		}
+		//根据查询有关商家的关键字,查询商家信息
+		public function select_shop($con)
+		{
+			return Db::name('online_shop')
+					->field('shop_name,shop_menu_type,shop_icon,shop_address,shop_id')
+					->where("shop_name|shop_menu_type",'like',"%$con%")
+					->select();
 		}
 		//根据搜索菜品词,查询相关类型的菜
 		public function search_menu($con)
@@ -58,18 +72,48 @@
 		//商品加入购物车
 		public function add_cart($data)
 		{
-			$cart = Db::name('shop_cart')->insert($data);
-			return $cart;
+			// $num = $data['num'];//添加商品的数量
+			// $menu_id = $data['menu_id'];//商品id
+			// $shop_id = $data['shop_id'];//商家id
+			// $user_id = $data['user_id'];
+			// //获取商品详情
+			// $menu_detail = select_menu_detail($menu_id);
+
+			// $menu_name = $menu_detail[0]['menu_name'];//商品名称
+			// $menu_icon = $menu_detail[0]['menu_icon'];//商品图片
+			// $menu_price = $menu_detail[0]['menu_price'];//商品价格
+			// $last_operate_time = date('Y-m-d H:i:s',time());//最后操作时间
+
+			// $data = [
+			// 	'menu_num'          => $num,
+			// 	'menu_id'			=> $menu_id,
+			// 	'menu_name'			=> $menu_name,
+			// 	'menu_icon'			=> $menu_icon,
+			// 	'menu_price'		=> $menu_price,
+			// 	'last_operate_time'	=> $last_operate_time,
+			// 	'shop_id' 			=> $shop_id,
+			// 	'user_id'			=> $user_id,//用户id
+			// ];
+			return Db::name('shop_cart')->insert($data);	
 		}
-		//查询购物车----------(对应店铺暂缺)
-		public function select_cart($user_id)
+		//查询用户是否,将商品重复加入购物车
+		public function select_cart($shop_id,$menu_id,$user_id)
 		{
 			return  Db::name('shop_cart')
 						->field('menu_id,menu_name,menu_price,menu_icon,menu_num')
-						->where('user_id','=',$user_id)
+						->where('user_id',$user_id)
+						->where('shop_id',$shop_id)
+						->where('menu_id',$menu_id)
 						->select();	
 		}
-
+		//查询用户加入购物车的商品
+		public function select_user_cart($user_id)
+		{
+			return  Db::name('shop_cart')
+						->field('shop_id,menu_id,menu_name,menu_price,menu_icon,menu_num')
+						->where('user_id',$user_id)
+						->select();	
+		}
 		//清空购物车
 		public function clean_cart($menu_id)
 		{

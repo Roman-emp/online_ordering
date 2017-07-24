@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>商家入驻</title>
+<meta name="author" content="DeathGhost" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC_INDEX__css/stylestorejoin.css" />
+<style>
+body{height:100%;background:#16a085;overflow:hidden;}
+canvas{z-index:-1;position:absolute;}
+</style>
+<script src="__PUBLIC_INDEX__js/jquerystorejoin.js"></script>
+<script src="__PUBLIC_INDEX__js/verificationNumbers.js"></script>
+<script src="__PUBLIC_INDEX__js/Particleground.js"></script>
+<script>
+$(document).ready(function() {
+  //粒子背景特效
+  $('body').particleground({
+    dotColor: '#5cbdaa',
+    lineColor: '#5cbdaa'
+  });
+  //验证码
+  createCode();
+  //测试提交，对接程序删除即可
+  $(".submit_btn").click(function(){
+    location.href="index.html";
+    });
+});
+</script>
+</head>
+<body>
+<dl class="admin_login">
+ <dt>
+  <strong>商家入驻</strong>
+  <em>Merchants settled</em>
+ </dt>
+ <form action="/index/storejoin/addStoreDetail"  method="post">
+ <dd class="user_icon">
+  <input type="text" placeholder="商家账号" name="store_name" class="login_txtbx"/>
+ </dd>
+ <dd class="pwd_icon">
+  <input type="password" placeholder="密码" name="store_pwd" class="login_txtbx"/>
+ </dd>
+ 
+  <dd class="pwd_icon">
+  <input type="text" placeholder="联系电话" name="store_tel" class="login_txtbx"/>
+ </dd>
+ <dd class="val_icon">
+ 
+
+    <input type="text" name="img" placeholder="验证码" class="login_txtbx" style="width:75px; height:30px;"><img src="{:captcha_src()}"  style="margin-left:8px; vertical-align:bottom" width="120" height="36" id = "yzm" onClick="this.src=this.src+'?'+Math.random()" >
+
+ </dd>
+ <dd>
+  <input type="submit" name='submit' value="立即注册" class="submit_btn"/>
+
+ </dd>
+ </form>
+ <dd>
+  <p>© 2015-2016 DeathGhost 版权所有</p>
+  <p>陕B2-20080224-1</p>
+ </dd>
+</dl>
+</body>
+</html>
