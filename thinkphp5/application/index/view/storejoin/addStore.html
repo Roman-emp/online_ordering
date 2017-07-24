@@ -32,28 +32,33 @@ $(document).ready(function() {
 <dl class="admin_login">
  <dt>
   <strong>商家入驻</strong>
-  <em>Management System</em>
+  <em>Merchants settled</em>
  </dt>
+ <form action="/index/storejoin/addStoreDetail"  method="post">
  <dd class="user_icon">
-  <input type="text" placeholder="账号" class="login_txtbx"/>
+  <input type="text" placeholder="商家账号" name="store_name" class="login_txtbx"/>
  </dd>
  <dd class="pwd_icon">
-  <input type="password" placeholder="密码" class="login_txtbx"/>
+  <input type="password" placeholder="密码" name="store_pwd" class="login_txtbx"/>
+ </dd>
+  <dd class="pwd_icon">
+  <input type="text" placeholder="联系电话" name="store_tel" class="login_txtbx"/>
  </dd>
  <dd class="val_icon">
-  <div class="checkcode">
-    <input type="text" id="J_codetext" placeholder="验证码" maxlength="4" class="login_txtbx">
-    <canvas class="J_codeimg" id="myCanvas" onclick="createCode()">对不起，您的浏览器不支持canvas，请下载最新版浏览器!</canvas>
-  </div>
-  <input type="button" value="验证码核验" class="ver_btn" onClick="validate();">
+ 
+
+    <input type="text" name="img" placeholder="验证码" class="login_txtbx" style="width:75px; height:30px;"><img src="{:captcha_src()}"  style="margin-left:8px; vertical-align:bottom" width="120" height="36" id = "yzm" onClick="this.src=this.src+'?'+Math.random()" >
+
  </dd>
  <dd>
-  <input type="button" value="立即登录" class="submit_btn"/>
+  <input type="submit" name='submit' value="立即注册" class="submit_btn"/>
+
  </dd>
+ </form>
  <dd>
   <p>© 2015-2016 DeathGhost 版权所有</p>
   <p>陕B2-20080224-1</p>
  </dd>
-</dl>
+</dl> <img src="{:captcha_src()}"  style="margin-left:8px; vertical-align:bottom" width="120" height="36" id = "yzm" onClick="this.src=this.src+'?'+Math.random()" >
 </body>
 </html>
