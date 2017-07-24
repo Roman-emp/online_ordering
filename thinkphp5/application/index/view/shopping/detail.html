@@ -5,9 +5,9 @@
    <section class="food-hd">
   {foreach $menu_list as $menu}
     <div class="foodpic">
-     <img src="{$menu['menu_icon']}" id="showimg">
+     <img src="/uploads/{$menu['menu_icon']}" id="showimg">
       <ul class="smallpic">
-       <li><img src="{$menu['menu_icon']}" onmouseover="show(this)" onmouseout="hide()"></li>
+       <li><img src="/uploads/{$menu['menu_icon']}" onmouseover="show(this)" onmouseout="hide()"></li>
       </ul>
     </div>
     <div class="foodtext">
@@ -83,7 +83,7 @@
     <div class="menutab show">
       <div class="cont_padding">
         {foreach $menu_list as $menu}
-         <img src="{$menu['menu_icon']}">
+         <img src="/uploads/{$menu['menu_icon']}">
          <p>{$menu['menu_info']}</p>
         {/foreach}
       </div>

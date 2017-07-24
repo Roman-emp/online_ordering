@@ -20,7 +20,7 @@
 							<th width="100">商品名称</th>
 							<th width="100">价格</th>
 						
-							<th width="100">商品分类</th>
+							<th width="100">商品图片</th>
 							<th width="100">创建时间</th>
 							<th width="80">操作</th>
 						</tr>
@@ -32,7 +32,9 @@
 							<td>{$value['menu_id']}</td>
 							<td>{$value['menu_name']}</td>
 							<td>{$value['menu_price']}</td>
-							<td>分类</td>
+							<td>
+								<img src="/uploads/{$value['menu_icon']}" alt="菜品" style="width:100px; height:100px">
+							</td>
 							<td>{$value['create_time']}</td>
 							<td class="td-status">
 							<a href="edit?id={$value['menu_id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
@@ -49,9 +51,9 @@
 {include file="footer"}
 
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
-<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 function del(id){
 	if(confirm("您确定要删除吗?")){
