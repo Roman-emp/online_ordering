@@ -7,15 +7,13 @@ use app\admin\model\User as UserModel;
 
 class User extends Controller
 {
-    
+   //初始化对象 
    public function _initialize()
    {
 
       $this->usermode = new UserModel();
 
     }
-   
- 
 
 	public function login()
 	{
@@ -25,9 +23,8 @@ class User extends Controller
 	//获取管理员列表
 	public  function  adminlist()
 	{
-		//实例化对象模型
-		$adModel = new UserModel();
-		$res = $adModel->adminlist();
+		
+		$res = $this->usermode->adminlist();
 		
 		$this->assign('res',$res);
 		return $this->fetch();
@@ -56,9 +53,8 @@ class User extends Controller
 			'create_time'=> date('Y-m-d H:i:s', time()),
 		];
 
-		//实例化对象模型
-		$adModel = new UserModel();
-		$result = $adModel->add($data);
+		
+		$result = $this->usermode->add($data);
 		if($result == true)
 		{
 			$this->success('添加成功');
@@ -101,9 +97,8 @@ class User extends Controller
 		];
 		
 
-		//实例化对象模型
-		$adModel = new UserModel();
-		$result = $adModel->updateModel($id, $data);
+		
+		$result = $this->usermode->updateModel($id, $data);
 
 		if($result == false)
 		{
@@ -142,9 +137,8 @@ class User extends Controller
 	//获取用户列表信息
 	public function userlist()
 	{
-		//实例化模型
-		$usModel = new UserModel();
-		$usM_list = $usModel->getUserList();
+	
+		$usM_list = $this->usermode->getUserList();
 		$this->assign('usM_list', $usM_list);
 		return $this->fetch();
 	}
@@ -161,7 +155,7 @@ class User extends Controller
 		//接受提交过来的数据
 		$data = [
 			'user_name'     =>input('username'),
-			'user_pwd'      =>input('user_pwd'),
+			'user_pwd'      =>md5(input('user_pwd')),
 			'user_email'    =>input('email'),
 			'user_tel'      =>input('user_tel'),
 			'user_integrate'=>50,
@@ -172,10 +166,7 @@ class User extends Controller
 
 		];
 
-		//实例化模型
-		$usModel = new UserModel();
-
-		$result = $usModel->addUser($data);
+		$result = $this->usermode->addUser($data);
 		if($result>0)
 		{
 			$this->success('添加成功', 'userlist');
@@ -189,14 +180,67 @@ class User extends Controller
 	//编辑用户信息
 	public function editUser()
 	{
-		$id = input('user_id');
 		
+		$user_id = $_GET['user_id'];
+
 		$usM = Db('online_user');
-		$usM_info= $usM->where("use_id=$id")->find();
+		$usM_info= $usM->where("user_id=$user_id")->find();
 	
 		$this->assign('usM_info', $usM_info);
 		return $this->fetch();
 	}
+
+	//处理用户编辑信息
+	public function updateUser()
+	{
+		$user_id = $_REQUEST['user_id'];
+
+		//接受提交过来的用户信息
+		$data = [
+			'user_name'     =>input('user_name'),
+			'user_pwd'      =>md5(input('user_pwd')),
+			'user_email'    =>input('user_email'),
+			'user_tel'      =>input('user_tel'),
+			'user_icon'   => input('user_icon'),
+
+		];
+
+
+
+		$result = $this->usermode->editUser($user_id,$data);
+		if($result ==false)
+		{
+			$this->error('编辑失败...', 'editUser');
+		}else{
+			$this->success('编辑成功','userlist');
+		}
+
+	}
+
+	//删除用户信息
+	public function delUser()
+	{
+		$user_id = $_GET['user_id'];
+
+		//实例化对象
+		$usM = Db('online_user');
+		$check = $usM ->where("user_id = {$user_id}")->find();
+
+		if($check == false)
+		{
+			$this->error('非法操作', 'userlist');
+		}
+		$result = $usM ->where("user_id = {$user_id}")->delete();
+
+
+		if($result == true)
+		{
+			$this->success('删除成功', 'userlist');
+		}
+	}
+
+
+
      //登录信息处理
 	 public function dologin()
 	    {

@@ -49,9 +49,9 @@
 						<td class="td-status"><span class="label label-success radius">
 						{$value['user_member']}
 						</span></td>
-						<td class="td-manage"> 
-						<a title="编辑" href="javascript:void(0);" onclick="admin_edit({$value['user_id']})" user_id = "edit" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> 
-						<a title="删除" href="javascript:;" onclick="admin_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+						<td class="td-manage">
+						<a href="editUser?user_id={$value['user_id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
+							<a href="delUser?user_id={$value['user_id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="删除" onclick="return del(1)"/></a></td>
 					</tr>
 				
 				</tbody>
@@ -63,10 +63,7 @@
 
 {include file="footer"}
 
-<!--请在下方写此页面业务相关的脚本--> 
-<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script> 
-<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
-<script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script> 
+
 <script type="text/javascript">
 /*
 	参数解释：
@@ -95,7 +92,6 @@ function admin_edit(user_id){
 	 $.get('/admin/user/editUser',{user_id:user_id},function (data){
 	 	
 	 	
-
 	},'json');
 }
 /*管理员-停用*/
