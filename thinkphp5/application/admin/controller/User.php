@@ -266,9 +266,6 @@ class User extends Controller
 	          }
 	    }
 
-<<<<<<< HEAD
-	    //
-=======
->>>>>>> 0ad855c025d6547614e0406d080785e1c48a6616
+
 	
 }
