@@ -38,7 +38,7 @@
 							<td>{$value['create_time']}</td>
 							<td class="td-status">
 							<a href="edit?id={$value['menu_id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
-							<a href="delete?id={$value['menu_id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="删除" onclick="return del(1)"/></a>
+							<a href="javascript:void(0);"><input style="width:60px;height:30px;background-color:cyan;" type="button" value="删除" onclick="del({$value['menu_id']})"/></a>
 							</td>
 						</tr>
 					</tbody>
@@ -56,8 +56,16 @@
 <script type="text/javascript" src="__PUBLIC_ADMIN__lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
 function del(id){
-	if(confirm("您确定要删除吗?")){
-		location.href = "/delete/id/"+id;
+	if(confirm("您确定要删除吗?"))
+	{
+		//location.href = "/delete/id/"+id;
+		//假设商家为shop_id = 1;
+		$.get("{:url('/admin/dishes/delete')}",{menu_id:id,shop_id:1},function(data){
+			if(data)
+			{
+            	window.location.reload();
+        	}
+		},'json');
 	}
 }
 
