@@ -38,7 +38,7 @@
 				<tbody>
 					<tr class="text-c">
 						<td><input type="checkbox" value="1" name=""></td>
-						<td>{$value['id']}</td>
+						<td>{$value['admin_id']}</td>
 						<td>{$value['name']}</td>
 						<td>{$value['telephone']}</td>
 						<td>{$value['email']}</td>
@@ -57,8 +57,8 @@
 						{/if}
 						</span></td>
 						<td class="td-manage">
-						<a href="edit?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
-							<a href="delete?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="删除" onclick="return del(1)"/></a></td>
+						<a href="edit?id={$value['admin_id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
+							<a href="delete?id={$value['admin_id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="删除" onclick="return del(1)"/></a></td>
 					</tr>
 				
 				</tbody>

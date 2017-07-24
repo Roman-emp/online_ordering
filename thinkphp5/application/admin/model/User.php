@@ -57,11 +57,14 @@ class User extends Model
 	{
 		return $this->fetch();
 	}
+	//判断登录
 	public function dologin($name,$pwd)
 	{
        return Db::name('online_admin')->where('name',$name)
                                      ->where('password',$pwd)->find();
 	}
+
+	//
 
 	
 }

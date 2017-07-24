@@ -119,7 +119,7 @@ class User extends Controller
 		$id = $_GET['id'];
 			
 			$adM = Db('online_admin');
-			$check = $adM->where("id={$id}")->find();
+			$check = $adM->where("admin_id={$id}")->find();
 
 		
 			if($check == false)
@@ -132,7 +132,7 @@ class User extends Controller
 				$this->error('没有权限...','adminlist');
 			}
 
-			$back = $adM->where("id = {$id} and role = 0")->delete();
+			$back = $adM->where("admin_id = {$id} and role = 0")->delete();
 			if($back == true)
 			{
 				$this->success('删除成功','adminlist');
@@ -200,7 +200,7 @@ class User extends Controller
      //登录信息处理
 	 public function dologin()
 	    {
-	     var_dump(session('id'));
+	     // var_dump(session('id'));
 	       $data = input();
 
 	        if(!captcha_check($data['yzm'])){
@@ -210,7 +210,8 @@ class User extends Controller
 	          $pwd  = input('pwd');
 	          $pwd  = md5($pwd);
 	          $re = $this->usermode->dologin($name,$pwd);
-	          $id = $re['id'];
+	   
+	          $id = $re['admin_id'];
 	          if($re)
 	          {
 	              session('id', $id);
@@ -220,5 +221,7 @@ class User extends Controller
 	            $this->error('用户名或密码错误');
 	          }
 	    }
+
+	    //
 	
 }
