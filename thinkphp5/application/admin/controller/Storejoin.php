@@ -84,4 +84,22 @@ class Storejoin extends Base
 		}
 	}
 	
+	//搜索
+	
+	public function search()
+	{
+
+			//接受提交过来的信息
+			$data['search'] = input('search');
+			$data['button']	= input('button');
+			
+			$stM = Db('store_join');
+			$res = $stM->where('store_name','like','%'.$data['search'].'%')
+					->select();
+			$this->assign('res',$res);
+			return $this->fetch();
+				
+	
+	}
+	
 }

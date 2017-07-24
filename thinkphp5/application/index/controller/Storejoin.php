@@ -44,9 +44,9 @@ class  Storejoin  extends Controller{
 		$result	=$this->storejoinmodel->addStorejoin($arr);
 		if($result == true)
 		{
-			$this->success('商家入驻成功','/index/user/login');
+			$this->success('商家注册成功','/index/user/login');
 		}else{
-			$this->error('商家入驻失败','addStore');
+			$this->error('商家入注册失败','addStore');
 		}
 		
 		
