@@ -36,7 +36,7 @@ class  Storejoin  extends Controller{
 		
 		$arr = [
 			'store_name'	=>input('store_name'),
-			'store_pwd'		=>input('store_pwd'),
+			'store_pwd'		=>md5(input('store_pwd')),
 			'store_tel'		=>input('store_tel'),
 			'create_time'	=>date('Y-m-d H:i:s',time()),
 		];
