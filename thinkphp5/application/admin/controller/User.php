@@ -238,6 +238,23 @@ class User extends Controller
 			$this->success('删除成功', 'userlist');
 		}
 	}
+	
+	//搜索用户列表信息
+	public function searchUser()
+	{
+		//接受数据
+		
+			$data['searchUser'] = input('searchUser');
+			$data['dosubmit'] =	input('dosubmit');
+
+		
+		$usM = Db('online_user');
+		$usM_lists = $usM
+					->where('user_name','like','%'.$data['searchUser'].'%')
+					->select();
+				$this->assign('usM_lists',$usM_lists);
+				return 	$this->fetch();
+	}
 
 
 

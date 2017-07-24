@@ -84,7 +84,7 @@ class Storejoin extends Base
 		}
 	}
 	
-	//搜索
+	//搜索商家入驻信息
 	
 	public function search()
 	{

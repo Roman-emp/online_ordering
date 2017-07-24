@@ -9,10 +9,12 @@
 		管理员列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a> </nav>
 	<div class="Hui-article">
 		<article class="cl pd-20">
+		<form action="/admin/user/searchUser" method="post">
 			<div class="text-c"> 
-				<input type="text" name="searchUser" class="input-text" style="width:250px" placeholder="输入管理员名称" id="" name="">
+				<input type="text"  class="input-text" style="width:250px" placeholder="用户账户" id="" name="searchUser">
 				<button type="submit" class="btn btn-success" id="dosubmit" name="dosubmit"><i class="Hui-iconfont">&#xe665;</i> 搜用户</button>
 			</div>
+		</form>
 			<div class="cl pd-5 bg-1 bk-gray mt-20">
 				<span class="l"> <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="admin_add('添加用户','addUser.html','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加用户</a> </span>
 				<span class="r">共有数据：<strong>54</strong> 条</span>
