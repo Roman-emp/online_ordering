@@ -264,5 +264,6 @@ class User extends Controller
 	            $this->error('用户名或密码错误');
 	          }
 	    }
+
 	
 }

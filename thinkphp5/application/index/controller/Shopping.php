@@ -18,13 +18,13 @@ class Shopping extends Controller
 	public function detail()
 	{
 		//获取菜品id
-		$menu_id = $_GET['menu_id'];
-		$shop_id = $_GET['shop_id'];
+		$menu_id = input('menu_id');
+		$shop_id = input('shop_id');
 			//获取菜品详情
 		$menu_list = $this->menu->select_menu_detail($menu_id);
 			//获取商家名字
-		$shop_name = $_GET['shop_name'];
-
+		$shop_name = input('shop_name');
+		
 		$this->assign('menu_list',$menu_list);
 		$this->assign('shop_id',$shop_id);
 		$this->assign('shop_name',$shop_name);
@@ -43,11 +43,12 @@ class Shopping extends Controller
 		//判断用户是否登录
 		if (session('user_id'))
 		{
-			$num = $_REQUEST['Number'];//添加商品的数量
-			$menu_id = $_REQUEST['menu_id'];//商品id
-			$shop_id = $_REQUEST['shop_id'];//商家id
+			
+			$num = input('Number');//添加商品的数量
+			$menu_id = input('menu_id');//商品id
+			$shop_id = input('shop_id');//商家id
 			$user_id = session('user_id');//用户id
-
+		
 			//获取商品详情
 			$menu_detail = $this->menu->select_menu_detail($menu_id);
 
@@ -86,22 +87,12 @@ class Shopping extends Controller
 	//购物车展示所选菜品
 	public  function  cart()
 	{
-		/*商家名字暂未获取*/
-		/*用户id暂未添加*/
-			//$user_id = session('user_id');//用户id
-		//测试id
-			$user_id = 2;
+		$user_id = session('user_id');
 		//查询登录用户的购物车信息-------商品未进行去重
 		$shop_cart = $this->menu->select_cart($user_id);
 
 		$this->assign('shop_cart',$shop_cart);
 		return $this->fetch();
-	}
-
-	//购物车删除菜单
-	public function menu_delete()
-	{
-
 	}
 
 	//商品分类
@@ -113,11 +104,11 @@ class Shopping extends Controller
 	//生成/删除订单
 	public function confirm_order()
 	{
-		dump($_REQUEST);
+		dump(input());
 		die;
-		if($_REQUEST['delete'])
+		if(input('delete'))
 		{
-			$menu_id = implode(',',$_REQUEST['menu_id']);//获取菜单id
+			$menu_id = implode(',',input('menu_id'));//获取菜单id
 			die;
 			$delete_cart = $this->menu->clean_cart($menu_id);//删除购物车菜品
 			if ($delete_cart)
@@ -129,21 +120,23 @@ class Shopping extends Controller
 	//搜索对应菜单
 	public function search_menu()
 	{
-		dump(input('keyword'));
+		
 		$con = input('keyword');//搜索关键字
 			//查询匹配内容
 		$menus = $this->menu->search_menu($con);
-		
-			//查询对应商家
-		foreach ($menus as $key => $value) 
-		{
-			$shop_id[] = $value['shop_id'];
-
-			$id = array_pop($shop_id);
-			//dump($id);
-			$shop = $this->shop->select_shop_detail($id);
-		}
-
+			//二维转一维
+		$shop_id = array_column($menus,'shop_id');
+		$length = count($shop_id);
+			//商家id依次遍历出栈
+		for ($i=0; $i <$length ; $i++) 
+		{ 
+			static $j=0;
+			$id = ($shop_id[$j]);//把商家id弹出	
+			$j++;
+			
+		}		
+		$shop = $this->shop->select_shop_detail($id);
+			//根据商家id查找商家基本信息
 		$this->assign('shop',$shop);
 		$this->assign('menus',$menus);
 		return $this->fetch();
@@ -151,6 +144,11 @@ class Shopping extends Controller
 	//搜索对应商铺
 	public function search_shop()
 	{
+		$con = input('keyword');//搜索关键字
+		$shops = $this->shop->select_shop($con);
+
+		$this->assign('shops',$shops);
+
 		return $this->fetch();
 	}
 	

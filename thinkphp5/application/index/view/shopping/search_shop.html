@@ -3,11 +3,22 @@
 <section class="Psection MT20">
  <article class="Searchlist Overflow">
   <ul class="Overflow">
+  {foreach $shops as $shop_info}
     <li>
-    <a href="shop.html" target="_blank" title="好味来快餐店"><img src="upload/cc.jpg"></a>
-    <p class="P-shop Overflow"><span class="sa"><a href="shop.html" target="_blank" title="好味来快餐店">好味来快餐店</a></span><span class="sp">西安·莲湖区</span></p>
-    <p class="P-shop Overflow">西安市莲湖区土门十字往西100米...</p>
+    <a href="/index/store/storeDetail?shop_id={$shop_info['shop_id']}">
+      <img src="{$shop_info['shop_icon']}">
+    </a>
+    <p class="P-shop Overflow">
+      <span class="sa">
+        <a href="/index/store/storeDetail?shop_id={$shop_info['shop_id']}">
+          {$shop_info['shop_name']}
+        </a>
+      </span>
+      <span class="sp">{$shop_info['shop_menu_type']}</span>
+    </p>
+    <p class="P-shop Overflow">{$shop_info['shop_address']}</p>
     </li>
+  {/foreach}
   </ul>
   <div class="TurnPage">
   <a href="#">

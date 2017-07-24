@@ -38,9 +38,17 @@
 		public function select_shop_detail($id)
 		{
 			return Db::name('online_shop')
-					->field('shop_name,shop_menu_type')
+					->field('shop_name,shop_menu_type,shop_icon,shop_address')
 					->where("shop_id=$id")
 					->find();
+		}
+		//根据查询有关商家的关键字,查询商家信息
+		public function select_shop($con)
+		{
+			return Db::name('online_shop')
+					->field('shop_name,shop_menu_type,shop_icon,shop_address,shop_id')
+					->where("shop_name|shop_menu_type",'like',"%$con%")
+					->select();
 		}
 		//根据搜索菜品词,查询相关类型的菜
 		public function search_menu($con)

@@ -64,7 +64,7 @@
     {foreach $shop_detail as $shop_info}
 		<li>
 		 <a href="/index/shopping/detail?shop_id={$shop_info['shop_id']}&shop_name={$shop_info['shop_name']}&menu_id={$shop_info['menu_id']}" target="_blank" title="{$shop_info['menu_name']}">
-         <img src="{$shop_info['menu_icon']}" class="foodsimgsize">
+         <img src="/uploads/{$shop_info['menu_icon']}" class="foodsimgsize">
          </a>
           <a href="#" class="item">
 		 <div>
