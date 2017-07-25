@@ -20,7 +20,7 @@
       <td>{$value['recieve_tel']}</td>
 	  <td>{$value['recieve_address_detail']}</td>
 	  <td>{$value['recieve_address']}</td>
-      <td><<a href="#">删除地址</a></td>
+      <td><a href="/index/address/editUserAddress?recieve_id={$value['recieve_id']}">编辑地址</a> | <a href="">删除地址</a></td>
      </tr>
 	{/foreach}
     </table>
@@ -33,7 +33,7 @@
      <td width="30%" class="Font14 FontW Lineheight35" align="right">收件人姓名：</td>
      <td><input type="text" name="recieve_name" required  class="input_name"></td>
     </tr>
-	    <tr>
+	 <tr>
      <td width="30%" class="Font14 FontW Lineheight35" align="right">选择所在地：</td>
      <td>
      <select name="" class="select_ssq">

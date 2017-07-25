@@ -13,4 +13,14 @@ Class Address extends Model
 		$result = $rsM->insert($data);
 		return $result;
 	}
+	
+	//编辑用户地址信息
+	public function updateUserAddress($recieve_id,$data)
+	{
+		
+		$rsM = Db('recieve_address');
+		$result = $rsM->where("recieve_id=$recieve_id")
+					  ->update($data);
+					 return $result; 
+	}
 }

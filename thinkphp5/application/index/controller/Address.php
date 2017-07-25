@@ -55,6 +55,39 @@ class Address 	extends  Controller
 		
 		
 	}
+	
+	//编辑用户地址信息
+	public function editUserAddress()
+	{
+		$recieve_id = $_GET['recieve_id'];
+		$rsM = Db('recieve_address');
+		$rsM_info = $rsM->where("recieve_id= $recieve_id")
+						->find();
+		$this->assign('rsM_info',$rsM_info);
+		return $this->fetch();
+	}
+	
+	//编辑用户地址信息处理数据
+	public function updateUserAddress()
+	{
+		$recieve_id = $_POST['recieve_id'];
+		
+		$data = [
+			'recieve_name'	=>	input('recieve_name'),
+			'recieve_address_detail' => input('recieve_address_detail'),
+			'recieve_tel'	=>	input('recieve_tel'),
+			'recieve_ems'	=>	input('recieve_ems'),
+		];
+		
+		$res = $this->address
+					->updateUserAddress($recieve_id,$data);
+			if($res==false)
+			{
+				$this->error('修改失败','editUserAddress');
+			}else{
+				$this->success('修改成功','userAddress');
+			}
+ 	}
 
 
 	//我的留言
