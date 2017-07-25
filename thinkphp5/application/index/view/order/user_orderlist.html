@@ -10,17 +10,18 @@
      <th class="Font14 FontW">收件人</th>
 	 <th class="Font14 FontW">下单时间</th>
      <th class="Font14 FontW">订单总金额</th>
-     <th class="Font14 FontW">订单状态</th>
+    
      <th class="Font14 FontW">操作</th>
      {foreach $data as $key => $value}
 	 <tr>
-	 
-      <td class="FontW"><a href="user_order.html">201700{$value['user_id']}</a></td>
-      <td>闫旭霞</td>
-      <td>{$value['order_time']}</td>
-      <td>{$value['order_amount']}</td>
-      <td>{$value['order_status']}</td>
-      <td><a href="#">取消订单</a> | <a href="#">付款</a></td>
+      <td class="FontW">{$value['order_num']}</td>
+      <td>{$value['user_name']}</td>
+      <td>{$value['create_time']}</td>
+      <td>{$dishes_total}</td>
+      
+      <td>
+	  <a href="javascript:void(0);" onclick="del({$value['order_id']},{$value['order_num']})" >取消订单</a> | <a href="#">付款</a>
+	  </td>
      </tr>
 	 {/foreach}
     </table>
@@ -46,3 +47,23 @@
   <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
  </div>
 {include file="foot"}
+
+<script>
+		function del(order_id,order_num)
+		{
+		 if (confirm('是否删除订单?'))
+		 {
+			
+			$.get('/index/order/delUserOrder',{order_id:order_id,order_num:order_num},function(data){
+				if(data)
+				{
+					window.location.reload();
+					//alert('删除成功');
+				}
+			
+			},'json');
+		 }
+	}
+
+	
+</script>
