@@ -63,8 +63,16 @@ class User extends Model
 		return $result;
 	}
 
+<<<<<<< HEAD
 
 	//用户登录
+=======
+	//判断登录
+
+
+	//用户登录
+
+>>>>>>> 0e062da4f9a990d8254d3b798df8c0809ce2904a
 	public function dologin($name,$pwd)
 	{
        return Db::name('online_admin')->where('name',$name)

@@ -1,0 +1,65 @@
+{include file="head"}
+<!--Start content-->
+<section class="Psection MT20">
+{include file="order_left"}
+ <article class="U-article Overflow">
+
+  <section class="Myaddress Overflow">
+   <span class="MDtitle Font14 FontW Block Lineheight35">编辑收货信息</span>
+
+ <form action="/index/address/updateUserAddress" method="post">
+   <table>
+ 
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">收件人姓名：</td>
+     <td><input type="text" name="recieve_name" required value="{$rsM_info['recieve_name']}" class="input_name"></td>
+    </tr>
+	<tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">选择所在地：</td>
+     <td>
+     <select name="" class="select_ssq">
+      <option>陕西省</option>
+     </select>
+     <select name="" class="select_ssq">
+     <option>西安市</option>
+     </select>
+     <select name="" class="select_ssq">
+     <option>莲湖区</option>
+     </select>
+     </td>
+    </tr>
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">详细地址：</td>
+     <td><input type="text" name="recieve_address_detail" required size="50" value="{$rsM_info['recieve_address_detail']}" class="input_addr"></td>
+    </tr>
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">邮政编码：</td>
+     <td><input type="text" name="recieve_ems" required size="10"  value="{$rsM_info['recieve_ems']}" class="input_zipcode"></td>
+    </tr>
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">手机号码：</td>
+     <td><input type="text" name="recieve_tel" value="{$rsM_info['recieve_tel']}" class="input_tel"></td>
+    </tr>
+    <tr>
+     <td align="right"  width="30%" class="Font14 FontW Lineheight35"></td>
+     <td class="Lineheight35">
+	 <input type="hidden" name="recieve_id" value="{$rsM_info['recieve_id']}">
+     <input style="width:60px; height:30px; background-color: cyan; " type="submit" name="dosubmit" value="更新" />
+	</td>
+    </tr>
+   </table>
+   </form>
+  
+  </section>
+ </article>
+</section>
+<!--End content-->
+<div class="F-link">
+  <span>友情链接：</span>
+  <a href="http://www.deathghost.cn" target="_blank" title="DeathGhost">DeathGhost</a>
+  <a href="http://www.17sucai.com/pins/15966.html" target="_blank" title="免费后台管理模板">绿色清爽版通用型后台管理模板免费下载</a>
+  <a href="http://www.17sucai.com/pins/17567.html" target="_blank" title="果蔬菜类模板源码">HTML5果蔬菜类模板源码</a>
+  <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
+ </div>
+{include file="foot"}
+

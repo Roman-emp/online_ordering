@@ -1,36 +1,29 @@
-
+{include file="head"}
 <!--Start content-->
 <section class="Psection MT20">
-<nav class="U-nav Font14 FontW">
-  <ul>
-   <li><i></i><a href="user_center.html">用户中心首页</a></li>
-   <li><i></i><a href="user_orderlist.html">我的订单</a></li>
-   <li><i></i><a href="user_address.html">收货地址</a></li>
-   <li><i></i><a href="user_message.html">我的留言</a></li>
-   <li><i></i><a href="user_coupon.html">我的优惠券</a></li>
-   <li><i></i><a href="user_favorites.html">我的收藏</a></li>
-   <li><i></i><a href="user_account.html">账户管理</a></li>
-   <li><i></i><a href="#">安全退出</a></li>
-  </ul>
- </nav>
+{include file="order_left"}
  <article class="U-article Overflow">
   <!--user order list-->
   <section>
     <table class="Myorder">
      <th class="Font14 FontW">订单编号</th>
-     <th class="Font14 FontW">下单时间</th>
      <th class="Font14 FontW">收件人</th>
+	 <th class="Font14 FontW">下单时间</th>
      <th class="Font14 FontW">订单总金额</th>
-     <th class="Font14 FontW">订单状态</th>
+    
      <th class="Font14 FontW">操作</th>
-     <tr>
-      <td class="FontW"><a href="user_order.html">201409225367</a></td>
-      <td>2014-09-22 19:21:38</td>
-      <td>DeathGhost</td>
-      <td>￥328.00</td>
-      <td>未付款,未发货</td>
-      <td><a href="#">取消订单</a> | <a href="#">付款</a></td>
+     {foreach $data as $key => $value}
+	 <tr>
+      <td class="FontW">{$value['order_num']}</td>
+      <td>{$value['user_name']}</td>
+      <td>{$value['create_time']}</td>
+      <td>{$dishes_total}</td>
+      
+      <td>
+	  <a href="javascript:void(0);" onclick="del({$value['order_id']},{$value['order_num']})" >取消订单</a> | <a href="#">付款</a>
+	  </td>
      </tr>
+	 {/foreach}
     </table>
     <div class="TurnPage">
          <a href="#">
@@ -54,3 +47,23 @@
   <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
  </div>
 {include file="foot"}
+
+<script>
+		function del(order_id,order_num)
+		{
+		 if (confirm('是否删除订单?'))
+		 {
+			
+			$.get('/index/order/delUserOrder',{order_id:order_id,order_num:order_num},function(data){
+				if(data)
+				{
+					window.location.reload();
+					//alert('删除成功');
+				}
+			
+			},'json');
+		 }
+	}
+
+	
+</script>

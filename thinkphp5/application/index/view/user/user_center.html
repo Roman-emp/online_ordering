@@ -1,35 +1,24 @@
 {include file="head"}
 <!--Start content-->
 <section class="Psection MT20">
-<nav class="U-nav Font14 FontW">
-  <ul>
-   <li><i></i><a href="{:url('index/user/user_center')}">用户中心首页</a></li>
-   <li><i></i><a href="user_orderlist.html">我的订单</a></li>
-   <li><i></i><a href="user_address.html">收货地址</a></li>
-   <li><i></i><a href="user_message.html">我的留言</a></li>
-   <li><i></i><a href="user_coupon.html">我的优惠券</a></li>
-   <li><i></i><a href="user_favorites.html">我的收藏</a></li>
-    <li><i></i><a href="{:url('index/user/user_account')}">账户管理</a></li>
-   <li><i></i><a href="{:url('index/user/drop')}">安全退出</a></li>
-  </ul>
- </nav>
+{include file="order_left"}
  <article class="U-article Overflow">
   <!--"引用“user_page/user_index.html”"-->
   <section class="usercenter">
-   <span class="Weltitle Block Font16 CorRed FontW Lineheight35">Welcome欢迎光临！</span>
+   <span class="Weltitle Block Font16 CorRed FontW Lineheight35">个人中心</span>
    <div class="U-header MT20 Overflow">
     <img src="__UPLOAD_IMG__{$data['user_icon']}">
-    <p class="Font14 FontW">{$data['user_name']} 欢迎您回到 用户中心！</p>
-    <p class="Font12">您的上一次登录时间:<time> {$data['user_last_login_time']}</time></p>
-    <p class="Font12 CorRed FontW">我的优惠券( 0 ) | 我的积分( 0 )</p>
+    <p class="Font14 FontW" style="font-size:16px;margin-top:20px">我的名称：{$data['user_name']}</p>
+	<p class="Font14 FontW" style="font-size:16px;margin-top:20px">联系电话：{$data['user_tel']}</p>
+	<p class="Font14 FontW" style="margin-left:95px;font-size:16px;margin-top:20px">登录时间:<time> {$data['user_create_time']}</time></p>
+	<p class="Font14 FontW" style="margin-left:95px;font-size:16px;margin-top:20px">我的邮箱：{$data['user_email']}</p>
+	<p class="Font14 FontW" style="margin-left:95px;font-size:16px;margin-top:20px">我的积分：{$data['user_integrate']}</p>
+	
+	<p class="Font14 FontW" style="margin-left:95px;font-size:16px;margin-top:47px">我的优惠劵：???</p>
+	
+    
    </div>
-    <ul class="s-States Overflow FontW" id="Lbn">
-     <li class="Font14 FontW">幸福业务在线提醒：</li>
-     <li><a href="#">待付款( 0 )</a></li>
-     <li><a href="#">待发货( 0 )</a></li>
-     <li><a href="#">待收货( 0 )</a></li>
-     <li><a href="#">待评价( 0 )</a></li>
-    </ul>
+
   </section>
  </article>
 </section>
