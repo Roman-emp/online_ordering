@@ -9,10 +9,12 @@ class Shopping extends Controller
 {
 	protected $menu;
 	protected $shop;
+	protected $order;
 	public function _initialize()
 	{
 		$this->menu = new Menu_list();
 		$this->shop = new Menu_list();
+		$this->order = new Menu_list();
 	}
 	//商品详情
 	public function detail()
@@ -92,22 +94,79 @@ class Shopping extends Controller
 		return $this->fetch();
 	}
 
-	//生成/删除订单
+	//清空购物车,删除单个商品
+	public function delete_order()
+	{	
+		echo json_encode($this->menu->clean_cart(input()));//删除购物车菜品
+	}
+	//生成订单,转到支付界面
+	public function add_order()
+	{
+		
+		/*获取到基础信息*/
+		$user_id = session('user_id');
+		$menu_id = input('menu_id');//商品id
+		$shop_id = input('shop_id');//商家id
+		$num = input('num');//商品数量
+
+		$len = count(explode(',',$menu_id));
+
+		$menu = explode(',', $menu_id);
+		$shop = explode(',', $shop_id);
+		$num = explode(',', $num);
+
+		$str = '';
+		for ($i=0; $i <$len ; $i++) 
+		{ 
+			$menu_id[$i] = array_pop($menu);//取得单独的菜品id
+			$shop_id[$i] = array_pop($shop);//取得单独的商家id
+			$amount[$i]  = array_pop($num);//取得单独的菜品数量
+			
+			$str .= $menu_id[$i].','.$shop_id[$i].','.$amount[$i].';';			
+		}
+		//取得由菜品id,商家id,菜品数量;组成的字符串
+		$str = substr($str,0,strlen($str)-1);//去除结尾的分号
+		
+		for ($j=1; $j <=$len; $j++) 
+		{ 
+			//把分号之前的字符串进行切割,形成新的数组
+			$arr = explode(';',$str);
+		}
+		session('arr',$arr);
+		echo json_encode($arr);
+		//echo $this->shop->product_order((input());
+	}
+	//添加订单基本信息界面
 	public function confirm_order()
 	{
-		dump(input());
-		die;
-		if(input('delete'))
+		dump(session('arr'));
+		$result = session('arr');//购物车提交的数据
+	//获取数组遍历次数
+		$len = count(session('arr'));
+		for ($i = 0; $i < $len; $i++) 
 		{
-			$menu_id = implode(',',input('menu_id'));//获取菜单id
-			die;
-			$delete_cart = $this->menu->clean_cart($menu_id);//删除购物车菜品
-			if ($delete_cart)
-			{
-				$this->success('菜品删除成功');
+			$arr = explode(',',$result[$i]);
+			//消除货品数量
+			unset($arr[count($arr) - 1]);
+			$time = count($arr);
+			
+			for ($j=0; $j <$time-1 ; $j++) 
+			{ 
+				//dump($arr[$j]);
+				//根据商品id与商家id,查询商品详情
+				$array = array_unique(['menu_id'=>$arr[$j],'shop_id'=>$arr[$j+1]]);
+				//dump($array);
+				$data[] = $this->order->select_goods_detail($array['menu_id'],$array['shop_id']);
+				//dump($data);					
 			}
 		}
+		dump($data);	
+		$this->assign('data',$data);
+		return $this->fetch();	
 	}
+
+/*根据搜索词,搜索对应结果*/
+
 	//搜索对应菜单
 	public function search_menu()
 	{

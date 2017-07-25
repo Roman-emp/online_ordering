@@ -6,12 +6,7 @@
 
 	class Menu_list extends Model
 	{
-		/*protected $menu;
-	
-		public function _initialize()
-		{
-			$this->menu = new Menu_list();
-		}*/
+		
 		//查询商家对应的菜单
 		public function select_menu()
 		{
@@ -48,6 +43,17 @@
 					->where("shop_id=$id")
 					->find();
 		}
+
+		//根据商家id与菜品id
+		public function select_goods_detail($menu_id,$shop_id)
+		{
+			return Db::name('shop_menu')
+					->field('menu_name,menu_price')
+					->where("menu_id",$menu_id)
+					->where('shop_id',$shop_id)
+					->select();		
+		}
+
 		//根据查询有关商家的关键字,查询商家信息
 		public function select_shop($con)
 		{
@@ -69,31 +75,11 @@
 					->where('menu_name','like',"%$con%")
 					->select();
 		}
+/*购物车部分*/
+
 		//商品加入购物车
 		public function add_cart($data)
 		{
-			// $num = $data['num'];//添加商品的数量
-			// $menu_id = $data['menu_id'];//商品id
-			// $shop_id = $data['shop_id'];//商家id
-			// $user_id = $data['user_id'];
-			// //获取商品详情
-			// $menu_detail = select_menu_detail($menu_id);
-
-			// $menu_name = $menu_detail[0]['menu_name'];//商品名称
-			// $menu_icon = $menu_detail[0]['menu_icon'];//商品图片
-			// $menu_price = $menu_detail[0]['menu_price'];//商品价格
-			// $last_operate_time = date('Y-m-d H:i:s',time());//最后操作时间
-
-			// $data = [
-			// 	'menu_num'          => $num,
-			// 	'menu_id'			=> $menu_id,
-			// 	'menu_name'			=> $menu_name,
-			// 	'menu_icon'			=> $menu_icon,
-			// 	'menu_price'		=> $menu_price,
-			// 	'last_operate_time'	=> $last_operate_time,
-			// 	'shop_id' 			=> $shop_id,
-			// 	'user_id'			=> $user_id,//用户id
-			// ];
 			return Db::name('shop_cart')->insert($data);	
 		}
 		//查询用户是否,将商品重复加入购物车
@@ -115,10 +101,19 @@
 						->select();	
 		}
 		//清空购物车
-		public function clean_cart($menu_id)
+		public function clean_cart($data)
 		{
+			$menu_id = $data['menu_id'];//获取菜单id
+			$user_id = $data['user_id'];
+			$shop_id = $data['shop_id'];//获取商家id
 			return Db::name('shop_cart')
-			      ->where("menu_id in ($menu_id)")
+			      ->where("menu_id=$menu_id and shop_id=$shop_id and user_id=$user_id")
 			      ->delete();
 		}
+
+/*订单部分*/
+		// public function product_order(data)
+		// {
+
+		// }
 	}

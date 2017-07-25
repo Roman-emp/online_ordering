@@ -1,82 +1,72 @@
 {include file="head"}
 <!--Start content-->
 <!--  /index/shopping/confirm_order-->
-<form action="#" method="post">
- <div class="gwc" style=" margin:auto;">
-  
-  {if !empty($shop_cart)}
-  
-       <table cellpadding="0" cellspacing="0" class="gwc_tb1">
-        <tr>
-          <td class="tb1_td1"><input id="Checkbox1" type="checkbox"  class="allselect"/></td>
-          <td class="tb1_td1">全选</td>
-          <td class="tb1_td3">商品</td>
-          <td class="tb1_td4">原价</td>
-          <td class="tb1_td5">数量</td>  
-          <td class="tb1_td6">单价</td>
-          <td class="tb1_td7">操作</td>
-        </tr>
-      </table> 
-      {foreach $shop_cart as $menu_info}
-       <table cellpadding="0" cellspacing="0" class="gwc_tb2" class="table2">
-        <tr>
-         <td colspan="7" class="shopname Font14 FontW">店铺：肯德基</td>
-        </tr>
-        <tr>
-          <td class="tb2_td1">
-            <input type="checkbox"   name="menu_id[]" value="{$menu_info['menu_id']}"  class="newslist" class="newslist-2" />
-          </td>
-          <td class="tb2_td2">
-              <a href="/index/shopping/detail?menu_id={$menu_info['menu_id']}&shop_id=$menu_info['shop_id']}" target="_blank">
-                <img src="/uploads/{$menu_info['menu_icon']}"/>
-              </a>
-            </a>
-          </td>
-          <td class="tb2_td3">
-            <a href="/index/shopping/detail?menu_id={$menu_info['menu_id']}" target="_blank">{$menu_info['menu_name']}</a>
-          </td>
-          <td class="tb1_td4">
-            <s>￥{$menu_info['menu_price']+15}</s>
-          </td>
-          <td class="tb1_td5">
-            <input class="min2" name=""  style=" width:30px; height:30px;border:1px solid #ccc;" type="button" value="-" />
-            <input class="text_box2" name="" type="text" value="1" style=" width:40px;height:28px; text-align:center; border:1px solid #ccc;" />
-            <input class="add2" name="" style=" width:30px; height:30px;border:1px solid #ccc;" type="button" value="+" />
-          </td>
-          <td class="tb1_td6">
-            <label class="total2" name="price[]" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;">{$menu_info['menu_price']}
-            </label>
-          </td>
-          <td class="tb1_td7"><button name="delete" value="delete">删除</button></td>
-        </tr>
-      </table>
-         {/foreach}
-        <table cellpadding="0" cellspacing="0" class="gwc_tb3">
+{if !empty($shop_cart)}
+ <div style="position:relative;left:15%;">
+  <table id="cartTable">
+      <thead>
           <tr>
-            <td class="tb1_td1"><input id="checkAll" class="allselect" type="checkbox" /></td>
-            <td class="tb1_td1">全选</td>
-            <td class="tb3_td1"><input id="invert" type="checkbox" />
-              反选
-              <input id="cancel" type="checkbox" />
-              取消 </td>
-            <td class="tb3_td2 GoBack_Buy Font14"><a href="#" target="_blank">继续购物</a></td>
-            <td class="tb3_td2">已选商品
-              <label class="shuliang" style="color:#ff5500;font-size:14px; font-weight:bold;">0</label>
-              件</td>
-            <td class="tb3_td3">合计(不含运费):<span>￥</span><span style=" color:#ff5500;">
-              <label class="zong1" style="color:#ff5500;font-size:14px; font-weight:bold;">0.00</label>
-              </span></td>
-            <td class="tb3_td4">
-              <span id="jz1">结算</span>
-              <!-- <a href="confirm_order.html" style=" display:none;"  class="jz2" id="jz2">结算</a> -->
-              <input type="submit" name="amount" value="结算" style=" display:none;"  class="jz2" id="jz2">
-            </td>
+              <th><label><input class="check-all check" type="checkbox">&nbsp;全选</label></th>
+              <th>商品</th>
+              <th>单价/￥</th>
+              <th>数量</th>
+              <th>小计</th>
+              <th>操作</th>
           </tr>
-        </table>
+      </thead>
+      <tbody>
+      
+        {foreach $shop_cart as $menu_info}
+          <tr class="on">
+              <td class="checkbox">
+                <input class="check-one check" name="menu" type="checkbox" value="{$menu_info['menu_id']}">
+               <!--  <input type="hidden" name="shop" value="{$menu_info['shop_id']}"> -->
+              </td>
+              <td class="goods">
+                <img src="/uploads/{$menu_info['menu_icon']}" alt="商品">
+                <span>{$menu_info['menu_name']}</span>
+                
+              </td>
+              <td class="price">{$menu_info['menu_price']}</td>
+              <td class="count">
+                <span class="reduce"></span>
+                <input class="count-input" type="text" name="num" value="1">
+                <span class="add">+</span>
+              </td>
+              <td class="subtotal">{$menu_info['menu_price']}</td>
+              <td class="operation">
+                <span class="delete">
+                <a href="javascript:void(0);"  onclick="get({$menu_info['menu_id']},{$menu_info['shop_id']})">
+                   <button class="shop"  value="{$menu_info['shop_id']}">删除</button>
+                </a>
+                </span>
+              </td>
+          </tr>
+        {/foreach}
+      </tbody>
+  </table>
+  <div class="foot" id="foot">
+      <label class="fl select-all"><input type="checkbox" class="check-all check">&nbsp;全选</label>
+      <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+      <a href="javascript:void(0);" onclick="amount();"><div class="fr closing">结 算</div></a>
+      <div class="fr total">合计：￥<span id="priceTotal">0</span></div>
+      <div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span class="arrow up">︽</span><span class="arrow down">︾</span></div>
+      <div class="selected-view">
+          <div id="selectedViewList" class="clearfix">  
+            <div>
+              {foreach $shop_cart as $menu_info}
+              <img src="/uploads/{$menu_info['menu_icon']}">
+              {foreach}
+              <span class="del" index="0">取消选择</span>
+            </div>  
+          </div>
+          <span class="arrow">◆<span>◆</span></span>
       </div>
-  </form>
+  </div>
+</div> 
+{/if}
    
-  {/if}
+  
   {if empty($shop_cart)}
     <div class="gwc" style=" margin:auto;">
       <p style="height:30px;font-size:20px;position:relative;left:30%;">
@@ -85,7 +75,66 @@
     </div>
   {/if}
   
-
+  <script type="text/javascript">
+   var user_id = "<?php echo session('user_id');?>";
+    //删除购物车
+    function get(menu_id,shop_id)
+    { 
+      if (confirm('确定删除此菜品?'))
+        {
+          $.get("{:url('index/shopping/delete_order')}",{menu_id:menu_id,shop_id:shop_id,user_id:user_id},function(data){
+              if (data)
+              {
+                window.location.reload();
+              }    
+            },'json');      
+        }
+    }
+    //结算购物车
+    function amount()
+    {
+      
+      var menu_id = $('.checkbox :checkbox:checked').val();
+     //查询所有选中的菜品id
+      var str = ""; 
+      $("input[name='menu']:checkbox").each(function() 
+      { 
+        if($(this).is(":checked")) 
+        { 
+          str += $(this).attr("value")+","; 
+          
+        }
+      });
+      str = str.substr(0,str.length-1);
+      console.log(str);
+      //查询所有选中的菜品id
+      var shop = ""; 
+      $(".shop").each(function() 
+      { 
+          shop += $(this).attr("value")+","; 
+          
+      });
+      shop = shop.substr(0,shop.length-1);
+      console.log(shop);
+      //查询所有选中的菜品id
+      var num = ""; 
+      $("input[name='num']:text").each(function() 
+      { 
+          num += $(this).attr("value")+","; 
+          
+      });
+      num = num.substr(0,num.length-1);
+      console.log(num);
+      $.get("{:url('index/shopping/add_order')}",{menu_id:str,shop_id:shop,num:num},function(data){
+          if(data)
+          {
+              window.location.href = '/index/shopping/confirm_order';
+          }
+      },'json');
+      
+        
+    }
+  </script>
 <!--End content-->
   {include file="foot"}
 </body>
