@@ -24,7 +24,7 @@ class Shopping extends Controller
 		$menu_list = $this->menu->select_menu_detail($menu_id);
 			//获取商家名字
 		$shop_name = input('shop_name');
-		
+
 		$this->assign('menu_list',$menu_list);
 		$this->assign('shop_id',$shop_id);
 		$this->assign('shop_name',$shop_name);
@@ -38,58 +38,49 @@ class Shopping extends Controller
 	}
 	*/
 	//添加到购物车
-	public  function  add_menu()
+	public function  add_menu()
 	{
-		//判断用户是否登录
-		if (session('user_id'))
-		{
-			
-			$num = input('Number');//添加商品的数量
+			$num = input('num');//添加商品的数量
 			$menu_id = input('menu_id');//商品id
 			$shop_id = input('shop_id');//商家id
-			$user_id = session('user_id');//用户id
-		
-			//获取商品详情
+			$user_id = input('user_id');
+				//获取商品详情
 			$menu_detail = $this->menu->select_menu_detail($menu_id);
-
-			$menu_name = $menu_detail[0]['menu_name'];//商品名称
-			$menu_icon = $menu_detail[0]['menu_icon'];//商品图片
-			$menu_price = $menu_detail[0]['menu_price'];//商品价格
-			$last_operate_time = date('Y-m-d H:i:s',time());//最后操作时间
-
-			$data = [
-				'menu_num'          => $num,
-				'menu_id'			=> $menu_id,
-				'menu_name'			=> $menu_name,
-				'menu_icon'			=> $menu_icon,
-				'menu_price'		=> $menu_price,
-				'last_operate_time'	=> $last_operate_time,
-				'shop_id' 			=> $shop_id,
-				'user_id'			=> $user_id,
-			];
-	
-			//把商品加入购物车
-			$res = $this->menu->add_cart($data);
-
-			if ($res)
+				//查询用户是否已将商品加入购物车
+			$is_exist = $this->menu->select_cart($shop_id,$menu_id,$user_id);
+			if (!$is_exist) 
 			{
-				$this->success('已加入购物车');
-			}
-		}
-		else
-		{
-			$this->error('您未登录,无法加入购物车','/index/user/login');
-		}
+				$menu_name = $menu_detail[0]['menu_name'];//商品名称
+				$menu_icon = $menu_detail[0]['menu_icon'];//商品图片
+				$menu_price = $menu_detail[0]['menu_price'];//商品价格
+				$last_operate_time = date('Y-m-d H:i:s',time());//最后操作时间
 
-		
+				$data = [
+						'menu_num'          => $num,
+						'menu_id'			=> $menu_id,
+						'menu_name'			=> $menu_name,
+						'menu_icon'			=> $menu_icon,
+						'menu_price'		=> $menu_price,
+						'last_operate_time'	=> $last_operate_time,
+						'shop_id' 			=> $shop_id,
+						'user_id'			=> $user_id,//用户id
+					];
+					//echo json_encode($data);
+					//echo $this->menu->add_cart($data);
+					echo $this->menu->add_cart($data);
+			}
+			else
+			{
+				echo 0;
+			}				
 	}
 
 	//购物车展示所选菜品
 	public  function  cart()
 	{
 		$user_id = session('user_id');
-		//查询登录用户的购物车信息-------商品未进行去重
-		$shop_cart = $this->menu->select_cart($user_id);
+		//查询登录用户的购物车信息
+		$shop_cart = $this->menu->select_user_cart($user_id);
 
 		$this->assign('shop_cart',$shop_cart);
 		return $this->fetch();

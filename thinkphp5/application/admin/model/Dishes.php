@@ -32,33 +32,17 @@ class Dishes extends Model
 	//编辑商品方法
 	public function updateModel($id, $data)
 	{
-
 		//实例化对象		
 		return Db('shop_menu')
 				->where("menu_id = $id")
 				->update($data);
 	}
 	//删除商品
-	public function delete()
-	{
-	  
-		$id = input('id');
-		dump($id); exit;
-		//实例化对象
-		$mlM = Db('shop_menu');
-		$check = $mlM->where("menu_id=$id")->find();
-		if($check == false)
-		{
-			$this->error('非法操作', 'getAllDishesList');
-		}
-
-		$back = $mlM->where("menu_id=$id")->delete();
-		if($back == true)
-		{
-			$this->success('删除成功', 'getAllDishesList');
-		}
-
-	}
-
-	
+	public function delete_menu($data)
+	{			
+		return Db::name('shop_menu')
+				->where('shop_id',$data['shop_id'])
+				->where('menu_id',$data['menu_id'])
+				->delete();
+	}	
 }

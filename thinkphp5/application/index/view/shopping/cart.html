@@ -1,6 +1,7 @@
 {include file="head"}
 <!--Start content-->
-<form action="/index/shopping/confirm_order" method="post">
+<!--  /index/shopping/confirm_order-->
+<form action="#" method="post">
  <div class="gwc" style=" margin:auto;">
   
   {if !empty($shop_cart)}
@@ -26,8 +27,8 @@
             <input type="checkbox"   name="menu_id[]" value="{$menu_info['menu_id']}"  class="newslist" class="newslist-2" />
           </td>
           <td class="tb2_td2">
-              <a href="/index/shopping/detail?menu_id={$menu_info['menu_id']}" target="_blank">
-                <img src="{$menu_info['menu_icon']}"/>
+              <a href="/index/shopping/detail?menu_id={$menu_info['menu_id']}&shop_id=$menu_info['shop_id']}" target="_blank">
+                <img src="/uploads/{$menu_info['menu_icon']}"/>
               </a>
             </a>
           </td>

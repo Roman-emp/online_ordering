@@ -156,24 +156,10 @@ class Dishes extends Base
 		return $this->fetch();
 	}
 
-	//删除商品
+	//删除商家对应的商品
 	public function delete()
 	{
-		$id = input('id');
-		
-		$mlM = Db('menu_list');
-		$check = $mlM->where("menu_id={$id}")->find();
-	
-		if($check == false)
-		{
-			$this->error('非法操作','getAllDishesList');
-		}
-
-		$back = $mlM->where("menu_id = {$id}")->delete();
-		if($back == true)
-		{
-			$this->success('删除成功','getAllDishesList');
-		}
+		echo $this->goods->delete_menu(input());
 
 	}
 
