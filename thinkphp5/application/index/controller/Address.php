@@ -88,6 +88,28 @@ class Address 	extends  Controller
 				$this->success('修改成功','userAddress');
 			}
  	}
+	
+	
+	//删除用户地址信息
+	public function delUserAddress()
+	{
+		$recieve_id = $_GET['recieve_id'];
+		$rsM = Db('recieve_address');
+		$check = $rsM->where("recieve_id = $recieve_id")
+				   ->find();
+				   if($check == false)
+				   {
+					   $this->error('非法操作', 'userAddress');
+				   }
+		
+		$back = $rsM->where("recieve_id = $recieve_id")
+					  ->delete();
+					if($back == true)
+					{
+						$this->success('删除成功','userAddress');
+					}
+		
+	}
 
 
 	//我的留言
