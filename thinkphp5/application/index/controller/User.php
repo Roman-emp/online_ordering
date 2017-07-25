@@ -115,7 +115,7 @@ class User extends Controller
 		    $this->assign('data',$data);
 			return  $this->fetch();
 		}
-//用户账户管理修改
+//用户账户管理修改（用户修改完善自己的信息）
         public function upload()
         {
 	        	$name = $_POST['name'];
