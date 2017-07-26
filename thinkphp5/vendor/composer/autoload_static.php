@@ -8,11 +8,13 @@ class ComposerStaticInit764e2804808d7991fd4467df6dd972f1
 {
     public static $files = array (
         '1cfd2761b63b0a29ed23657ea394cb2d' => __DIR__ . '/..' . '/topthink/think-captcha/src/helper.php',
+        '07c7bbffae0ef3c340bfa5d2b10c66d1' => __DIR__ . '/..' . '/tekintian/tp5auth/helper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         't' => 
         array (
+            'tp5auth\\auth\\' => 13,
             'think\\composer\\' => 15,
             'think\\captcha\\' => 14,
             'think\\' => 6,
@@ -20,6 +22,10 @@ class ComposerStaticInit764e2804808d7991fd4467df6dd972f1
     );
 
     public static $prefixDirsPsr4 = array (
+        'tp5auth\\auth\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/tekintian/tp5auth',
+        ),
         'think\\composer\\' => 
         array (
             0 => __DIR__ . '/..' . '/topthink/think-installer/src',

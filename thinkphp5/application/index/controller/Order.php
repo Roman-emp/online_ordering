@@ -10,9 +10,11 @@ class Order extends Controller
 {
 	//初始化对象
 	protected $online_order;
+	protected $order_status;
 	public function _initialize()
 	{
 		$this->online_order = new orderModel();
+		$this->order_status	= new orderModel();
 	}
 	//用户订单列表信息
 	public function user_orderlist()
@@ -20,7 +22,9 @@ class Order extends Controller
 		$user_id = session('user_id');	
 		$data = $this->online_order
 					 ->userOrder($user_id);
+			
 					
+
 					foreach($data as $key=>$value)
 					{
 						$order_num = $value['order_num'];
@@ -66,15 +70,9 @@ class Order extends Controller
 		$res = $this->online_order->delUserOrder(input());
 		if($res == true)
 		{
-			$thi->success('删除成功','user_orderlist');
+			$this->success('删除成功','user_orderlist');
 		}
 		
 	}
-	
-	
-	
-	
-	
-	
-	
+
 }

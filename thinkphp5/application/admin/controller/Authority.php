@@ -1,28 +1,13 @@
 <?php
 namespace app\admin\controller;
 use app\admin\controller\Base;//判断是否登录
-use app\admin\controller\Tree;//无限极分类
-use app\admin\model\Role;//角色表
-use app\admin\model\Node;//权限表
-use app\admin\model\OnlineAdmin;//用户表
-use app\admin\model\RoleAdmin;//用户角色表
+
 
 //权限管理
 class Authority extends Base
 {
 
-	public function _initialize()
-   {
 
-      $this->Role = new Role();
-      $this->Node = new Node();
-      $this->Tree = new Tree();
-      $this->Admin = new OnlineAdmin();
-      $this->Role_Admin = new RoleAdmin();
-    
-
-
-    }
 	
      //角色管理
 	public function admin_role()
@@ -35,8 +20,17 @@ class Authority extends Base
 	//管理员角色添加
 	public function admin_role_add()
 	{
-		//$data = input();
-		//var_dump($data);
+		$data = input();
+		
+		$re = $this->Role->roleadd($data['id']);//根据id查找出角色
+
+		$role_node = $this->Node->role_node();//查找出所有的权限节点
+		$role_node = $this->Tree->create($role_node);//用无限极分类进行排序
+       // dump($role_node);
+		$access = $this->Access->seleaccess($data['id'],$role_node);
+		//dump($access);
+		$this->assign('access',$access);
+		$this->assign('re',$re);
 		return $this->fetch();
 	}
 	//权限管理
@@ -158,7 +152,42 @@ class Authority extends Base
         	$this->assign('reus',$reus);
         	return $this->fetch();
         }
-		     
+		
+		//添加角色权限
+		public function addrolenode()
+		{
+			
+			$data = input();
+			$acce = $this->Access->seleroles($data['rid']);
+			if(isset($data['access'])){
+				//dump($data['access']);
+				$array = array();
+				foreach ($data['access'] as $v) {
+					$tmp=explode('_',$v);
+					
+					$array[] = array(
+                          'role_id' => $data['rid'],
+                          'node_id' => $tmp[0],
+                          'level'   => $tmp[1]
+						);
+				}
+				//dump($array);
+				$add = $this->Access->addaccess($array);
+				dump($add);
+				if($add)
+				{
+                  	 $this->success('修改成功');
+					}else
+					{
+						$this->error('修改失败');
+					}
+
+				}
+			else
+			{
+				$this->error('修改失败');
+			}
+		}  
    
 
 

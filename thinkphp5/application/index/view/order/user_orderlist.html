@@ -5,25 +5,39 @@
  <article class="U-article Overflow">
   <!--user order list-->
   <section>
+	
     <table class="Myorder">
+	{if(!empty($data))}
      <th class="Font14 FontW">订单编号</th>
      <th class="Font14 FontW">收件人</th>
 	 <th class="Font14 FontW">下单时间</th>
-     <th class="Font14 FontW">订单总金额</th>
-    
+     <th class="Font14 FontW">支付方式</th>
+    <th class="Font14 FontW">订单状态</th>
      <th class="Font14 FontW">操作</th>
-     {foreach $data as $key => $value}
+	 
+	{foreach $data as $key=>$value}	
+	
 	 <tr>
       <td class="FontW">{$value['order_num']}</td>
       <td>{$value['user_name']}</td>
-      <td>{$value['create_time']}</td>
-      <td>{$dishes_total}</td>
-      
+      <td>{$value['message_time']}</td>
+      <td>{$value['pay_way']}</td>
+      <td>{$value['order_status']}</td>
       <td>
-	  <a href="javascript:void(0);" onclick="del({$value['order_id']},{$value['order_num']})" >取消订单</a> | <a href="#">付款</a>
+	  <a href="javascript:void(0);" onclick="del({$value['id']},{$value['order_num']})" >取消订单</a> | <a href="#">付款</a>
 	  </td>
      </tr>
-	 {/foreach}
+
+	{/foreach}
+	{else}
+	<th class="Font14 FontW">订单编号</th>
+     <th class="Font14 FontW">收件人</th>
+	 <th class="Font14 FontW">下单时间</th>
+     <th class="Font14 FontW">订单总金额</th>
+    <th class="Font14 FontW">订单状态</th>
+     <th class="Font14 FontW">操作</th>
+	
+	{/if}
     </table>
     <div class="TurnPage">
          <a href="#">
@@ -49,12 +63,12 @@
 {include file="foot"}
 
 <script>
-		function del(order_id,order_num)
+		function del(id,order_num)
 		{
 		 if (confirm('是否删除订单?'))
 		 {
-			
-			$.get('/index/order/delUserOrder',{order_id:order_id,order_num:order_num},function(data){
+			//id表示订单的id
+			$.get('/index/order/delUserOrder',{id:id,order_num:order_num},function(data){
 				if(data)
 				{
 					window.location.reload();

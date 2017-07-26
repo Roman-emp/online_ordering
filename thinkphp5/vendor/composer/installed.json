@@ -174,5 +174,43 @@
             }
         ],
         "description": "The ThinkPHP5 Image Package"
+    },
+    {
+        "name": "tekintian/tp5auth",
+        "version": "v2.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tekintian/tp5auth.git",
+            "reference": "7b5cf822aaad43bb309121b2675d9a43027a0e1d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://files.phpcomposer.com/files/tekintian/tp5auth/7b5cf822aaad43bb309121b2675d9a43027a0e1d.zip",
+            "reference": "7b5cf822aaad43bb309121b2675d9a43027a0e1d",
+            "shasum": ""
+        },
+        "time": "2017-01-19T05:42:08+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "tp5auth\\auth\\": ""
+            },
+            "files": [
+                "helper.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "tekintian",
+                "email": "tekintian@gmail.com"
+            }
+        ],
+        "description": "ThinkPHP5.0 Auth RBAC model tp5auth Package."
     }
 ]

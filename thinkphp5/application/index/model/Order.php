@@ -5,18 +5,19 @@ use think\Model;
 
 Class  Order  extends  Model
 {
-	//»ñÈ¡ÓÃ»§¶©µ¥ÁÐ±íÐÅÏ¢
+
 	public function userOrder($user_id)
 	{
 		
-		$result = Db('online_user,online_order')
-				 ->where("online_user.user_id =online_order.user_id")
+		$result = Db('online_user,order_status')
+				 ->where("online_user.user_id =order_status.user_id")
 				 ->select();
-		
+
 				return $result;
 	}
 	
 	
+
 	//ÓÃ»§¶©µ¥ÁÐ±í£¨²éÑ¯ÓÃ»§¶©µ¥×´Ì¬£©
 	public function userOrderStatus($order_num)
 	{
@@ -27,10 +28,11 @@ Class  Order  extends  Model
 					
 					return $result;
 	}
+
 	public function delUserOrder()
 	{
-		return Db::name('online_order')
-					// ->where('order_id',input('order_id'))
+		return Db::name('order_status')
+					// ->where('id',input('order_id'))
 					->where('order_num',input('order_num'))
 					->where('user_id',session('user_id'))
 					->delete();
