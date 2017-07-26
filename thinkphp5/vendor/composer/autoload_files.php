@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     '1cfd2761b63b0a29ed23657ea394cb2d' => $vendorDir . '/topthink/think-captcha/src/helper.php',
+    '07c7bbffae0ef3c340bfa5d2b10c66d1' => $vendorDir . '/tekintian/tp5auth/helper.php',
 );

@@ -19,6 +19,12 @@ class Role extends Model
      $re = Db::name('role')->select();
      return $re;
    }
+   //admin_role_add
+   public function roleadd($id)
+   {
+     $re = Db::name('role')->where('id',$id)->find();
+     return $re;
+   }
    // //关联
    // public function OnlineAdmin()
    //  {
@@ -26,11 +32,23 @@ class Role extends Model
    //     return $this->belongsToMany('OnlineAdmin', 'role_admin','user_id','role_id');
    //  }
   
-    //关联查询
-   public function role_admin($re)
-   {
-    
-   }
+     //关联查询出role_id
+       public function list_user($id)
+       {        
+              return   Db::name('online_admin')->where('id',$id)
+                          ->alias('oa') //命名别名
+                          ->join('role_admin ra','oa.id = ra.user_id')
+                          ->field('role_id')
+                          ->find();  
+
+                    //->buildSql();
+                     
+       }
+       // //查询出角色
+       // public function list_role()
+       // {
+        
+       // }
 
 
 

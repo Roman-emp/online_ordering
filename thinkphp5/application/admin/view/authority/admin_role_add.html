@@ -13,11 +13,11 @@
 <script type="text/javascript" src="lib/html5.js"></script>
 <script type="text/javascript" src="lib/respond.min.js"></script>
 <![endif]-->
-<link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
-<link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
-<link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC_ADMIN__admin1/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC_ADMIN__admin2/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC_ADMIN__lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC_ADMIN__admin2/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC_ADMIN__admin2/css/style.css" />
 <!--[if IE 6]>
 <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
 <script>DD_belatedPNG.fix('*');</script>
@@ -30,174 +30,86 @@
 </head>
 <body>
 <article class="cl pd-20">
-	<form action="" method="post" class="form form-horizontal" id="form-admin-role-add">
+	<form action="/admin/authority/addrolenode" method="post" class="form form-horizontal" id="form-admin-role-add">
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>角色名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="roleName" name="roleName" datatype="*4-16" nullmsg="用户账户不能为空">
+				<input type="text" class="input-text" value="{$re['name']}" placeholder="" id="roleName" name="roleName" datatype="*4-16" nullmsg="用户账户不能为空">
+				<input type="hidden" name="rid" value="{$re['id']}" />
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3">备注：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text" value="" placeholder="" id="" name="">
+				<input type="text" class="input-text" value="{$re['remark']}" placeholder="" id="" name="">
 			</div>
 		</div>
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-3">网站角色：</label>
 			<div class="formControls col-xs-8 col-sm-9">
 				<dl class="permission-list">
-					<dt>
+					{foreach $access as $v}
+					<dt style="text-indent:{$v['level']*20}px; {if condition=" $v['level'] eq 3 "}float:left;margin-right:-40px;{else/}clear:both;{/if}">
 						<label>
-							<input type="checkbox" value="" name="user-Character-0" id="user-Character-0">
-							资讯管理</label>
+							<input type="checkbox" value="{$v['id']}_{$v['level']}" name="access[]" id="{$v['id']}"
+                               pid="{$v['pid']}" level="{$v['level']}"
+							 />
+                             {if condition=" $v['level'] eq 1 "}<span style="font-weight:bold;">[项目]</span>
+                                {elseif condition="$v['level'] eq 2"/}<span style="font-weight:bold;">[模块]</span>{/if}
+                                 
+							      {$v['title']}
+
+
+						</label>
 					</dt>
-					<dd>
-						<dl class="cl permission-list2">
-							<dt>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-0" id="user-Character-0-0">
-									栏目管理</label>
-							</dt>
-							<dd>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-0">
-									添加</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-1">
-									修改</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-2">
-									删除</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-3">
-									查看</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-4">
-									审核</label>
-								<label class="c-orange"><input type="checkbox" value="" name="user-Character-0-0-0" id="user-Character-0-0-5"> 只能操作自己发布的</label>
-							</dd>
-						</dl>
-						<dl class="cl permission-list2">
-							<dt>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-1" id="user-Character-0-1">
-									文章管理</label>
-							</dt>
-							<dd>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-1-0" id="user-Character-0-1-0">
-									添加</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-1-0" id="user-Character-0-1-1">
-									修改</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-1-0" id="user-Character-0-1-2">
-									删除</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-1-0" id="user-Character-0-1-3">
-									查看</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-0-1-0" id="user-Character-0-1-4">
-									审核</label>
-								<label class="c-orange"><input type="checkbox" value="" name="user-Character-0-2-0" id="user-Character-0-2-5"> 只能操作自己发布的</label>
-							</dd>
-						</dl>
-					</dd>
-				</dl>
-				<dl class="permission-list">
-					<dt>
-						<label>
-							<input type="checkbox" value="" name="user-Character-0" id="user-Character-1">
-							用户中心</label>
-					</dt>
-					<dd>
-						<dl class="cl permission-list2">
-							<dt>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-1-0" id="user-Character-1-0">
-									用户管理</label>
-							</dt>
-							<dd>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-1-0-0" id="user-Character-1-0-0">
-									添加</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-1-0-0" id="user-Character-1-0-1">
-									修改</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-1-0-0" id="user-Character-1-0-2">
-									删除</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-1-0-0" id="user-Character-1-0-3">
-									查看</label>
-								<label class="">
-									<input type="checkbox" value="" name="user-Character-1-0-0" id="user-Character-1-0-4">
-									审核</label>
-							</dd>
-						</dl>
-					</dd>
+						{/foreach}
 				</dl>
 			</div>
 		</div>
 		<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
-				<button type="submit" class="btn btn-success radius" id="admin-role-save" name="admin-role-save"><i class="icon-ok"></i> 确定</button>
+				<button type="submit" class="btn btn-success radius" id="admin-role-save" name=""><i class="icon-ok"></i> 确定</button>
 			</div>
 		</div>
 	</form>
 </article>
 
 <!--_footer 作为公共模版分离出去-->
-<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script> 
-<script type="text/javascript" src="lib/layer/2.4/layer.js"></script> 
-<script type="text/javascript" src="static/h-ui/js/H-ui.js"></script> 
-<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.page.js"></script> 
+{include file="footer"}
 
 <!--/_footer /作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
-<script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script> 
-<script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/messages_zh.js"></script> 
 <script type="text/javascript">
-$(function(){
-	$(".permission-list dt input:checkbox").click(function(){
-		$(this).closest("dl").find("dd input:checkbox").prop("checked",$(this).prop("checked"));
-	});
-	$(".permission-list2 dd input:checkbox").click(function(){
-		var l =$(this).parent().parent().find("input:checked").length;
-		var l2=$(this).parents(".permission-list").find(".permission-list2 dd").find("input:checked").length;
-		if($(this).prop("checked")){
-			$(this).closest("dl").find("dt input:checkbox").prop("checked",true);
-			$(this).parents(".permission-list").find("dt").first().find("input:checkbox").prop("checked",true);
-		}
-		else{
-			if(l==0){
-				$(this).closest("dl").find("dt input:checkbox").prop("checked",false);
-			}
-			if(l2==0){
-				$(this).parents(".permission-list").find("dt").first().find("input:checkbox").prop("checked",false);
-			}
-		}
+
+	$('input').click(function(){
+         var level = $(this).attr('level');
+         if(level == 1)
+         { 
+         	var str = '_';
+            var inputs = $('input[value*='+str+']');
+           if($(this).is(':checked')){ inputs.prop('checked',true); }else{ inputs.prop('checked',false); } 
+         }else if(level == 2)
+         { 
+         	var id = $(this).attr('id');
+            var inputs = $('input[pid='+id+']');
+           $(this).is(':checked') ? inputs.prop('checked',true) : inputs.prop('checked',false);
+         }else if(level == 3){
+         	if($(this).is(':checked'))
+         	{
+         		var pid=$(this).attr('pid');
+         		console.log($('input[id='+pid+']'));
+         		$('input[id='+pid+']').prop('checked',true);
+         		var ppid=$('input[id='+pid+']').attr('pid');
+         		$('input[id='+ppid+']').prop('checked',true);
+         	}
+         }
+
 	});
 	
-	$("#form-admin-role-add").validate({
-		rules:{
-			roleName:{
-				required:true,
-			},
-		},
-		onkeyup:false,
-		focusCleanup:true,
-		success:"valid",
-		submitHandler:function(form){
-			$(form).ajaxSubmit();
-			var index = parent.layer.getFrameIndex(window.name);
-			parent.layer.close(index);
-		}
-	});
-});
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
 </body>
