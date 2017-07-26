@@ -4,7 +4,7 @@ namespace app\index\controller;
 use think\Controller;
 use think\Db;
 use app\index\model\Order as orderModel;
-
+//use extend\hbj\MyCurl;
 
 class Order extends Controller
 {
@@ -17,12 +17,10 @@ class Order extends Controller
 	//用户订单列表信息
 	public function user_orderlist()
 	{
-		$user_id = session('user_id');
-		
+		$user_id = session('user_id');	
 		$data = $this->online_order
 					 ->userOrder($user_id);
 					
-				
 					foreach($data as $key=>$value)
 					{
 						$order_num = $value['order_num'];
@@ -44,11 +42,20 @@ class Order extends Controller
 						$order_status = $value['order_status'];
 						
 					}
-				
-			 // $this->assign('order_status',$order_status);
-			 $this->assign('data',$data);
+		
+			
+		/*$url = "http://v.juhe.cn/exp/index?com=yd&no=3973210243695&dtype=&key=c55fd666abc71d2d9739d59c14a44055";
+		$curl = MyCurl::get($url);
+		$arr = json_decode($curl,true);
+		
+		$title = "快递公司：".$arr['result']['company']."快递单号：".$arr['result']['no']; 
+		$content = $arr['result']['list'];*/
+	
+			 $this->assign('order_status',$order_status);
+			$this->assign('data',$data);
 			 $this->assign('dishes_total',$dishes_total);
-			 
+			 $this->assign('content',$content);
+			 dump($content);
 		return  $this->fetch();
 	}
 	

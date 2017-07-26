@@ -24,6 +24,19 @@ Class Address extends Model
 					 return $result; 
 	}
 	
-	
+	//前台完成添加订单地址
+	public function add_address($data)
+	{
+		
+		$arr = [
+			'recieve_username'	=> $data['username'],
+			'recieve_address'	=> $data['address'],
+			'recieve_ems'		=> '美团',
+			'recieve_tel'		=> $data['province'].$data['city'].$data['area'],
+			'user_id'			=> session('user_id'),
+			'recieve_address_detail' => $data['address'],
+		];
+		return Db::name()->insert($arr);
+	}
 
 }

@@ -52,10 +52,10 @@ class Address 	extends  Controller
 		}else{
 			$this->error('添加失败','userAddress');
 		}
-		
-		
 	}
+
 	
+
 	//编辑用户地址信息
 	public function editUserAddress()
 	{
