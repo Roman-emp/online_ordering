@@ -19,7 +19,8 @@
       <td>{$value['user_name']}</td>
 	  <td>{$value['shop_name']}</td>
 	  <td>{$value['menu_name']}</td>
-      <td><a href="/index/usermessage/viewUserMess?menu_id={$value['menu_id']}&shop_id={$value['shop_id']}">查看回复</a> | <a href="/index/address/delUserMess">删除留言</a></td>
+      <td><a href="/index/usermessage/viewUserMess?menu_id={$value['menu_id']}&shop_id={$value['shop_id']}">查看回复</a> | 
+	  <a href="javascript:void(0);" onclick="del({$value['menu_id']},{$value['shop_id']})"">删除留言</a></td>
      </tr>
 	{/foreach}
     </table>
@@ -46,3 +47,25 @@
   <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
  </div>
 {include file="foot"}
+
+<script>
+		function del(menu_id,shop_id)
+		{
+		
+		 if (confirm('是否删除订单?'))
+		 {
+		 console.log(menu_id);
+		 console.log(shop_id);
+			//menu_id商品id   shop_id商家id
+			$.get('/index/usermessage/delUserMess',{menu_id:menu_id,shop_id:shop_id},function(data){
+				if(data)
+				{
+					window.location.reload();
+					//alert('删除成功');
+				}
+			
+			},'json'); 
+		 }
+	}
+	
+</script>

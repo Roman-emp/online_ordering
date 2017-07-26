@@ -43,6 +43,16 @@ class Usermessage 	extends  Controller
 			return $this->fetch();
 	}
 	
+	//用户删除留言
+	public function delUserMess()
+	{
+		$res = $this->user_comments->delUserMess(input());
+		if($res == true)
+		{
+			$this->success('删除成功','usermessage');
+		}
+	}
+	
 	
 	
 	

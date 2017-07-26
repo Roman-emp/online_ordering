@@ -17,7 +17,7 @@ Class  Order  extends  Model
 	}
 	
 	
-	
+	//取消我的订单
 	public function delUserOrder()
 	{
 		return Db::name('order_status')

@@ -36,5 +36,16 @@ class Usermessage extends Model
 	}
 	
 	
+	//用户删除留言
+	public function delUserMess()
+	{
+		return Db::name('user_comments')
+				->where('menu_id',input('menu_id'))
+				->where('shop_id',input('shop_id'))
+				->where('user_id',session('user_id'))
+				->delete();
+	}
+	
+	
 		
 }

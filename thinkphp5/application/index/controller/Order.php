@@ -36,7 +36,7 @@ class Order extends Controller
 		$res = $this->online_order->delUserOrder(input());
 		if($res == true)
 		{
-			$thi->success('删除成功','user_orderlist');
+			$this->success('删除成功','user_orderlist');
 		}
 		
 	}
