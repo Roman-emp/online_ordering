@@ -5,7 +5,7 @@ use think\Model;
 
 Class  Order  extends  Model
 {
-	//获取用户订单列表信息
+	//鑾峰彇鐢ㄦ埛璁㈠崟鍒楄〃淇℃伅
 	public function userOrder($user_id)
 	{
 		
@@ -13,7 +13,6 @@ Class  Order  extends  Model
 				 ->where("online_user.user_id =order_status.user_id")
 				 ->select();
 
-		
 				return $result;
 	}
 	
