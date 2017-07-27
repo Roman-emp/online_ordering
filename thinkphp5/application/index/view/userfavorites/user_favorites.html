@@ -8,23 +8,23 @@
  <section class="Mymessage Overflow">
    <span class="Mmtitle Block Font14 FontW Lineheight35">我的留言</span>
 	 <table class="Myorder">
-     <th class="Font14 FontW">商品名称</th>
-	 <th class="Font14 FontW">我的名称</th>
-	 <th class="Font14 FontW">商品图片</th>
 	 <th class="Font14 FontW">店铺名称</th>
+	 <th class="Font14 FontW">我的名称</th>
+
+
      <th class="Font14 FontW">收藏时间</th>
    
      <th class="Font14 FontW">操作</th>
 	{foreach $data as $key=>$value}
 	 <tr>
-      <td>{$value['menu_name']}</td>
+		<td>{$value['shop_name']}</td>
       <td>{$value['user_name']}</td>
-	  <td><img srs ="{$value['menu_icon']}"></td>
-	  <td>{$value['shop_name']}</td>
+
+	  
 	  <td>{$value['create_time']}</td>
 
 	  <td>
-	  <a href="javascript:void(0);" onclick="del({$value['menu_id']},{$value['shop_id']})"">删除留言</a></td>
+	  <a href="javascript:void(0);" onclick="del({$value['shop_id']})"">删除店铺</a></td>
      </tr>
 	 {/foreach}
 	
@@ -55,7 +55,7 @@
 {include file="foot"}
 
 <script>
-		function del(menu_id,shop_id)
+		function del(shop_id)
 		{
 
 		
@@ -63,7 +63,7 @@
 		 {
 
 			//menu_id商品id   shop_id商家id
-			$.get('/index/userfavorites/delUserFavor',{menu_id:menu_id,shop_id:shop_id},function(data){
+			$.get('/index/userfavorites/delUserFavor',{shop_id:shop_id},function(data){
 				if(data)
 				{
 					window.location.reload();

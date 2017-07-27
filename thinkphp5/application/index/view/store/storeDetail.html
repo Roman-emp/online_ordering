@@ -36,11 +36,18 @@
      <div class="Button">
       <a href="#ydwm"><span class="DCbutton">查看菜谱点菜</span></a>
      </div>
+	 
+	 <!--我的收藏-->
      <div class="otherinfor">
-     <a href="#" class="icoa"><img src="/static/index/images/collect.png">收藏店铺（1293）</a>
-     <div class="bshare-custom"><a title="分享" class="bshare-more bshare-more-icon more-style-addthis">分享</a></div>
-	 <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
-     </div>
+	 
+     <a href="/index/store/UserFavorShop?shop_id={$shop_id}" class="icoa"><img src="/static/index/images/collect.png">收藏店铺</a>
+      <a href="/index/store/delFavor?shop_id={$shop_id}" class="icoa"><img src="/static/index/images/collect.png">取消收藏</a>
+	 <div class="bshare-custom"><a title="分享" class="bshare-more bshare-more-icon more-style-addthis">分享</a></div>
+	 <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script>
+	 <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+     
+	 
+	 </div>
    </div>
   </div>
  
