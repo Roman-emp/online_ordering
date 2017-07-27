@@ -7,26 +7,25 @@
   <section>
 	
  <table class="U-order-D">
-    <th>订单编号</th>
-    <th>订单产品</th>
-    <th>订购数量</th>
-    <th>单价</th>
-    <th>小计</th>
-    <th>配送费用</th>
-    <th>共计金额</th>
-    <th>付款方式</th>
+    <th>商品名称</th>
+    <th>商品价格</th>
+    <th>我的名称</th>
+    <th>商家名称</th>
+	<th>商品图片</th>
+    {foreach $data as $key=>$value}
     <tr>
-     <td>201409243195</td>
-     <td><a href="detailsp.html" target="_blank" title="酸辣土豆丝">酸辣土豆丝</a></td>
-     <td>1</td>
-     <td>￥8.00</td>
-     <td>￥8.00</td>
-     <td>￥2.00</td>
-     <td>￥10.00</td>
-     <td>支付宝</td>
+     <td><a href="/index/shopping/detail?shop_id={$value['shop_id']}&menu_id={$value['menu_id']}">{$value['menu_name']}</a></td>
+     <td>{$value['menu_price']}</td>
+	 <td><a href="/index/shopping/detail?shop_id={$value['shop_id']}&menu_id={$value['menu_id']}"><img src="{$value['menu_icon']}"></a></td>
+	 <td>{$value['shop_name']}</td>
+     <td>{$value['user_name']}</td>
+	 
+     
+    
      <!--如果未付款，则显示立即付款按钮-->
      <td style="display:none;"><a href="#" target="_blank">立即付款</a></td>
     </tr>
+	{/foreach}
    </table>
     <div class="TurnPage">
          <a href="#">
