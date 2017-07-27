@@ -1,24 +1,13 @@
 <?php
 namespace app\admin\controller;
-use think\Controller;
 use think\captcha;
 use think\Session;
-use app\admin\model\User as UserModel;
+use app\admin\controller\Base;
 
-class User extends Controller
+class User extends Base
 {
    //初始化对象 
-   public function _initialize()
-   {
-
-      $this->usermode = new UserModel();
-
-    }
-
-	public function login()
-	{
-		return $this->fetch();
-	}
+ 
 
 	//获取管理员列表
 	public  function  adminlist()
@@ -122,12 +111,9 @@ class User extends Controller
 				$this->error('非法操作','adminlist');
 			}
 
-			if($check['role'] == 1)
-			{
-				$this->error('没有权限...','adminlist');
-			}
+			
 
-			$back = $adM->where("id = {$id} and role = 0")->delete();
+			$back = $adM->where("id = {$id} ")->delete();
 			if($back == true)
 			{
 				$this->success('删除成功','adminlist');
@@ -258,29 +244,7 @@ class User extends Controller
 
 
 
-     //登录信息处理
-	 public function dologin()
-	    {
-	     // var_dump(session('id'));
-	       $data = input();
-	        if(!captcha_check($data['yzm'])){
-	               $this->error('验证码错误');
-	            };
-	          $name = input('name');
-	          $pwd  = input('pwd');
-	          $pwd  = md5($pwd);
-	          $re = $this->usermode->dologin($name,$pwd);
-	   
-	          $id = $re['id'];
-	          if($re)
-	          {
-	              session('id', $id);
-	             $this->success('登录成功',"admin/index/index");
-	             
-	          }else{
-	            $this->error('用户名或密码错误');
-	          }
-	    }
+     
       
 
 	

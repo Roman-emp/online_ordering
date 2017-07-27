@@ -1,5 +1,6 @@
 {include file="head"}
 
+
     <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=8fb7305e7cde70670dee032b33dc5759&plugin=AMap.PlaceSearch"></script>
     <script type="text/javascript" src="http://cache.amap.com/lbs/static/PlaceSearchRender.js"></script>
     <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
@@ -22,6 +23,8 @@ $(function(){
   });
   });
   var mt = 0;
+
+
 window.onload = function () {
  var Topcart = document.getElementById("Topcart");
    var mt = Topcart.offsetTop;
@@ -31,6 +34,7 @@ window.onload = function () {
       Topcart.style.position = "fixed";
         Topcart.style.margin = "";
          Topcart.style.top = "200px";
+
      Topcart.style.right = "191px";
      Topcart.style.boxShadow ="0px 0px 20px 5px #cccccc";
      Topcart.style.top="0";
@@ -40,6 +44,7 @@ window.onload = function () {
          Topcart.style.position = "static";
      Topcart.style.boxShadow ="none";
      Topcart.style.border="";
+
           }
           }
         }
@@ -53,11 +58,11 @@ window.onload = function () {
     <img src="/uploads/wpjnewlogo.jpg" class="shop-ico">
     <span>{$shop['shop_name']}</span>
     <span>
-     <img src="/static/index/images/star-on.png">
-     <img src="/static/index/images/star-on.png">
-     <img src="/static/index/images/star-on.png">
-     <img src="/static/index/images/star-on.png">
-     <img src="/static/index/images/star-off.png">
+     <img src="__PUBLIC_INDEX__images/star-on.png">
+     <img src="__PUBLIC_INDEX__images/star-on.png">
+     <img src="__PUBLIC_INDEX__images/star-on.png">
+     <img src="__PUBLIC_INDEX__images/star-on.png">
+     <img src="__PUBLIC_INDEX__images/star-off.png">
     </span>
     <span>4.8</span>
    </div>
@@ -80,11 +85,17 @@ window.onload = function () {
      <div class="Button">
       <a href="#ydwm"><span class="DCbutton">查看菜谱点菜</span></a>
      </div>
+	 
+	 <!--我的收藏-->
      <div class="otherinfor">
-     <a href="#" class="icoa"><img src="/static/index/images/collect.png">收藏店铺（1293）</a>
-     <div class="bshare-custom"><a title="分享" class="bshare-more bshare-more-icon more-style-addthis">分享</a></div>
-   <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
-     </div>
+
+	 
+     <a href="/index/store/UserFavorShop?shop_id={$shop_id}" class="icoa"><img src="/static/index/images/collect.png">收藏店铺</a>
+      <a href="/index/store/delFavor?shop_id={$shop_id}" class="icoa"><img src="/static/index/images/collect.png">取消收藏</a>
+	 <div class="bshare-custom"><a title="分享" class="bshare-more bshare-more-icon more-style-addthis">分享</a></div>
+	 <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=1&amp;lang=zh"></script>
+	 <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>	 
+	 </div>
    </div>
   </div>
   <div class="shopcontent">
@@ -267,8 +278,10 @@ window.onload = function () {
  
 </section>
 <!--End content-->
+
 {include file="foot"}
 
 
 </body>
 </html>
+

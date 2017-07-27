@@ -3,6 +3,7 @@ namespace app\admin\model;
 use think\DB;
 use think\Model;
 
+
 class User extends Model
 {
 	//获取管理员列表

@@ -19,6 +19,7 @@ class Address 	extends  Controller
 	{
 		//根据用户id查询用户详细地址
 		$user_id = session('user_id');
+
 		//我的地址列表
 		$raM = Db('recieve_address');
 	
@@ -112,15 +113,5 @@ class Address 	extends  Controller
 	}
 
 
-	//我的留言
-	public function userMessage()
-	{
-		return $this->fetch();
-	}
 
-	//我的优惠劵
-	public function userCoupon()
-	{
-		return $this->fetch();
-	}
 } 

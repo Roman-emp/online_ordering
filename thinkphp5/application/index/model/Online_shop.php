@@ -23,4 +23,38 @@
 						->where("shop_id in ($shop_id)")
 						->select();
 		}
+		
+		
+		//用户收藏店铺
+		public function UserFavorShop($shop_id)
+		{
+			$dM = Db('user_favor');
+			
+			$data = [
+				'shop_id' =>$shop_id,
+				'user_id' =>session('user_id'),
+				'create_time'=>date('Y-m-d H:i:s',time()),
+			];
+		
+			$user_id = session('user_id');
+
+			$result = Db::name('user_favor')
+						->insert($data);
+				return $result;
+						
+		}
+		
+		//用户取消店铺收藏
+		public function delFavorModel($shop_id)
+		{
+			$user_id = session('user_id');
+			return Db::name('user_favor')
+					->where("shop_id=$shop_id and user_id=$user_id")
+					->delete();
+					
+					
+		}
+		
+		
+		
 	}

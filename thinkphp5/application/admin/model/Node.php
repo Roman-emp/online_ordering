@@ -46,7 +46,18 @@ class Node extends Model
                           ->select();  
 
    }
+   //根据node_id查询出来对应的权限和路径
+   public function list_node_name($id)
+   {
+      $re = Db::name('node')->field('title,url,id,pid,level')->where('id',$id)->where('level',2)->find();
 
+     return $re;
+   }
+   public function list_node_name_child($id)
+   {
+      $re = Db::name('node')->field('title,url,id,pid,level')->where('id',$id)->where('level',3)->find();
 
+     return $re;
+   }
 
 }

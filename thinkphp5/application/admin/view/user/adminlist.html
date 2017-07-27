@@ -26,11 +26,9 @@
 						<th width="25"><input type="checkbox" name="" value=""></th>
 						<th width="40">ID</th>
 						<th width="150">名称</th>
-						<th width="90">手机</th>
-						<th width="150">邮箱</th>
-						<th>角色</th>
+						
 						<th width="130">加入时间</th>
-						<th width="100">是否启用</th>
+						
 						<th width="150">操作</th>
 					</tr>
 				</thead>
@@ -38,27 +36,14 @@
 				<tbody>
 					<tr class="text-c">
 						<td><input type="checkbox" value="1" name=""></td>
-						<td>{$value['admin_id']}</td>
+						<td>{$value['id']}</td>
 						<td>{$value['name']}</td>
-						<td>{$value['telephone']}</td>
-						<td>{$value['email']}</td>
-						<td class="td-status"><span class="label label-success radius">
-						{if($value['role'] == 0)}
-								主管
-								{else if($value['role'] == 1)}
-								副管
-						{/if}
+					
 						<td>{$value['create_time']}</td>
-						<td class="td-status"><span class="label label-success radius">
-						{if($value['is_use'] == 0)}
-								是
-								{else if($value['is_use'] == 1)}
-								否
-						{/if}
-						</span></td>
+						
 						<td class="td-manage">
-						<a href="edit?id={$value['admin_id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
-							<a href="delete?id={$value['admin_id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="删除" onclick="return del(1)"/></a></td>
+						<a href="edit?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
+							<a href="delete?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="删除" onclick="return del(1)"/></a></td>
 					</tr>
 				
 				</tbody>

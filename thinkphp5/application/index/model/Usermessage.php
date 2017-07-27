@@ -1,5 +1,5 @@
 <?php
- namespace app\index\model;
+namespace app\index\model;
 use think\DB;
 use think\Model;
 

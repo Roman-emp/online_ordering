@@ -5,7 +5,7 @@ use think\Model;
 
 Class  Order  extends  Model
 {
-
+	//查询用户订单
 	public function userOrder($user_id)
 	{
 		
@@ -18,7 +18,7 @@ Class  Order  extends  Model
 	
 	
 
-	//脫脙禄搂露漏碌楼脕脨卤铆拢篓虏茅脩炉脫脙禄搂露漏碌楼脳麓脤卢拢漏
+	
 	public function userOrderStatus($order_num)
 	{
 		
