@@ -1,6 +1,6 @@
 <?php
 namespace app\index\model;
-use think\DB;
+use think\Db;
 use think\Model;
 
 Class  Order  extends  Model
@@ -18,7 +18,7 @@ Class  Order  extends  Model
 	
 	
 
-	//ÓÃ»§¶©µ¥ÁÐ±í£¨²éÑ¯ÓÃ»§¶©µ¥×´Ì¬£©
+	//脫脙禄搂露漏碌楼脕脨卤铆拢篓虏茅脩炉脫脙禄搂露漏碌楼脳麓脤卢拢漏
 	public function userOrderStatus($order_num)
 	{
 		
@@ -37,12 +37,17 @@ Class  Order  extends  Model
 					->where('user_id',session('user_id'))
 					->delete();
 	}
-	//��ɶ���֧��
+	//完成订单支付
 	public function complete_order($data)
 	{
-		$len = conut($menu_id);//ѭ���������ݵĴ���
-		$order_num = 'LBJ'.time();//�������
-		$create_time = date('Y-m-d H:i:s',time());//�µ�ʱ��
+		$len = count(session('menus_id'));//循环插入数据的次数
+
+		$order_num = 'LBJ'.time();//订单编号
+		$create_time = date('Y-m-d H:i:s',time());//下单时间
+		$menus_id = session('menus_id');
+		$shops_id = session('shops_id');
+		$menus_num = session('menus_num');
+		$menus_price = session('menus_price');
 		for ($i=0; $i <$len ; $i++) 
 		{ 
 			$arr = [
@@ -51,25 +56,28 @@ Class  Order  extends  Model
 					'recieve_person' 	=> $data['username'],
 					'shop_id'			=> $shops_id[$i],
 					'menu_id'			=> $menus_id[$i],
-					'num'				=> $menus_num[$i],
+					'num'				=> $menus_num[0]['num'],
 					'price'				=> $menus_price[$i],
 					'user_tel'			=> $data['tel'],
 					'order_add_info'	=> $data['msg'],
 					'create_time'		=> $create_time
 			];
-			return Db::name('online_order')->insert($arr);
+		
+			 Db::name('online_order')->insert($arr);	
 		}
+		return true;
 	}
-	//���Ӷ���״̬
-	public function add_order_status($data)
+	//添加订单状态
+	public function add_order_status()
 	{
-		$order_num = 'LBJ'.time();//�������
+		$order_num = 'LBJ'.time();//订单编号
 		$arr = [
-			'order_num' 	=> $order_num,
-			'order_status'  => 'δ�ջ�',
-			'pay_way' 		=> '֧����',
-			'logistics' 	=> '����',
+			'user_id'		=> session('user_id'),
+			'order_num'		=> $order_num,
+			'order_status'  => '未收货',
+			'pay_way'		=> '支付宝',
+			'logistics'		=> '美团',
 		];
-		return Db::name('order_status')->inset($arr);
+		return Db::name('order_status')->insert($arr);
 	}
 }

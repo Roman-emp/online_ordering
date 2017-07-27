@@ -32,11 +32,11 @@ Class Address extends Model
 			'recieve_username'	=> $data['username'],
 			'recieve_address'	=> $data['address'],
 			'recieve_ems'		=> '美团',
-			'recieve_tel'		=> $data['province'].$data['city'].$data['area'],
+			'recieve_tel'		=> $data['tel'],
 			'user_id'			=> session('user_id'),
-			'recieve_address_detail' => $data['address'],
+			'recieve_address_detail' => $data['province'].$data['city'].$data['area'],
 		];
-		return Db::name()->insert($arr);
+		return Db::name('recieve_address')->insert($arr);
 	}
 
 }

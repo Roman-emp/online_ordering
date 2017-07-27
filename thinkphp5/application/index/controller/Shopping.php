@@ -6,6 +6,7 @@ use think\Db;
 use app\index\model\Menu_list;
 use app\index\model\Order;
 use app\index\model\Address;
+
 class Shopping extends Controller
 {
 	protected $menu;
@@ -188,12 +189,15 @@ class Shopping extends Controller
 	{
 		//echo json_encode(input());
 		//添加订单
+		//echo json_encode($this->orders->complete_order(input()));
 		$online_order = $this->orders->complete_order(input());
 		//添加收货地址
 		$add_address = $this->address->add_address(input());
+		//echo json_encode($this->address->add_address(input()));
 		//把订单号插入订单状态表
-		$order_status = $this->orders->add_order_status(input());
-
+		$order_status = $this->orders->add_order_status();
+		//echo json_encode(session('shops_id'));
+		
 		if ($online_order && $add_address && $order_status)
 		{
 			echo json_encode(1);

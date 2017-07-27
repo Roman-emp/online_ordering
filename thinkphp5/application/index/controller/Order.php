@@ -56,7 +56,7 @@ class Order extends Controller
 		$content = $arr['result']['list'];*/
 	
 			 $this->assign('order_status',$order_status);
-			$this->assign('data',$data);
+			 $this->assign('data',$data);
 			 $this->assign('dishes_total',$dishes_total);
 			 $this->assign('content',$content);
 			 dump($content);
