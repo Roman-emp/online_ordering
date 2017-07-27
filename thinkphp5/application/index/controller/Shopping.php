@@ -85,7 +85,6 @@ class Shopping extends Controller
 		$user_id = session('user_id');
 		//查询登录用户的购物车信息
 		$shop_cart = $this->menu->select_user_cart($user_id);
-
 		$this->assign('shop_cart',$shop_cart);
 		return $this->fetch();
 	}
@@ -207,7 +206,7 @@ class Shopping extends Controller
 /*根据搜索词,搜索对应结果*/
 
 	//搜索对应菜单
-	public function search_menu()
+	public function search_p()
 	{
 		
 		$con = input('keyword');//搜索关键字

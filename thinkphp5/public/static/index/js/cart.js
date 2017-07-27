@@ -130,9 +130,9 @@ var data = {"total":0,"rows":[]};
 		var totalCost = 0;
 		
 		$(function(){
-			// $('#cartcontent').datagrid({
-				// singleSelect:true
-			// });
+			$('#cartcontent').datagrid({
+				singleSelect:true
+			});
 			$('.item').draggable({
 				revert:true,
 				proxy:'clone',

@@ -111,9 +111,5 @@
 			      ->delete();
 		}
 
-/*订单部分*/
-		// public function product_order(data)
-		// {
 
-		// }
 	}

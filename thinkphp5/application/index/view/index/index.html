@@ -1,20 +1,19 @@
 {include file="head"}
-
+<!--Start content-->
 <section class="Cfn">
  <aside class="C-left">
   <div class="S-time">服务时间：周一~周六<time>09:00</time>-<time>23:00</time></div>
   <div class="C-time">
-
-   <img src="__UPLOAD_IMG__/dc.jpg"/>
+   <img src="__UPLOAD_IMG__dc.jpg"/>
   </div>
-  <a href="list.html" target="_blank"><img src="__PUBLIC_INDEX__/images/by_button.png"></a>
-  <a href="list.html" target="_blank"><img src="__PUBLIC_INDEX__/images/dc_button.png"></a>
+  <a href="list.html" target="_blank"><img src="__PUBLIC_INDEX__images/by_button.png"></a>
+  <a href="list.html" target="_blank"><img src="__PUBLIC_INDEX__images/dc_button.png"></a>
  </aside>
  <div class="F-middle">
  <ul class="rslides f426x240">
-        <li><a href="javascript:"><img src="__UPLOAD_IMG__/01.jpg"/></a></li>
-        <li><a href="javascript:"><img src="__UPLOAD_IMG__/02.jpg" /></a></li>
-        <li><a href="javascript:"><img src="__UPLOAD_IMG__/03.jpg"/></a></li>
+        <li><a href="javascript:"><img src="__UPLOAD_IMG__01.jpg"/></a></li>
+        <li><a href="javascript:"><img src="__UPLOAD_IMG__02.jpg" /></a></li>
+        <li><a href="javascript:"><img src="__UPLOAD_IMG__03.jpg"/></a></li>
     </ul>
  </div>
  <aside class="N-right">
@@ -92,52 +91,43 @@
      <a href="#">蓝田县 </a>
      </p>
      <div class="SCcontent">
-    {foreach $menu_list as $menu}
-     <a href="/index/shopping/detail?menu_id={$menu['menu_id']}&shop_id={$menu['shop_id']}&shop_name={$menu['shop_name']}"  title="菜品名称">
-        <figure>
-           <img src="/uploads/{$menu['menu_icon']}">
-           <figcaption>
-             <span class="title">{$menu['menu_name']}</span>
-             <span class="price"><i>￥</i>{$menu['menu_price']}</span>
-           </figcaption>
-        </figure>
-      </a>
-    {/foreach}
+
+      {foreach $menu_list as $menu}
+       <a href="/index/shopping/detail?menu_id={$menu['menu_id']}&shop_id={$menu['shop_id']}&shop_name={$menu['shop_name']}"  title="菜品名称">
+          <figure>
+             <img src="/uploads/{$menu['menu_icon']}">
+             <figcaption>
+               <span class="title">{$menu['menu_name']}</span>
+               <span class="price"><i>￥</i>{$menu['menu_price']}</span>
+             </figcaption>
+          </figure>
+        </a>
+      {/foreach}
      </div>
      <div class="bestshop">
       <a href="shop.html" target="_blank" title="店铺名称">
       <figure>
-
        <img src="__UPLOAD_IMG__wpjnewlogo.jpg">
-
       </figure>
       </a>
       <a href="shop.html" target="_blank" title="店铺名称">
       <figure>
-
        <img src="__UPLOAD_IMG__weijia.jpg">
-
       </figure>
       </a>
       <a href="shop.html" target="_blank" title="店铺名称">
       <figure>
-
        <img src="__UPLOAD_IMG__wpjnewlogo.jpg">
-
       </figure>
       </a>
       <a href="shop.html" target="_blank" title="店铺名称">
       <figure>
-
        <img src="__UPLOAD_IMG__weijia.jpg">
-
       </figure>
       </a>
       <a href="shop.html" target="_blank" title="店铺名称">
       <figure>
-
        <img src="__UPLOAD_IMG__wpjnewlogo.jpg">
-
       </figure>
       </a>
      </div>
@@ -160,9 +150,9 @@
      <a href="#">周至县</a>
      <a href="#">蓝田县 </a>
      </p>
-     
      <div class="DCcontent">
-      {foreach $shop_info as $shop}
+
+       {foreach $shop_info as $shop}
        <a href="/index/store/storeDetail?shop_id={$shop['shop_id']}" target="_blank" title="{$shop['shop_name']}">
            <figure>
            <img src="{$shop['shop_icon']}">
@@ -186,36 +176,86 @@
            </figure>
         </a>
         {/foreach}
-     </div>
+      
      
+     </div>
   </li>
   </ul>
  </div>
  </div>
  </article>
  <aside class="A-infor">
-
   <img src="__UPLOAD_IMG__2014911.jpg">
-
   <div class="usercomment">
    <span>用户菜品点评</span>
    <ul>
     <li>
-
      <img src="__UPLOAD_IMG__01.jpg">
      用户“DeathGhost”对[ 老李川菜馆 ]“酸辣土豆丝”评说：味道挺不错，送餐速度挺快...
     </li>
     <li>
      <img src="__UPLOAD_IMG__02.jpg">
-
-     用户“lbj”对[ 魏家凉皮 ]“酸辣土豆丝”评说：味道挺不错，送餐速度挺快...
+     用户“DeathGhost”对[ 魏家凉皮 ]“酸辣土豆丝”评说：味道挺不错，送餐速度挺快...
     </li>
    </ul>
   </div>
  </aside>
 </section>
-
-
-{include file="foot"}
-
-
+<!--End content-->
+<div class="F-link">
+  <span>友情链接：</span>
+  <a href="http://www.deathghost.cn" target="_blank" title="DeathGhost">DeathGhost</a>
+  <a href="http://www.17sucai.com/pins/15966.html" target="_blank" title="免费后台管理模板">绿色清爽版通用型后台管理模板免费下载</a>
+  <a href="http://www.17sucai.com/pins/17567.html" target="_blank" title="果蔬菜类模板源码">HTML5果蔬菜类模板源码</a>
+  <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
+ </div>
+<footer>
+ <section class="Otherlink">
+  <aside>
+   <div class="ewm-left">
+    <p>手机扫描二维码：</p>
+    <img src="images/Android_ico_d.gif">
+    <img src="images/iphone_ico_d.gif">
+   </div>
+   <div class="tips">
+    <p>客服热线</p>
+    <p><i>1830927**73</i></p>
+    <p>配送时间</p>
+    <p><time>09：00</time>~<time>22:00</time></p>
+    <p>网站公告</p>
+   </div>
+  </aside>
+  <section>
+    <div>
+    <span><i class="i1"></i>配送支付</span>
+    <ul>
+     <li><a href="article_read.html" target="_blank" title="标题">支付方式</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">配送方式</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">配送效率</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">服务费用</a></li>
+    </ul>
+    </div>
+    <div>
+    <span><i class="i2"></i>关于我们</span>
+    <ul>
+     <li><a href="article_read.html" target="_blank" title="标题">招贤纳士</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">网站介绍</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">配送效率</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">商家加盟</a></li>
+    </ul>
+    </div>
+    <div>
+    <span><i class="i3"></i>帮助中心</span>
+    <ul>
+     <li><a href="article_read.html" target="_blank" title="标题">服务内容</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">服务介绍</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">常见问题</a></li>
+     <li><a href="article_read.html" target="_blank" title="标题">网站地图</a></li>
+    </ul>
+    </div>
+  </section>
+ </section>
+<div class="copyright">© 版权所有 2016 DeathGhost 技术支持：<a href="http://www.deathghost.cn" title="DeathGhost">DeathGhost</a></div>
+</footer>
+</body>
+</html>
