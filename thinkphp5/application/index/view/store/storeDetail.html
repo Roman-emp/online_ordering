@@ -1,4 +1,45 @@
 {include file="head"}
+<script>
+$(function(){		
+	$('.title-list li').click(function(){
+		var liindex = $('.title-list li').index(this);
+		$(this).addClass('on').siblings().removeClass('on');
+		$('.menutab-wrap div.menutab').eq(liindex).fadeIn(150).siblings('div.menutab').hide();
+		var liWidth = $('.title-list li').width();
+		$('.shopcontent .title-list p').stop(false,true).animate({'left' : liindex * liWidth + 'px'},300);
+	});
+	
+	$('.menutab-wrap .menutab li').hover(function(){
+		$(this).css("border-color","#ff6600");
+		$(this).find('p > a').css('color','#ff6600');
+	},function(){
+		$(this).css("border-color","#fafafa");
+		$(this).find('p > a').css('color','#666666');
+	});
+	});
+	var mt = 0;
+window.onload = function () {
+ var Topcart = document.getElementById("Topcart");
+   var mt = Topcart.offsetTop;
+    window.onscroll = function () {
+     var t = document.documentElement.scrollTop || document.body.scrollTop;
+      if (t > mt) {
+      Topcart.style.position = "fixed";
+        Topcart.style.margin = "";
+         Topcart.style.top = "200px";
+		 Topcart.style.right = "191px";
+		 Topcart.style.boxShadow ="0px 0px 20px 5px #cccccc";
+		 Topcart.style.top="0";
+		 Topcart.style.border="1px #636363 solid";
+         }
+         else { 
+         Topcart.style.position = "static";
+		 Topcart.style.boxShadow ="none";
+		 Topcart.style.border="";
+          }
+          }
+        }
+</script>
 <!--Start content-->
 <section class="Shop-index">
   
@@ -9,11 +50,11 @@
     <img src="/uploads/wpjnewlogo.jpg" class="shop-ico">
     <span>{$shop['shop_name']}</span>
     <span>
-     <img src="/static/index/images/star-on.png">
-     <img src="/static/index/images/star-on.png">
-     <img src="/static/index/images/star-on.png">
-     <img src="/static/index/images/star-on.png">
-     <img src="/static/index/images/star-off.png">
+     <img src="__PUBLIC_INDEX__images/star-on.png">
+     <img src="__PUBLIC_INDEX__images/star-on.png">
+     <img src="__PUBLIC_INDEX__images/star-on.png">
+     <img src="__PUBLIC_INDEX__images/star-on.png">
+     <img src="__PUBLIC_INDEX__images/star-off.png">
     </span>
     <span>4.8</span>
    </div>
