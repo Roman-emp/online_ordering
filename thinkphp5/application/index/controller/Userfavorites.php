@@ -20,6 +20,7 @@ class Userfavorites extends Controller
 		return $this->fetch();
 	}
 	
+	//删除我的收藏
 	public function delUserFavor()
 	{
 
@@ -30,6 +31,8 @@ class Userfavorites extends Controller
 			$this->success('删除成功','userfavorites');
 		}
 	}
+	
+
 }
 
 

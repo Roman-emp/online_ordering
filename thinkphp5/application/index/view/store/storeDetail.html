@@ -104,7 +104,7 @@ window.onload = function () {
       <li class="on">菜谱</li>
       <li>累计评论（5）</li>
       <li>商家详情</li>
-      <li>店铺留言</li>
+      <li>用户留言</li>
       <p><b></b></p>
     </ul>
   </div>
@@ -221,11 +221,10 @@ window.onload = function () {
      </a>
     </div>
     
-     <form class="A-Message" action="#"> 
-      <p><i>姓名：</i><input name="usr_name" type="text" autofocus placeholder="张三" required></p>
-      <p><i>手机：</i><input name="" type="text" placeholder="15825518***" pattern="[0-9]{11}" required></p>
-      <p><i>邮件：</i><input type="email" name="email" autocomplete="off" placeholder="admin@admin.com" required/></p>
-      <p><i>问题补充：</i><textarea name="" cols="" rows="" required placeholder="详细说明您的问题..."></textarea></p>
+     <form action= '/index/store/addUserFavor?shop_id={$shop_id}&menu_id={$menu_id}' method="post" class="A-Message" > 
+      <p><i>留言名称：</i><input name="message_name" type="text" autofocus placeholder="" required></p>
+      
+      <p><i>留言内容：</i><textarea name="reply_content" cols="" rows="" required placeholder="详细说明您的问题..."></textarea></p>
       <p><input type="submit" class="Abutt" /></p>
      </form>
     </div>

@@ -53,10 +53,4 @@ class Usermessage 	extends  Controller
 		}
 	}
 	
-	
-	
-	
-	
-	
-	
 }
