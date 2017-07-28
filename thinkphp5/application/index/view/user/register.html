@@ -25,7 +25,7 @@
   </tr>
   <tr>
   <td width="40%" align="right" class="FontW">手机校验码：</td>
-  <td><input type="text" name="tellcode"  pattern="[0-9]{6}"></td>
+  <td><input type="text" name="tellcode" ><a href="javascript:void(0)"><button id="tellup">点击获取验证码</button></a></td>
   </tr>
   <tr>
   <td width="40%" align="right" class="FontW">验证码：</td>
@@ -44,6 +44,8 @@
 
   
  </div>
+ 
+
  <script type="text/javascript">
   
 
@@ -133,6 +135,16 @@
         }
        
     });
+
+ $("#tellup").click(function(){
+           $to = $("#tell").val() ;
+            $(this).attr("disabled","disabled");
+         $.post("/index/user/tellcode",{to:$to},function(data){
+           alert(data);
+
+        });
+
+ });
   
  </script>
  {include file="foot"}

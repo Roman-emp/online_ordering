@@ -68,14 +68,15 @@ class Base extends Controller
                 }
                  //dump($list_node_url_child);            
                  //dump($list_node_url);
-              
-                  
-
-           
-            
-  
-
 
 		}
+     if(session('id'))
+     {
+      
+     }
+    
+
+
 	}
+
 }
