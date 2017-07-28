@@ -1,7 +1,7 @@
 <?php
 namespace app\admin\controller;
 use app\admin\controller\Base;
-use app\admin\model\User;
+
 
 class Index extends Base
 {
@@ -9,5 +9,25 @@ class Index extends Base
 	{
 		
 		return $this->fetch();
+	}
+	//友情链接
+	public function links_url()
+	{
+		
+		return $this->fetch();
+	}
+	//友情链接
+	public function dolinks()
+	{
+		
+		$data = input();
+		$re = $this->Links_url->dolink($data);
+		       if($re)
+				{
+					$this->success('添加成功');
+
+				}else{
+					$this->error('添加失败');
+				}
 	}
 }

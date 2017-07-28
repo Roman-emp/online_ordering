@@ -32,7 +32,22 @@ class Online_admin extends Model
 		   }
 		   */
 
-       
-
+        public function head_name($id)
+		   {
+		         return   Db('online_admin')->where('id',$id)
+						->alias('oa')
+						->join('role_admin ra',"oa.id = ra.user_id")
+						->field('ra.role_id,oa.name')
+						->find();
+		   }
+        
+           public function head_role($id)
+		   {
+		         return   Db('role_admin ')->where('role_id',$id)
+						->alias('ra')
+						->join('role r',"r.id = ra.role_id")
+						->field('r.name')
+						->find();
+		   }
 
 }

@@ -1,0 +1,86 @@
+{include file="head"}
+{include file="left"}
+
+
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
+		<span class="c-gray en">&gt;</span>
+		文章管理
+		<span class="c-gray en">&gt;</span>
+		支付方式
+		<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
+	</nav>
+	<div class="Hui-article">
+		<article class="cl pd-20">
+		
+			<div class="cl pd-5 bg-1 bk-gray mt-20">
+				<span class="l">
+			<span class="l">
+			
+			<a href="javascript:;" onclick="admin_add('添加','add.html','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加</a> </span>
+				</span>
+				<span class="r">共有数据：<strong>54</strong> 条</span>
+			</div>
+			<div class="mt-10">
+				<table class="table table-border table-bordered table-bg table-hover table-sort">
+					<thead>
+						<tr class="text-c">
+							<th width="25"><input type="checkbox" name="" value=""></th>
+							<th width="80">ID</th>
+
+							<th width="100">标题</th>
+							<th width="100">内容</th>
+
+							<th width="20%">操作</th>
+						</tr>
+					</thead>
+					{foreach $data as $key => $value}
+					<tbody>
+						<tr class="text-c">
+							<td><input type="checkbox" value="" name=""></td>
+							<td>{$value['id']}</td>
+							<td>{$value['title']}</td>
+
+							<td>{$value['content']}</td>
+						
+						
+							<td>
+							<a href="edit?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
+							<a href="delete?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="删除" onclick="return del(1)"/></a>
+							</td>
+						</tr>
+					</tbody>
+					{/foreach}
+				</table>
+			</div>
+			<div id="pageNav" class="pageNav"></div>
+		</article>
+	</div>
+</section>
+{include file="footer"}
+
+<script type="text/javascript">
+function del(id,mid){
+	if(confirm("您确定要删除吗?")){
+	
+	}
+}
+</script>
+
+<script type="text/javascript">
+/*
+	参数解释：
+	title	标题
+	url		请求的url
+	id		需要操作的数据id
+	w		弹出层宽度（缺省调默认值）
+	h		弹出层高度（缺省调默认值）
+*/
+/*管理员-增加*/
+function admin_add(title,url,w,h){
+	layer_show(title,url,w,h);
+}
+
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+

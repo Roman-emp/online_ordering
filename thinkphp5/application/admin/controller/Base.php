@@ -13,12 +13,19 @@ use app\admin\model\Online_admin;//用户表
 use app\admin\model\RoleAdmin;//用户角色表
 use app\admin\model\Access;//用户角色表
 use app\admin\model\User as UserModel;
+use app\admin\model\Dishes as DishesModel;
+use app\admin\model\Online_order;
+use app\admin\model\Links_url;
 
+ 
 class Base extends Controller
 {
 	public function _initialize()
-	{
-    
+	{     
+        $this->Links_url = new Links_url();
+        $this->order = new Online_order();
+        $this->menu = new DishesModel();
+        $this->goods = new DishesModel();
         $this->usermode = new UserModel();
         $this->Role = new Role();
 	      $this->Node = new Node();
@@ -68,14 +75,18 @@ class Base extends Controller
                 }
                  //dump($list_node_url_child);            
                  //dump($list_node_url);
-              
-                  
-
-           
-            
-  
-
 
 		}
+     if(session('id'))
+     {
+        $head_name = $this->Admin->head_name(session('id'));
+        $head_role = $this->Admin->head_role($head_name['role_id']);
+        $this->assign('head_name',$head_name);
+        $this->assign('head_role',$head_role);
+     }
+
+    
+
 	}
+
 }

@@ -26,48 +26,94 @@ class Article extends Base
 		return $this->fetch();
 	}
 
-	//服务费用
-	public  function  serverFee()
-	{
 
-		return $this->fetch();
-	}
+		//获取配送信息
+		public function index()
+		{
+			$data = Db('article')
+					->select();
+			$this->assign('data',$data);
+			return $this->fetch();
+		}
+		
+		//添加配送信息
+		public function add()
+		{
+			return $this->fetch();
+		}
 
-	//配送效率
-	public function sendEffic()
-	{
-		return $this->fetch();
-	}
 
-	//网站介绍
-	public function website()
-	{
-		return $this->fetch();
-	}
+		//添加配送信息处理
+		public function insert()
+		{
 
-	//公司公告
-	public function information()
-	{
-		return $this->fetch();
-	}
+			$data = [
+				'title' =>input('title'),
+				'content'=>input('content'),
+				'create_time' =>date('Y-m-d H:i:s', time()),
 
-	//商家加盟
-	public function storeBus()
-	{
-		return $this->fetch();
-	}
+			];
+	
 
-	//服务内容
-	public function serverCon()
-	{
-		return $this->fetch();
-	}
+			$res = Db('article')
+					->insert($data);
 
-	//常见问题
-	public function question()
-	{
-		return $this->fetch();
-	}
+				if($res == true)
+				{
+					$this->success('添加成功','index');
 
+				}else{
+					$this->error('添加失败','add');
+				}
+		}
+
+		//编辑配送信息
+		public function edit()
+		{
+			$id = $_GET['id'];
+			
+			$info = Db('article')
+					->where("id={$id}")
+					->find();
+				$this->assign('info',$info);
+				return $this->fetch();
+		} 
+
+		//编辑配送信息处理数据
+		public function update()
+		{
+			$id = $_POST['id'];
+	
+			$data = [
+				'title' =>input('title'),
+				'content'=>input('content'),
+
+			];
+			$res = Db('article')
+						->where("id = {$id}")
+						->update($data);
+					if($res == false)
+					{
+						$this->error('编辑失败','index');
+					}else{
+						$this->success('编辑成功','index');
+					}
+		}
+		
+		
+		//删除配送信息
+		public function delete()
+		{
+			$id = $_GET['id'];
+			$result = Db('article')
+						->where("id={$id}")
+						->delete();
+				if($result == false)
+				{
+					$this->error('删除失败','index');
+					}else{
+						$this->success('删除成功','index');
+				}
+		}
 
 }
