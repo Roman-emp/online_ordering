@@ -7,25 +7,34 @@
 <meta name="description" content="DeathGhost.cn::H5 WEB前端设计开发!" />
 <meta name="author" content="DeathGhost"/>
 <link href="__PUBLIC_INDEX__css/style.css" rel="stylesheet" type="text/css" />
-
+<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+<link rel="stylesheet" href="http://cache.amap.com/lbs/static/AMap.PlaceSearchRender1120.css"/>
 <script type="text/javascript" src="__PUBLIC_INDEX__js/public.js"></script>
 <script type="text/javascript" src="__PUBLIC_INDEX__js/jquery.js"></script>
 <script type="text/javascript" src="__PUBLIC_INDEX__js/jqpublic.js"></script>
-<link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
-<link rel="stylesheet" href="http://cache.amap.com/lbs/static/AMap.PlaceSearchRender1120.css"/>
+
 <style>
   #map
   {
     width:440px;
     height:300px;
   }
-</style>
-<!-- <script type="text/javascript" src="__PUBLIC_INDEX__js/demo.js"></script> -->
 
-<!--
-Author: DeathGhost
-Author URI: http://www.deathghost.cn
--->
+        #tip
+    {
+      width:200px;
+      height:120px;
+      position:relative;
+      left:10%;
+      top:10%;
+    }
+        .weather{
+            width: 60px;
+            padding-left: 8px;
+            display: inline-block;
+        }
+   
+</style>
 <script>
 
 </script>
@@ -39,7 +48,6 @@ Author URI: http://www.deathghost.cn
     {if empty(session('user_id'))}
     <a href="{:url('index/user/register')}">注册</a>/<a href="{:url('index/user/login')}">登录</a>
      {/if}
-    <a href="#">QQ客服</a><a href="#">微信客服</a><a href="#">手机客户端</a>
    </div>
    <div class="RightNav">
 
