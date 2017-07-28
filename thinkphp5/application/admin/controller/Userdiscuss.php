@@ -19,6 +19,11 @@ class Userdiscuss extends Base
 	//商家回复用户留言评论
 	public function add()
 	{
+		$shop_id=$_GET['shop_id'];
+		$menu_id = $_GET['menu_id'];
+		$this->assign('shop_id',$shop_id);
+		$this->assign('menu_id',$menu_id);
+		
 			return $this->fetch();
 	}
 	
@@ -26,14 +31,18 @@ class Userdiscuss extends Base
 	//商家回复用户留言评论处理
 	public function insert()
 	{
+
 		$data = [
-			'shop_id' =>$_GET['shop_id'],
-			'menu_id' =>$_GET['menu_id'],
+			'shop_id' =>input('shop_id'),
+		
+			'menu_id' =>input('menu_id'),
 			'reply_content' =>input('reply_content'),
 			'user_id'	=>session('user_id'),
+			'is_reply'  =>1,
+			'create_time'=>date('Y-m-d H:i:s',time())
 			
 		];
-	
+
 		
 		$result = Db('user_comments')
 					->insert($data);
