@@ -30,7 +30,6 @@ class Dishes extends Base
 	//商品添加提交页面
 	public function adddishes()
 	{
-
 		//商铺id测试暂用shop_id = 1;
 		$shop_id = 1;
 		$menu_id = input('menu_id');
@@ -89,11 +88,10 @@ class Dishes extends Base
 		//接受传过来的商品id
 
 		$id = input('id');
-
-		$mlM = Db('menu_list');
+		$mlM = Db('shop_menu');
 		//mlM_info
-		$mlM_info = $mlM->where("menu_id = $id")->find();
-		
+		$mlM_info = $mlM->where("menu_id=$id and shop_id=1")->find();
+		$this->assign('id',$id);
 		$this->assign('mlM_info', $mlM_info);
 		return $this->fetch('edit');
 	}
@@ -101,11 +99,12 @@ class Dishes extends Base
 	//编辑商品
 	public function update()
 	{
+		
 		if (input('menu_type'))
 		{	
 			//接受提交过来的商品id
 			$id = input('id');
-
+			
 			$file = request()->file('file');
 			// 把上传图片，移动到框架应用根目录/public/uploads/ 目录下
 			$info = $file->move(ROOT_PATH . 'public' . DS . 'uploads');
@@ -134,9 +133,9 @@ class Dishes extends Base
 			
 			if($res === false)
 			{
-					$this->error('编辑失败...','edit');
+					$this->error('失败','edit');
 			}else{
-				$this->success('编辑成功','getalldisheslist');
+				$this->success('修改成功','getalldisheslist');
 			}
 		}
 		else
