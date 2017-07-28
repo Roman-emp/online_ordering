@@ -1,15 +1,13 @@
 <?php
 namespace app\admin\controller;
 use app\admin\controller\Base;
-use app\admin\model\Dishes as DishesModel;
 
 class Dishes extends Base
 {
-	protected $goods;
-	public function _initialize()
-	{
-		$this->goods = new DishesModel();
-	}
+	
+
+		
+
 	//获取所有商品列表
 	public function getAllDishesList()
 	{

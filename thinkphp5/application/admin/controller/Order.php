@@ -2,18 +2,12 @@
 
 	namespace app\admin\controller;
 	use app\admin\controller\Base;
-	use app\admin\model\Dishes as DishesModel;
-	use app\admin\model\Online_order;
-
+	
 	class Order extends Base
 	{
-		protected $order;
-		protected $menu;
-		public function _initialize()
-		{
-			$this->order = new Online_order();
-			$this->menu = new DishesModel();
-		}
+		
+		
+	
 
 		/*查询未收货订单*/
 		public function order_list()

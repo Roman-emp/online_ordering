@@ -13,6 +13,8 @@ class Authority extends Base
 	public function admin_role()
 	{
 		$res= $this->Role->seleroles();
+		    $le = count($res);
+		    $this->assign('le',$le);
 		$this->assign('res',$res);
 	
 		return $this->fetch();
@@ -39,7 +41,10 @@ class Authority extends Base
 
 		$re = $this->Node->senodes();
 		$re = $this->Tree->create($re);
+		$le = count($re);
+		$this->assign('le',$le);
 		$this->assign('re',$re);
+		
 		return $this->fetch();
 	}
     //删除权限节点
@@ -149,6 +154,8 @@ class Authority extends Base
             	$reus[]=array_merge($v,$re[$k]);
             }
             // $res = array_values($res); dump($res);
+            $le = count($reus);
+		    $this->assign('le',$le);
         	$this->assign('reus',$reus);
         	return $this->fetch();
         }
