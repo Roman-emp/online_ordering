@@ -29,7 +29,8 @@
 							<th width="80">ID</th>
 
 							<th width="100">站点名称</th>
-							<th width="100">站点网址</th>
+							<th width="150">站点网址</th>
+							<th width="100">联系电话</th>
 							<th width="100">是否关闭</th>
 
 							<th width="20%">操作</th>
@@ -42,9 +43,17 @@
 							<td>{$value['id']}</td>
 						
 
-							<td>{$value['store_info']}</td>
-						
-						
+							<td>{$value['name']}</td>
+							<td>{$value['url']}</td>
+							<td>{$value['telephone']}</td>
+							<td>
+							{if($value['is_close'] == 1)}
+							    已关闭
+							  {else}
+							    已开启
+							{/if}
+							</td>
+
 							<td>
 							<a href="edit?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
 							<a href="delete?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="删除" onclick="return del(1)"/></a>
