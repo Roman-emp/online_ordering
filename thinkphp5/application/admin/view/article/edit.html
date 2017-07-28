@@ -6,21 +6,28 @@
 </head>
 <body>
 <article class="page-container">
-	<form action = '/admin/payway/update' class="form form-horizontal" id="form-article-add" method = 'post' enctype="multipart/form-data" >
+	<form action = '/admin/article/update' class="form form-horizontal" id="form-article-add" method = 'post' enctype="multipart/form-data" >
 		<div class="row cl">
 			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>名称：</label>
 			<div class="formControls col-xs-8 col-sm-9">
-				<input type="text" class="input-text"  placeholder="" value="{$info['paytype']}" name="paytype" />
+				<input type="text" class="input-text"  placeholder="" value="{$info['title']}" name="title" />
+			</div>
+		</div>
+			<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>名称：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text"  placeholder="" value="{$info['content']}" name="content" />
 			</div>
 		</div>
 
 
-		<div class="row cl">
+	<div class="row cl">
 			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
 				<input type="hidden" name="id" value="{$info['id']}">
                 <input style="width:60px; height:30px; background-color: cyan; " type="submit" name="update" value="更新" />
 			</div>
-		</div>
+		</div>		
+		
 	</form>
 </article>
 
