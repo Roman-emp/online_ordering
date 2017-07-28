@@ -16,7 +16,7 @@ class Dishes extends Model
 		return Db::name('menu_list')->field('menu_name')->where('menu_id',$menu_id)->find();
 	}
 	//获取商品列表
-	public function getAllDishesList($shop_id)
+	public function getalldisheslist($shop_id)
 	{
 		//实例化对象
 		return Db('shop_menu')->where('shop_id',$shop_id)->select();

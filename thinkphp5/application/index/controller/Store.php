@@ -19,17 +19,23 @@ class  Store extends Controller
         $this->assign('link',$link);
 	}
 	//商家详情信息
-	public function storeDetail()
+	public function storedetail()
 	{
-		$shop_id = $_GET['shop_id'];
-		$menu_id = $_GET['menu_id'];
 
+		$shop_id = input('shop_id');
+
+		$menu_id = $_GET['menu_id'];
 			//获取商铺详情
 		$shop_info = $this->shop->select_shop_detail($shop_id);
 
 		$shop_detail = $shop_info;
 		$shop = $shop_info[0];//获取商店信息
+		
+		$list = $this->shop->menu_limit($shop_id);	
+		$page = $list->render();		
 	
+		$this->assign('list',$list);
+		$this->assign('page',$page);
 		$this->assign('shop_info',$shop_info);
 		$this->assign('shop_detail',$shop_detail);
 		$this->assign('shop',$shop);
@@ -50,7 +56,7 @@ class  Store extends Controller
 		{
 			$this->success('收藏成功','/index/userfavorites/user_favorites');
 		}else{
-			$this->error('收藏失败','storeDetail');
+			$this->error('收藏失败','storedetail');
 		}
 	}
 	

@@ -9,12 +9,12 @@ class Dishes extends Base
 		
 
 	//获取所有商品列表
-	public function getAllDishesList()
+	public function getalldisheslist()
 	{
 		//展示登录商家对应的菜品表
 			$shop_id = 1;//测试商家id
 		//实例化模型
-		$res = $this->goods->getAllDishesList($shop_id);
+		$res = $this->goods->getalldisheslist($shop_id);
 	
 		$this->assign('res', $res);
 		return $this->fetch();
@@ -28,7 +28,7 @@ class Dishes extends Base
     }
 
 	//商品添加提交页面
-	public function addDishes()
+	public function adddishes()
 	{
 
 		//商铺id测试暂用shop_id = 1;
@@ -71,7 +71,7 @@ class Dishes extends Base
 
 			if($res>0)
 			{
-				$this->success('添加成功', 'getAllDishesList');
+				$this->success('添加成功', 'getalldisheslist');
 			}else{
 
 				$this->error('添加失败......', 'add');
@@ -136,7 +136,7 @@ class Dishes extends Base
 			{
 					$this->error('编辑失败...','edit');
 			}else{
-				$this->success('编辑成功','getAllDishesList');
+				$this->success('编辑成功','getalldisheslist');
 			}
 		}
 		else
