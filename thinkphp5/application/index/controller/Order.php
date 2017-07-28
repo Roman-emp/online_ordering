@@ -25,27 +25,27 @@ class Order extends Controller
 			
 					
 
-					foreach($data as $key=>$value)
-					{
-						$order_num = $value['order_num'];
-						$dishes_num = $value['num']; //商品总数量
-						$dishes_price =$value['price']; //商品单价
+					// foreach($data as $key=>$value)
+					// {
+					// 	$order_num = $value['order_num'];
+					// 	$dishes_num = $value['num']; //商品总数量
+					// 	$dishes_price =$value['price']; //商品单价
 						
-					}
-					if($dishes_num>0 && $dishes_price>0)
-					{
-						//计算没个订单的总金额
-						$dishes_total = $dishes_num*$dishes_price;
-					}
+					// }
+					// if($dishes_num>0 && $dishes_price>0)
+					// {
+					// 	//计算没个订单的总金额
+					// 	$dishes_total = $dishes_num*$dishes_price;
+					// }
 						
 						
-					$res = $this->online_order
-						->userOrderStatus($order_num);
-					foreach($res as $key=>$value)
-					{
-						$order_status = $value['order_status'];
+					// $res = $this->online_order
+					// 	->userOrderStatus($order_num);
+					// foreach($res as $key=>$value)
+					// {
+					// 	$order_status = $value['order_status'];
 						
-					}
+					// }
 		
 			
 		/*$url = "http://v.juhe.cn/exp/index?com=yd&no=3973210243695&dtype=&key=c55fd666abc71d2d9739d59c14a44055";
@@ -55,11 +55,11 @@ class Order extends Controller
 		$title = "快递公司：".$arr['result']['company']."快递单号：".$arr['result']['no']; 
 		$content = $arr['result']['list'];*/
 	
-			 $this->assign('order_status',$order_status);
+			// $this->assign('order_status',$order_status);
 			 $this->assign('data',$data);
-			 $this->assign('dishes_total',$dishes_total);
-			 $this->assign('content',$content);
-			 dump($content);
+			 //$this->assign('dishes_total',$dishes_total);
+			// $this->assign('content',$content);
+		
 		return  $this->fetch();
 	}
 	
