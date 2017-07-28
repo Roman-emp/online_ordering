@@ -15,6 +15,22 @@
 						->select();
 		}
 
+		//storedetail页面进行商品分页,使用此方法
+		public function menu_limit($shop_id)
+		{
+			return Db::name("online_shop o,shop_menu s")
+						->field('*')
+						->where("o.shop_id=s.shop_id and o.shop_id=$shop_id")
+						->paginate(1);;
+		}
+		/*public function select_shop_detail($shop_id)
+		{
+			return Db::name("online_shop o,shop_menu s")
+						->field('*')
+						->where("o.shop_id=s.shop_id and o.shop_id=$shop_id")
+						->select();
+		}*/
+
 		//首页查询入驻的商家
 		public function select_shop($shop_id)
 		{

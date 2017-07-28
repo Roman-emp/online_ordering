@@ -27,6 +27,25 @@
 						->select();
 		}
 
+		//根据菜品数量进行分页
+		public function menu_limit()
+		{
+			 
+			return Db::name('shop_menu s,online_shop o')
+						->field('s.shop_id
+								,menu_name
+								,menu_id
+								,menu_price
+								,menu_icon
+								,shop_name
+								,shop_menu_type
+								,shop_open_time
+								,shop_icon
+								,shop_address')
+						->where('s.shop_id = o.shop_id')
+						->paginate(3);
+		}
+
 		//根据菜品id，查询菜品详情
 		public function select_menu_detail($menu_id)
 		{

@@ -75,7 +75,6 @@ class User extends Model
                                      ->where('password',$pwd)->find();
 	}
 
-	
-
+   
 	
 }

@@ -14,7 +14,8 @@ class User extends Base
 	{
 		
 		$res = $this->usermode->adminlist();
-		
+		 $le = count($res);
+		 $this->assign('le',$le);
 		$this->assign('res',$res);
 		return $this->fetch();
 	}
