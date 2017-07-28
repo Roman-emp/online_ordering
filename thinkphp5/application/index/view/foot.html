@@ -25,11 +25,11 @@
     </ul>
     </div>
     <div>
-    <span><i class="i2"></i>关于我们</span>
+    <span><i class="i2"></i>友情链接</span>
     <ul>
-     <li><a href="article_read.html" target="_blank" title="标题">网站介绍</a></li>
-     <li><a href="article_read.html" target="_blank" title="标题">公司公告</a></li>
-     <li><a href="article_read.html" target="_blank" title="标题">商家加盟</a></li>
+      {foreach $link as $v}
+     <li><a href="{$v['url']}" target="_blank" title="标题">{$v['name']}</a></li>
+     {/foreach}
     
     </ul>
     </div>

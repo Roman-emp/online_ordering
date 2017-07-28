@@ -2,6 +2,7 @@
 namespace app\index\controller;
 use think\Controller;
 use app\index\model\Address as AddressModel;
+use app\admin\model\Links_url;
 
 class Address 	extends  Controller
 {
@@ -10,7 +11,9 @@ class Address 	extends  Controller
 	public function _initialize()
 	{
 		$this->address = new AddressModel();
-		
+		 $this->Links_url = new Links_url();
+	      $link = $this->Links_url->selink();
+	      $this->assign('link',$link);
 	}
 	
 	

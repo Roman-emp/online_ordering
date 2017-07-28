@@ -2,6 +2,7 @@
 namespace app\index\controller;
 use think\Controller;
 use app\index\model\Usermessage as UserMessageModel;
+use app\admin\model\Links_url;
 
 class Usermessage 	extends  Controller
 {
@@ -11,7 +12,9 @@ class Usermessage 	extends  Controller
 	public function _initialize()
 	{
 		$this->user_comments = new UserMessageModel();
-
+        $this->Links_url = new Links_url();
+        $link = $this->Links_url->selink();
+        $this->assign('link',$link);
 	}
 	
 	//获取我的留言列表

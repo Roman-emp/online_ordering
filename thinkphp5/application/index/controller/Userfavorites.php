@@ -2,7 +2,7 @@
 namespace app\index\controller;
 use think\Controller;
 use app\index\model\Userfavorites as UserfavorMod;
-
+use app\admin\model\Links_url;
 
 class Userfavorites extends Controller
 {
@@ -10,6 +10,9 @@ class Userfavorites extends Controller
 	public function _initialize()
 	{
 		$this->Userfavorites = new UserfavorMod();
+		$this->Links_url = new Links_url();
+        $link = $this->Links_url->selink();
+        $this->assign('link',$link);
 	}
 	//我的用户收藏
 	public function user_favorites()

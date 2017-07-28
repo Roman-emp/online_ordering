@@ -3,6 +3,7 @@ namespace app\index\controller;
 use think\Controller;
 use app\index\model\Menu_list;
 use app\index\model\Online_shop;
+use app\admin\model\Links_url;
 class Index extends Controller
 {
 	protected $menu;
@@ -11,6 +12,9 @@ class Index extends Controller
 	{
 		$this->menu = new Menu_list();
 		$this->shop = new Online_shop();
+		$this->Links_url = new Links_url();
+      $link = $this->Links_url->selink();
+      $this->assign('link',$link);
 	}
 	public function index()
 	{

@@ -5,7 +5,7 @@ use think\Controller;
 use think\Db;
 use think\Request;
 use app\index\model\Storejoin as storejoinModel;
-
+use app\admin\model\Links_url;
 
 class  Storejoin  extends Controller{
 
@@ -14,6 +14,9 @@ class  Storejoin  extends Controller{
 	 public function _initialize()
     {
       $this->storejoinmodel = new storejoinModel();
+      $this->Links_url = new Links_url();
+        $link = $this->Links_url->selink();
+        $this->assign('link',$link);
 
     } 
 	//商家入住

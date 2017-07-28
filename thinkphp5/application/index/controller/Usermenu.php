@@ -2,6 +2,7 @@
 namespace app\index\controller;
 use think\Controller;
 use app\index\model\Usermenu as UserMenuModel;
+use app\admin\model\Links_url;
 
 class Usermenu	extends  Controller
 {
@@ -11,7 +12,9 @@ class Usermenu	extends  Controller
 	{
 		
 		$this->online_order = new UserMenuModel();
-
+        $this->Links_url = new Links_url();
+        $link = $this->Links_url->selink();
+        $this->assign('link',$link);
 	}
 	
 	

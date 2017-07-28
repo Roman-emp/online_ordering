@@ -4,6 +4,7 @@ namespace app\index\controller;
 use think\Controller;
 use think\Db;
 use app\index\model\Order as orderModel;
+use app\admin\model\Links_url;
 //use extend\hbj\MyCurl;
 
 class Order extends Controller
@@ -15,7 +16,10 @@ class Order extends Controller
 	{
 		$this->online_order = new orderModel();
 		$this->order_status	= new orderModel();
-	}
+		$this->Links_url = new Links_url();
+        $link = $this->Links_url->selink();
+        $this->assign('link',$link);
+	} 
 	//用户订单列表信息
 	public function user_orderlist()
 	{

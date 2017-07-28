@@ -5,6 +5,7 @@ use think\Controller;
 use think\Db;
 use think\Request;
 use app\index\model\Online_shop;
+use app\admin\model\Links_url;
 
 class  Store extends Controller
 {
@@ -13,6 +14,9 @@ class  Store extends Controller
 	public function _initialize()
 	{
 		$this->shop = new Online_shop();
+		$this->Links_url = new Links_url();
+        $link = $this->Links_url->selink();
+        $this->assign('link',$link);
 	}
 	//商家详情信息
 	public function storeDetail()

@@ -4,6 +4,7 @@ use think\Controller;
 use app\index\model\User as UserModel;
 use think\captcha;
 use think\Session;
+use app\admin\model\Links_url;
 
 class User extends Controller
 {
@@ -11,6 +12,9 @@ class User extends Controller
     public function _initialize()
     {
       $this->usermode = new UserModel();
+      $this->Links_url = new Links_url();
+      $link = $this->Links_url->selink();
+      $this->assign('link',$link);
 
     }
 //用户注册

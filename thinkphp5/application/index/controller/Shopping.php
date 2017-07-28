@@ -6,7 +6,7 @@ use think\Db;
 use app\index\model\Menu_list;
 use app\index\model\Order;
 use app\index\model\Address;
-
+use app\admin\model\Links_url;
 class Shopping extends Controller
 {
 	protected $menu;
@@ -22,6 +22,9 @@ class Shopping extends Controller
 		$this->order = new Menu_list();
 		$this->orders = new Order();
 		$this->address = new Address();
+		$this->Links_url = new Links_url();
+        $link = $this->Links_url->selink();
+        $this->assign('link',$link);
 	}
 	//商品详情
 	public function detail()
