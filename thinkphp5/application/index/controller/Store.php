@@ -18,6 +18,8 @@ class  Store extends Controller
 	public function storeDetail()
 	{
 		$shop_id = $_GET['shop_id'];
+		$menu_id = $_GET['menu_id'];
+
 			//获取商铺详情
 		$shop_info = $this->shop->select_shop_detail($shop_id);
 
@@ -28,6 +30,7 @@ class  Store extends Controller
 		$this->assign('shop_detail',$shop_detail);
 		$this->assign('shop',$shop);
 		$this->assign('shop_id',$shop_id);
+		$this->assign('menu_id',$menu_id);
 		return $this->fetch();
 	}
 	
@@ -60,6 +63,37 @@ class  Store extends Controller
 			$this->success('取消失败','/index/userfavorites/user_favorites');
 		}
 	}
+	
+	
+	
+	//添加用户留言
+	public function addUserFavor()
+	{
+		 $shop_id = input('shop_id');
+		 $menu_id = input('menu_id');
+		// $user_id = session('user_id');
+		// $message_name = input('message_name');
+		// $reply_content = input('reply_content');
+		
+		$data = [
+			'shop_id'	=>$shop_id ,
+			'menu_id'	=>$menu_id,
+			'user_id'	=>session('user_id'),
+			'message_name'=>input('message_name'),
+			'reply_content'=>input('reply_content')
+		];
+		
+		$result = Db('user_comments')
+				->insert($data);
+				if($result == true)
+				{
+					$this->success('成功');
+					$this->redirect('/index/store/storeDetail?shop_id={$shop_id}');
+				}else{
+					$this->error('失败');
+				}
+	}
+	
 	
 	
 	

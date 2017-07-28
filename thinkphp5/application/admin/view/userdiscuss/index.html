@@ -5,9 +5,9 @@
 <section class="Hui-article-box">
 	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
 		<span class="c-gray en">&gt;</span>
-		系统管理
+		文章管理
 		<span class="c-gray en">&gt;</span>
-		站点信息
+		支付方式
 		<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
 	</nav>
 	<div class="Hui-article">
@@ -28,11 +28,11 @@
 							<th width="25"><input type="checkbox" name="" value=""></th>
 							<th width="80">ID</th>
 
-							<th width="100">站点名称</th>
-							<th width="150">站点网址</th>
-							<th width="100">联系电话</th>
-							<th width="100">是否关闭</th>
-
+							<th width="100">留言主题</th>
+						
+							<th width="120">我的名称</th>
+							<th width="120">店铺名称</th>
+							<th width="120">商品名称</th>
 							<th width="20%">操作</th>
 						</tr>
 					</thead>
@@ -40,23 +40,17 @@
 					<tbody>
 						<tr class="text-c">
 							<td><input type="checkbox" value="" name=""></td>
-							<td>{$value['id']}</td>
+							<td>{$value['comment_id']}</td>
 						
 
-							<td>{$value['name']}</td>
-							<td>{$value['url']}</td>
-							<td>{$value['telephone']}</td>
+							<td>{$value['message_name']}</td>
+						
+							<td>{$value['user_name']}</td>
+							<td>{$value['shop_name']}</td>
+							<td>{$value['menu_name']}</td>
 							<td>
-							{if($value['is_close'] == 1)}
-							    已关闭
-							  {else}
-							    已开启
-							{/if}
-							</td>
-
-							<td>
-							<a href="edit?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
-							<a href="delete?id={$value['id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="删除" onclick="return del(1)"/></a>
+							<a href="add?comment_id={$value['comment_id']}&shop_id={$value['shop_id']}&menu_id={$value['menu_id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="商家回复"/></a>
+							
 							</td>
 						</tr>
 					</tbody>
