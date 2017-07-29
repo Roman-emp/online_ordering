@@ -1,0 +1,24 @@
+{include file="head"}
+<!--Start content-->
+<section class="Psection MT20">
+{include file="order_left"}
+ <article class="U-article Overflow">
+  <!--"引用“user_page/user_index.html”"-->
+  <section class="usercenter">
+   <span class="Weltitle Block Font16 CorRed FontW Lineheight35">个人中心</span>
+   <div class="U-header MT20 Overflow">
+    <img src="__UPLOAD_IMG__{$data['user_icon']}">
+    <p class="Font14 FontW" style="font-size:16px;margin-top:20px">我的名称：{$data['user_name']}</p>
+	<p class="Font14 FontW" style="font-size:16px;margin-top:20px">联系电话：{$data['user_tel']}</p>
+	<p class="Font14 FontW" style="margin-left:95px;font-size:16px;margin-top:20px">登录时间:<time> {$data['user_create_time']}</time></p>
+	<p class="Font14 FontW" style="margin-left:95px;font-size:16px;margin-top:20px">我的邮箱：{$data['user_email']}</p>
+
+	
+    
+   </div>
+
+  </section>
+ </article>
+</section>
+<!--End content-->
+ {include file="foot"}

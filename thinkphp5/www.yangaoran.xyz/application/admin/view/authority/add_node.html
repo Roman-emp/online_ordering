@@ -1,0 +1,84 @@
+{include file="head"}
+{include file="left"}
+<title>添加权限</title>
+</head>
+<body>
+<article class="cl pd-20">
+	<form action="/admin/authority/doadd_node" method="post" class="form form-horizontal" id="form-add">
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>英文名称：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" value="" placeholder="" id="name" name="name">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>显示中文名称：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" autocomplete="off" value="" name="title">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>状态：</label>
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="radio-box">
+					<input name="status" type="radio" value="0" id="1" checked>
+					<label for="1">禁用</label>
+				</div>
+				<div class="radio-box">
+					<input type="radio" id="2" name="status" value="1" >
+					<label for="2">启用</label>
+				</div>
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3">类型：</label>
+			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
+				<select class="select" name="level" size="1">
+					<option value="1">项目</option>
+					<option value="2">模块</option>
+					<option value="3">操作</option>
+					
+				</select>
+				</span> </div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3">父节点：</label>
+			<div class="formControls col-xs-8 col-sm-9"> <span class="select-box" style="width:150px;">
+				<select class="select" name="pid" size="1">
+					<option value="0">根节点</option>
+					{foreach $re as $v}
+					{if condition="$v['level'] eq 1"}
+					<option value="{$v['id']}">{$v['title']}</option>
+					{else /}
+					<option value="{$v['id']}">　| {$v['title']}</option>
+					{/if}
+					{/foreach}
+					
+				</select>
+				</span> </div>
+		</div>
+		<div class="row cl">
+				<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>url：</label>
+				<div class="formControls col-xs-8 col-sm-9">
+					<input type="text" class="input-text"  name="url" >
+				</div>
+			</div>
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</article>
+
+{include file="footer"}
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/messages_zh.js"></script> 
+<script type="text/javascript">
+
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

@@ -1,0 +1,88 @@
+d{include file="head"}
+{include file="left"}
+<title>添加友链</title>
+
+</head>
+<body>
+
+
+	
+<article class="cl pd-20">
+	
+		<div style="width:1000px;float:right;">
+		<table border = "1">
+			<tr>
+				<th>友链名</th>
+				<th>url</th>
+				<th>备注</th>
+				<th>排序</th>
+				<th>是否显示</th>
+		   </tr>
+		   {if $re}
+		   {foreach $re as $v}
+		   <tr>
+		   	<td>{$v['name']}</td>
+		   	<td>{$v['url']}</td>
+		   	<td>{$v['remarks']}</td>
+		   	<td>{$v['sort']}</td>
+		   	<td>
+		   	<a href="/admin/index/uplink?id={$v['id']}&display={$v['display']}">{if condition = "$v['display'] eq 1 "}显示{else /}不显示{/if}</a>
+		   	</td>
+		   </tr>
+		   {/foreach}
+		   {/if}
+		</table>
+       </div>
+       <br/>
+       <br/>
+       <br/>
+	<form action="/admin/index/dolinks" method="post" class="form form-horizontal" id="form-add">
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>友链名：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text"  placeholder="" id="name" name="name">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>url：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" autocomplete="off" value="" placeholder="url"  name="url">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>备注：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" autocomplete="off" value=""   name="remarks">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>排序：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" autocomplete="off" value=""  name="sort">
+			</div>
+		</div>
+		<div class="row cl">
+			<label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>是否显示：</label>
+			<div class="formControls col-xs-8 col-sm-9">
+				<input type="text" class="input-text" autocomplete="off" value="" placeholder="为1时显示，为0不显示" name="display">
+			</div>
+		</div>
+		
+		<div class="row cl">
+			<div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+				<input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;保存添加&nbsp;&nbsp;">
+			</div>
+		</div>
+	</form>
+</article>
+
+{include file="footer"}
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/messages_zh.js"></script> 
+
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

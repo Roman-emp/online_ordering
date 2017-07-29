@@ -3,11 +3,9 @@ namespace app\index\controller;
 use think\Controller;
 use app\index\model\Menu_list;
 use app\index\model\Online_shop;
-<<<<<<< HEAD
 use app\admin\model\Links_url;
-=======
 use think\Request;
->>>>>>> ff1b938aab2a6588aeb065eedc5f3909f80aecb9
+
 class Index extends Controller
 {
 	protected $menu;

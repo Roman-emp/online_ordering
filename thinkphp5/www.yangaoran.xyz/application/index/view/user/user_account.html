@@ -1,0 +1,40 @@
+{include file="head"}
+<!--Start content-->
+<section class="Psection MT20">
+{include file="order_left"}
+ <article class="U-article Overflow">
+  <!--user Account-->
+  <section class="AccManage Overflow">
+   <span class="AMTitle Block Font14 FontW Lineheight35">账户管理</span>
+   <p>登陆邮箱：{$data['user_email']} ( <a href="#" target="_blank">更换手机号码</a> )</p>
+   <p>手机号码：{$data['user_tel']} ( <a href="#" target="_blank">更换手机号码</a> ) ( <a href="#" target="_blank">解绑手机</a> )</p>
+   <p>上次登陆：{$data['user_last_login_time']}( *如非本人登陆，请立即<a href="#" target="_blank">修改您的密码</a>！ )</p>
+   <form action="/index/user/upload" enctype="multipart/form-data" method="post">
+    <table>
+    <tr>
+    <td width="30%" align="right">*修改头像：</td>
+    <td><input name="file" type="file"><button>确定</button></td>
+    </tr>
+    <tr>
+    <td width="30%" align="right">*昵称：</td>
+    <td><input type="text" name="name" value="{$data['user_name']}"></td>
+    </tr>
+    <tr>
+    <td width="30%" align="right">*邮箱：</td>
+    <td><input type="email" name="email" value="{$data['user_email']}"></td>
+    </tr>
+    <tr>
+    <td width="30%" align="right">*手机：</td>
+    <td><input type="tel" name="tell" value="{$data['user_tel']}"></td>
+    </tr>
+    <tr>
+    <td></td>
+    <td><input name="" type="submit" value="保 存"></td>
+    </tr>
+    </table>
+   </form>
+  </section>
+ </article>
+</section>
+<!--End content-->
+{include file="foot"}

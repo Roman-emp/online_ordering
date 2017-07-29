@@ -1,0 +1,82 @@
+{include file="head"}
+{include file="left"}
+
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 图片管理 <span class="c-gray en">&gt;</span> 图片列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+	<div class="Hui-article">
+		<article class="cl pd-20">
+			<div class="text-c">
+				
+				<input type="text" name="" id="" placeholder=" 图片名称" style="width:250px" class="input-text">
+				<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜图片</button>
+			</div>
+			<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="add('添加商品','add.html')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加商品</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+			<div class="mt-20">
+				<table class="table table-border table-bordered table-bg table-hover table-sort">
+					<thead>
+						<tr class="text-c">
+							<th width="40"><input name="" type="checkbox" value=""></th>
+							<th width="80">ID</th>
+							<th width="100">商品名称</th>
+							<th width="100">价格</th>
+						
+							<th width="100">商品图片</th>
+							<th width="100">创建时间</th>
+							<th width="80">操作</th>
+						</tr>
+					</thead>
+					{foreach $res as $key => $value}
+					<tbody>
+						<tr class="text-c">
+							<td><input name="" type="checkbox" value=""></td>
+							<td>{$value['menu_id']}</td>
+							<td>{$value['menu_name']}</td>
+							<td>{$value['menu_price']}</td>
+							<td>
+								<img src="/uploads/{$value['menu_icon']}" alt="菜品" style="width:100px; height:100px">
+							</td>
+							<td>{$value['create_time']}</td>
+							<td class="td-status">
+							<a href="edit?id={$value['menu_id']}"><input style="width:60px; height:30px; background-color: cyan; " type="submit" name="delete" value="编辑"/></a>
+							<a href="javascript:void(0);"><input style="width:60px;height:30px;background-color:cyan;" type="button" value="删除" onclick="del({$value['menu_id']})"/></a>
+							</td>
+						</tr>
+					</tbody>
+					{/foreach}
+				</table>
+			</div>
+		</article>
+	</div>
+</section>
+{include file="footer"}
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+function del(id){
+	if(confirm("您确定要删除吗?"))
+	{
+		//location.href = "/delete/id/"+id;
+		//假设商家为shop_id = 1;
+		$.get("{:url('/admin/dishes/delete')}",{menu_id:id,shop_id:1},function(data){
+			if(data)
+			{
+            	window.location.reload();
+        	}
+		},'json');
+	}
+}
+
+/*图片-添加*/
+function add(title,url){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+</script>
+<!--/请在上方写此页面业务相关的脚本-->

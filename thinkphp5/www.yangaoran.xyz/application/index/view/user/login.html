@@ -1,0 +1,33 @@
+{include file="head"}
+<!--Start content-->
+<section class="Psection MT20">
+ <form action="/index/user/dologin" method="post">
+  <table class="login">
+  <tr>
+  <td width="40%" align="right" class="FontW">账号：</td>
+  <td><input type="text" name="name"  placeholder="账号/电子邮件/手机号码"></td>
+  </tr>
+  <tr>
+  <td width="40%" align="right" class="FontW">密码：</td>
+  <td><input type="password" name="pwd" ></td>
+  </tr>
+  <tr>
+  <td width="40%" align="right" class="FontW">验证码：</td>
+  <td><input type="text" name="yzm" ><img src="{:captcha_src()}" style="margin-left:8px; vertical-align:bottom" width="83" height="36" onClick="this.src=this.src+'?'+Math.random()"></td>
+  </tr>
+  <tr>
+  <td width="40%" align="right"></td>
+  <td>
+    <input type="submit" name="" value="登 录" class="Submit_b">
+    <script type="text/javascript" src="http://open.51094.com/user/myscript/1596e0cc4b302b.html"></script>
+  <span id="hzy_fast_login" style="position:relative;left:40%;">其他方式登录</span>
+  </td>
+  </tr>
+  </table>
+ </form>
+</section>
+
+<script type="text/javascript">  
+
+</script>
+ {include file="foot"}

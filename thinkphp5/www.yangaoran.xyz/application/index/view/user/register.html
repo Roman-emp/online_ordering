@@ -1,0 +1,151 @@
+
+{include file="head"}
+<section class="Psection MT20">
+ <form action="/index/user/upregister"  method="post" >
+  <table class="Register">
+  <tr>
+  <td width="40%" align="right" class="FontW">用户名：</td>
+  <td><input type="text" name="name" id="name" autofocus  ></td>
+  </tr>
+  <tr>
+  <td width="40%" align="right" class="FontW">密码：</td>
+  <td><input type="password" name="pwd"  id="pwd"></td>
+  </tr>
+  <tr>
+  <td width="40%" align="right" class="FontW">再次确认：</td>
+  <td><input type="password" name="repwd" id="repwd"></td>
+  </tr>
+  <tr>
+  <td width="40%" align="right" class="FontW">电子邮件：</td>
+  <td><input type="email" name="email" id="email" ></td>
+  </tr>
+  <tr>
+  <td width="40%" align="right" class="FontW">手机号码：</td>
+  <td><input type="text" name="tell"  id = "tell"></td>
+  </tr>
+  <tr>
+  <td width="40%" align="right" class="FontW">手机校验码：</td>
+  <td><input type="text" name="tellcode" ><a href="javascript:void(0)"><button id="tellup">点击获取验证码</button></a></td>
+  </tr>
+  <tr>
+  <td width="40%" align="right" class="FontW">验证码：</td>
+  <td><input type="text" name="img" ><img src="{:captcha_src()}"  style="margin-left:8px; vertical-align:bottom" width="83" height="36" id = "yzm" onClick="this.src=this.src+'?'+Math.random()" ></td>
+
+  </tr>
+  <tr>
+  <td width="40%" align="right"></td>
+  <td><input type="submit" class="Submit_b" value="注 册">( 已经是会员，<a href="login.html" class="BlueA">请登录</a> )</td>
+  </tr>
+  </table>
+ </form>
+</section>
+<!--End content-->
+<div class="F-link">
+
+  
+ </div>
+ 
+
+ <script type="text/javascript">
+  
+
+//为表单元素添加失去焦点事件
+    $("form :input").blur(function(){
+        var $parent = $(this).parent();
+        //验证名称
+        if($(this).is("#name")){
+          $("span").remove();
+            $.post("{:url('index/user/upName')}",{'name':$("#name").val()},function(msg){
+                var ms = eval('('+msg+')');
+                if(ms.length){
+                   var errorMsg = " 用户已被注册";
+                   $parent.append("<span >" + errorMsg + "</span>");
+                   $(this).focus();
+                }
+             
+            });
+            if($.trim(this.value) == "" || $.trim(this.value).length < 3){
+                var errorMsg = " 请输入至少6位的名称！";
+                $parent.append("<span >" + errorMsg + "</span>");
+                 $(this).focus();
+            }
+
+        }
+        //验证邮箱
+        if($(this).is("#email")){
+          $("span").remove();
+            if($.trim(this.value) == "" || ($.trim(this.value) != "" && !/.+@.+\.[a-zA-Z]{2,4}$/.test($.trim(this.value)))){
+                var errorMsg = " 请输入正确的E-Mail地址！";
+                $parent.append("<span >" + errorMsg + "</span>");
+                
+            }
+            else{
+                var okMsg=" 输入正确";
+                $parent.find(".high").remove();
+                $parent.append("<span >" + okMsg + "</span>");
+            }
+        }
+        //密码验证
+        if($(this).is('#pwd'))
+        {
+           $("span").remove();
+            if($.trim(this.value) == "" ||  !/[a-zA-Z0-9_]{5,20}$/.test($.trim(this.value))){
+                var errorMsg = " 请输入6位以上密码！";
+                $parent.append("<span >" + errorMsg + "</span>");
+                 
+            }
+            else{
+                var okMsg=" 输入正确";
+                $parent.find(".high").remove();
+                $parent.append("<span >" + okMsg + "</span>");
+            }
+
+        }
+        if($(this).is('#repwd'))
+        {
+           $("span").remove();
+          if($("#pwd").val() != $("#repwd").val())
+          {
+             var errorMsg = " 两次输入的密码不一致！";
+                  $parent.append("<span >" + errorMsg + "</span>");
+                  
+          } else{
+                var okMsg=" 输入正确";
+                $parent.find(".high").remove();
+                $parent.append("<span >" + okMsg + "</span>");
+            }
+
+        }
+       
+        //手机号码验证
+        if($(this).is('#tell'))
+        {
+           $("span").remove();
+            if($.trim(this.value) == "" ||  !/^[\d]{10,20}$/.test($.trim(this.value))){
+                var errorMsg = " 请输入正确的手机号！";
+                $parent.append("<span >" + errorMsg + "</span>");
+                
+            }
+            else{
+                var okMsg=" 输入正确";
+                $parent.find(".high").remove();
+                $parent.append("<span >" + okMsg + "</span>");
+            }
+
+        }
+       
+    });
+
+ $("#tellup").click(function(){
+           $to = $("#tell").val() ;
+            $(this).attr("disabled","disabled");
+         $.post("/index/user/tellcode",{to:$to},function(data){
+           alert(data);
+
+        });
+
+ });
+  
+ </script>
+ {include file="foot"}
+

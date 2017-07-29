@@ -1,0 +1,80 @@
+{include file="head"}
+<!--Start content-->
+<section class="Psection MT20">
+{include file="order_left"}
+ <article class="U-article Overflow">
+  <!--user order list-->
+  <section>
+	
+    <table class="Myorder">
+	{if(!empty($data))}
+     <th class="Font14 FontW">订单编号</th>
+     <th class="Font14 FontW">收件人</th>
+	 <th class="Font14 FontW">订单状态</th>
+ 
+     <th class="Font14 FontW">操作</th>
+	 
+	{foreach $data as $key=>$value}	
+	
+	 <tr>
+      <td class="FontW">{$value['order_num']}</td>
+      <td>{$value['user_name']}</td>
+      <td>{$value['order_status']}</td>
+
+      <td>
+	  <a href="javascript:void(0);" onclick="del({$value['id']},{$value['order_num']})" >取消订单</a> | <a href="#">付款</a>
+	  </td>
+     </tr>
+
+	{/foreach}
+	{else}
+	<th class="Font14 FontW">订单编号</th>
+     <th class="Font14 FontW">收件人</th>
+	 <th class="Font14 FontW">订单状态</th>
+
+     <th class="Font14 FontW">操作</th>
+	
+	{/if}
+    </table>
+    <div class="TurnPage">
+         <a href="#">
+          <span class="Prev"><i></i>首页</span>
+         </a>
+         <a href="#"><span class="PNumber">1</span></a>
+         <a href="#"><span class="PNumber">2</span></a>
+         <a href="#">
+         <span class="Next">最后一页<i></i></span>
+        </a>
+       </div>
+  </section>
+ </article>
+</section>
+<!--End content-->
+<div class="F-link">
+  <span>友情链接：</span>
+  <a href="http://www.deathghost.cn" target="_blank" title="DeathGhost">DeathGhost</a>
+  <a href="http://www.17sucai.com/pins/15966.html" target="_blank" title="免费后台管理模板">绿色清爽版通用型后台管理模板免费下载</a>
+  <a href="http://www.17sucai.com/pins/17567.html" target="_blank" title="果蔬菜类模板源码">HTML5果蔬菜类模板源码</a>
+  <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
+ </div>
+{include file="foot"}
+
+<script>
+		function del(id,order_num)
+		{
+		 if (confirm('是否删除订单?'))
+		 {
+			//id表示订单的id
+			$.get('/index/order/delUserOrder',{id:id,order_num:order_num},function(data){
+				if(data)
+				{
+					window.location.reload();
+					//alert('删除成功');
+				}
+			
+			},'json');
+		 }
+	}
+
+	
+</script>

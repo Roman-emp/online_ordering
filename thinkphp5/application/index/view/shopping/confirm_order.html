@@ -5,27 +5,27 @@
  <div class="confirm_addr_f">
   <span class="flow_title">收货地址：</span>
   <!--如果未添加地址，则显示此表单-->
-  <form class="add_address" action="#">
+  <form action="/index/shopping/complete_order" method="post">
    <p><i>收件人姓名：</i><input type="text" name="username"></p>
    <p>
    <i>选择所在地：</i> 
-   <select class="province">
+   <select class="province" name="province">
     <option>省</option>
-    <option value="1">北京市</option>
+    <option value="北京市">北京市</option>
    </select>
-   <select class="city">
+   <select name="city">
     <option>市</option>
-    <option value="1">海淀区</option>
+    <option value="海淀区">海淀区</option>
    </select>
-   <select class="area">
+   <select name="area">
     <option>县</option>
-    <option value="1">永泰庄</option>
+    <option value="永泰庄">永泰庄</option>
    </select>
    </p>
    <p><i>街道地址：</i><input type="text" name="address"></p>
    <p><i>邮政编码：</i><input type="text" name="postnode"></p>
    <p><i>手机号码：</i><input type="text" name="tel"></p>
-  </form>
+ 
  </div>
 <!--配送方式及支付，则显示如下-->
 <!--check order or add other information-->
@@ -42,13 +42,13 @@
    </tr>
   </table>
   <span class="flow_title">在线支付方式：</span>
-   <form action="#">
+
     <ul>
     <li><input type="radio" name="pay" id="alipay" value="支付宝" /><label for="alipay"><i class="alipay"></i></label></li>
     </ul>
-   </form>
+ 
   </div>
-  <form action="#">
+ 
   <div class="inforlist">
    <span class="flow_title">商品清单</span>
    <table>
@@ -73,7 +73,7 @@
       ?>
    </table>
     <div class="Order_M">
-     <p><em>订单附言:</em><input name="message"  type="text"></p>
+     <p><em>订单附言:</em><input name="msg"  type="text"></p>
      <!-- <p><em>优惠券:</em>
      <select name="">
       <option>￥10元优惠券</option>
@@ -83,22 +83,22 @@
     <div class="Sum_infor">
     <p class="p1">配送费用：￥0.00+商品费用：￥177.00-优惠券：￥10.00</p>
     <p class="p2">合计：￥<span id="total">0</span></p>
-    <a href="javascript:void(0);" class="p3button" onclick="order();">提交订单</a>
+    <input type="submit" value="提交订单">
     </div>
    </div>
-   </form>
- </div>
+   
+ </div></form>
 </section>
 <script>
 //Test code,You can delete this script /2014-9-21DeathGhost/
  
-      $(document).ready(function(){
+      /*$(document).ready(function(){
        var submitorder =$.noConflict();
        submitorder(".p3button").click(function(){
       	 submitorder("#Cflow").hide();
       	 submitorder("#Aflow").show();
       	 });
-      });
+      });*/
       var total = document.getElementById('total').innerHTML;
       var money = 0; 
       $(".amount").each(function() 
@@ -109,7 +109,7 @@
      $("#total").remove();
      $(".p2").append('<span id="total">'+money+'</span>');
       /*获取用户基本信息*/
-      function order()
+     /* function order()
       {
         var username = $("input[name='username']:text").val();
         var province = $(".province :selected").text();
@@ -127,7 +127,7 @@
             }
         },'json');
 
-      }
+      }*/
    
 </script>
 <section class="Psection MT20 Textcenter" style="display:none;" id="Aflow">

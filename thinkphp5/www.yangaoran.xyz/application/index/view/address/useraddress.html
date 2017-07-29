@@ -1,0 +1,120 @@
+{include file="head"}
+<!--Start content-->
+<section class="Psection MT20">
+{include file="order_left"}
+ <article class="U-article Overflow">
+  <!--user Address我的收货地址列表-->
+  <section class="Myaddress Overflow">
+   <span class="MDtitle Font14 FontW Block Lineheight35">收货人信息</span>
+     
+	 <table class="Myorder">
+     <th class="Font14 FontW">收件人</th>
+	 <th class="Font14 FontW">联系电话</th>
+
+     <th class="Font14 FontW">详细地址</th>
+   
+     <th class="Font14 FontW">操作</th>
+     {foreach $raM_list as $key=>$value}
+	 <tr>
+      <td>{$value['recieve_username']}</td>
+      <td>{$value['recieve_tel']}</td>
+	  <td>{$value['recieve_address_detail']}</td>
+      <td><a href="/index/address/editUserAddress?recieve_id={$value['recieve_id']}">编辑地址</a> | <a href="/index/address/delUserAddress?recieve_id={$value['recieve_id']}">删除地址</a></td>
+     </tr>
+	{/foreach}
+    </table>
+	
+	 <!--add new address-->
+   <form action="/index/address/addUserAddress" method="post">
+    <table style="margin-top:10px;">
+
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">收件人姓名：</td>
+     <td><input type="text" name="recieve_name" required  class="input_name"></td>
+    </tr>
+	<!--  <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">选择所在地：</td>
+     <td>
+     <select name="" class="select_ssq">
+      <option>陕西省</option>
+     </select>
+     <select name="" class="select_ssq">
+     <option>西安市</option>
+     </select>
+     <select name="" class="select_ssq">
+     <option>莲湖区</option>
+     </select>
+     </td>
+    </tr> -->
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">详细地址：</td>
+     <td><input type="text" name="recieve_address_detail" required  class="input_addr"></td>
+    </tr>
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">邮政编码：</td>
+     <td><input type="text" name="recieve_ems" required pattern="[0-9]{6}"  class="input_zipcode"></td>
+    </tr>
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">手机号码：</td>
+     <td><input type="text" name="recieve_tel" required pattern="[0-9]{11}" class="input_tel"></td>
+    </tr>
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right"></td>
+     <td class="Font14 Font Lineheight35"><input name="dosubmit" type="submit" value="新增收货地址"  class="Submit"></td>
+    </tr>
+   </table>
+   </form>
+	
+   <!-- <form action="#">
+   <table>
+ 
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">收件人姓名：</td>
+     <td><input type="text" name="recieve_name" required value="DeathGhost" class="input_name"></td>
+    </tr>
+	<tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">选择所在地：</td>
+     <td>
+     <select name="" class="select_ssq">
+      <option>陕西省</option>
+     </select>
+     <select name="" class="select_ssq">
+     <option>西安市</option>
+     </select>
+     <select name="" class="select_ssq">
+     <option>莲湖区</option>
+     </select>
+     </td>
+    </tr>
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">详细地址：</td>
+     <td><input type="text" name="recieve_address_detail" required size="50" value="详细地址" class="input_addr"></td>
+    </tr>
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">邮政编码：</td>
+     <td><input type="text" name="recieve_ems" required size="10" pattern="[0-9]{6}" value="727444" class="input_zipcode"></td>
+    </tr>
+    <tr>
+     <td width="30%" class="Font14 FontW Lineheight35" align="right">手机号码：</td>
+     <td><input type="text" name="recieve_tel" required pattern="[0-9]{11}" value="18309275673" class="input_tel"></td>
+    </tr>
+    <tr>
+     <td align="right"  width="30%" class="Font14 FontW Lineheight35"></td>
+     <td class="Lineheight35"><input name="" type="submit" value="确认修改" class="Submit"><input name="" type="submit" value="删除" class="Submit"></td>
+    </tr>
+   </table>
+   </form> -->
+  
+  </section>
+ </article>
+</section>
+<!--End content-->
+<div class="F-link">
+  <span>友情链接：</span>
+  <a href="http://www.deathghost.cn" target="_blank" title="DeathGhost">DeathGhost</a>
+  <a href="http://www.17sucai.com/pins/15966.html" target="_blank" title="免费后台管理模板">绿色清爽版通用型后台管理模板免费下载</a>
+  <a href="http://www.17sucai.com/pins/17567.html" target="_blank" title="果蔬菜类模板源码">HTML5果蔬菜类模板源码</a>
+  <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
+ </div>
+{include file="foot"}
+

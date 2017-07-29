@@ -1,0 +1,143 @@
+{include file="head"}
+<!--Start content-->
+<section class="Psection MT20" id="Cflow">
+<!--如果用户未添加收货地址，则显示如下-->
+ <div class="confirm_addr_f">
+  <span class="flow_title">收货地址：</span>
+  <!--如果未添加地址，则显示此表单-->
+  <form action="/index/shopping/complete_order" method="post">
+   <p><i>收件人姓名：</i><input type="text" name="username"></p>
+   <p>
+   <i>选择所在地：</i> 
+   <select class="province" name="province">
+    <option>省</option>
+    <option value="北京市">北京市</option>
+   </select>
+   <select name="city">
+    <option>市</option>
+    <option value="海淀区">海淀区</option>
+   </select>
+   <select name="area">
+    <option>县</option>
+    <option value="永泰庄">永泰庄</option>
+   </select>
+   </p>
+   <p><i>街道地址：</i><input type="text" name="address"></p>
+   <p><i>邮政编码：</i><input type="text" name="postnode"></p>
+   <p><i>手机号码：</i><input type="text" name="tel"></p>
+ 
+ </div>
+<!--配送方式及支付，则显示如下-->
+<!--check order or add other information-->
+ <div class="pay_delivery">
+  <span class="flow_title">配送方式：</span>
+  <table>
+   <th width="30%">配送方式</th>
+   <th width="30%">运费</th>
+   <th width="40%">说明</th>
+   <tr>
+    <td>送货上门</td>
+    <td>￥0.00</td>
+    <td>配送说明信息...</td>
+   </tr>
+  </table>
+  <span class="flow_title">在线支付方式：</span>
+
+    <ul>
+    <li><input type="radio" name="pay" id="alipay" value="支付宝" /><label for="alipay"><i class="alipay"></i></label></li>
+    </ul>
+ 
+  </div>
+ 
+  <div class="inforlist">
+   <span class="flow_title">商品清单</span>
+   <table>
+    <th>名称</th>
+    <th>数量</th>
+    <th>价格/￥</th>
+    <th>小计/￥</th>
+    {foreach $data as $key => $menu}
+     
+      <tr>
+       <td>{$menu['menu_name']}</td>
+       <td>{$menus_num}</td>
+       <td class="price">{$menu['menu_price']}</td>
+       <td class="amount">{$menu['menu_price']*$menus_num}</td>
+      </tr>
+       
+    {/foreach}
+    
+   </table>
+    <div class="Order_M">
+     <p><em>订单附言:</em><input name="msg"  type="text"></p>
+     <!-- <p><em>优惠券:</em>
+     <select name="">
+      <option>￥10元优惠券</option>
+     </select>
+     </p> -->
+    </div>
+    <div class="Sum_infor">
+    <p class="p1">配送费用：￥0.00+商品费用：￥177.00-优惠券：￥10.00</p>
+    <p class="p2">合计：￥<span id="total">0</span></p>
+    <input type="submit" value="提交订单">
+    </div>
+   </div>
+   
+ </div></form>
+</section>
+<script>
+//Test code,You can delete this script /2014-9-21DeathGhost/
+ 
+      /*$(document).ready(function(){
+       var submitorder =$.noConflict();
+       submitorder(".p3button").click(function(){
+      	 submitorder("#Cflow").hide();
+      	 submitorder("#Aflow").show();
+      	 });
+      });*/
+      var total = document.getElementById('total').innerHTML;
+      var money = 0; 
+      $(".amount").each(function() 
+      { 
+          money += parseFloat($(this).html()); 
+      });
+     
+     $("#total").remove();
+     $(".p2").append('<span id="total">'+money+'</span>');
+      /*获取用户基本信息*/
+     /* function order()
+      {
+        var username = $("input[name='username']:text").val();
+        var province = $(".province :selected").text();
+        var city = $(".city :selected").text();
+        var area = $(".area :selected").text();
+        var address = $("input[name='address']:text").val();
+        var postnode = $("input[name='postnode']:text").val();
+        var tel = $("input[name='tel']:text").val();
+        var msg = $("input[name='message']:text").val();
+        $.get("{:url('index/shopping/complete_order')}",{username:username,province:province,city:city,area:area,address:address,postnode:postnode,tel:tel,msg:msg},function(data){
+            console.log(data);
+            if(data)
+            {
+              window.location.reload();
+            }
+        },'json');
+
+      }*/
+   
+</script>
+<section class="Psection MT20 Textcenter" style="display:none;" id="Aflow">
+  <!-- 订单提交成功后则显示如下 -->
+  <p class="Font14 Lineheight35 FontW">恭喜你！订单提交成功！</p>
+  <p class="Font14 Lineheight35 FontW">您的订单编号为：<span class="CorRed">201409205134</span></p>
+  <p class="Font14 Lineheight35 FontW">共计金额：<span class="CorRed">￥359</span></p>
+  <p>
+    <button type="button" class="Lineheight35">
+    <a href="user_center.html">进入用户中心</button>
+  </p>
+</section>
+<!--End content-->
+
+{include file="foot"}
+</body>
+</html>

@@ -16,12 +16,14 @@ use app\admin\model\User as UserModel;
 use app\admin\model\Dishes as DishesModel;
 use app\admin\model\Online_order;
 use app\admin\model\Links_url;
+use app\admin\model\Storejoin as StorejoinModel;
 
  
 class Base extends Controller
 {
 	public function _initialize()
-	{     
+	{      
+        $this->storemodel = new StorejoinModel();
         $this->Links_url = new Links_url();
         $this->order = new Online_order();
         $this->menu = new DishesModel();

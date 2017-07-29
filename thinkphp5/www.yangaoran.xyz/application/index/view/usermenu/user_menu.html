@@ -1,0 +1,71 @@
+{include file="head"}
+<!--Start content-->
+<section class="Psection MT20">
+{include file="order_left"}
+ <article class="U-article Overflow">
+  <!--user order list-->
+  <section>
+	
+ <table class="U-order-D">
+    <th>商品名称</th>
+    <th>商品价格</th>
+    <th>我的名称</th>
+    <th>商家名称</th>
+	<th>商品图片</th>
+    {foreach $data as $key=>$value}
+    <tr>
+     <td><a href="/index/shopping/detail?shop_id={$value['shop_id']}&menu_id={$value['menu_id']}">{$value['menu_name']}</a></td>
+     <td>{$value['menu_price']}</td>
+	 <td><a href="/index/shopping/detail?shop_id={$value['shop_id']}&menu_id={$value['menu_id']}"><img width="100" height='70px' src="{$value['menu_icon']}"></a></td>
+	 <td>{$value['shop_name']}</td>
+     <td>{$value['user_name']}</td>
+	 
+     
+    
+     <!--如果未付款，则显示立即付款按钮-->
+     <td style="display:none;"><a href="#" target="_blank">立即付款</a></td>
+    </tr>
+	{/foreach}
+   </table>
+    <div class="TurnPage">
+         <a href="#">
+          <span class="Prev"><i></i>首页</span>
+         </a>
+         <a href="#"><span class="PNumber">1</span></a>
+         <a href="#"><span class="PNumber">2</span></a>
+         <a href="#">
+         <span class="Next">最后一页<i></i></span>
+        </a>
+       </div>
+  </section>
+ </article>
+</section>
+<!--End content-->
+<div class="F-link">
+  <span>友情链接：</span>
+  <a href="http://www.deathghost.cn" target="_blank" title="DeathGhost">DeathGhost</a>
+  <a href="http://www.17sucai.com/pins/15966.html" target="_blank" title="免费后台管理模板">绿色清爽版通用型后台管理模板免费下载</a>
+  <a href="http://www.17sucai.com/pins/17567.html" target="_blank" title="果蔬菜类模板源码">HTML5果蔬菜类模板源码</a>
+  <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
+ </div>
+{include file="foot"}
+
+<script>
+		function del(id,order_num)
+		{
+		 if (confirm('是否删除订单?'))
+		 {
+			//id表示订单的id
+			$.get('/index/order/delUserOrder',{id:id,order_num:order_num},function(data){
+				if(data)
+				{
+					window.location.reload();
+					//alert('删除成功');
+				}
+			
+			},'json');
+		 }
+	}
+
+	
+</script>

@@ -1,0 +1,210 @@
+{include file="head"}
+<!--Start content-->
+
+  <section class="slp">
+   <section class="food-hd">
+  {foreach $menu_list as $menu}
+    <div class="foodpic">
+     <img src="/uploads/{$menu['menu_icon']}" id="showimg">
+      <ul class="smallpic">
+       <li><img src="/uploads/{$menu['menu_icon']}" onmouseover="show(this)" ></li>
+      </ul>
+    </div>
+    <div class="foodtext">
+     <div class="foodname_a">
+      <h1 id="menu_id">{$menu['menu_name']}</h1>
+      <p id="shop_id">{$shop_name}</p>
+     </div>
+     <div class="price_a">
+      <p class="price01">促销：￥<span>{$menu['menu_price']}</span></p>
+      <p class="price02">价格：￥<s>{$menu['menu_price']+25}</s></p>
+     </div>
+     <div class="Freight">
+      <span>配送费用：</span>
+      <span><i>未央区</i>至<i>莲湖区</i></span>
+      <span>10.00</span>
+     </div>
+     <ul class="Tran_infor">
+       <li>
+        <p class="Numerical">3</p>
+        <p>月销量</p>
+       </li>
+       <li class="line">
+        <p class="Numerical">58</p>
+        <p>累计评价</p>
+       </li>
+       <li>
+        <p class="Numerical">59</p>
+        <p>送幸福积分</p>
+       </li>
+     </ul>
+     <form action="#" method="post">
+     <div class="BuyNo">
+      <span>我要买：
+        <input type="number" name="Number" id="number" required autofocus min="1" value="1"/>份
+      </span>
+      <span>库存：3258</span>
+      <div class="Buybutton">
+       <a href="javascript:void(0);">
+        <input name="" type="button" value="加入购物车" class="BuyB" id="carts" onclick="add_cart(menu_id={$menu['menu_id']},shop_id={$shop_id},num=1)">
+      </a
+       <!--  -->
+       <a href="/index/store/storedetail?menu_id={$menu['menu_id']}&shop_id={$shop_id}">
+        <span class="Backhome">进入店铺首页</span>
+      </a>
+      </div>
+      </form>
+     </div>
+    </div>
+  {/foreach}
+  
+ </section>
+ <!--bottom content-->
+ <section class="Bcontent">
+  <article>
+   <div class="shopcontent">
+  <div class="title2 cf">
+    <ul class="title-list fr cf ">
+      <li class="on">详细说明</li>
+      <li>评价详情（5）</li>
+      <li>成交记录（5）</li>
+      <p><b></b></p>
+    </ul>
+  </div>
+  <div class="menutab-wrap">
+    <!--case1-->
+    <div class="menutab show">
+      <div class="cont_padding">
+        {foreach $menu_list as $menu}
+         <img src="/uploads/{$menu['menu_icon']}">
+         <p>{$menu['menu_info']}</p>
+        {/foreach}
+      </div>
+    </div>
+    <!--case2-->
+    <div class="menutab">
+     <div class="cont_padding">
+      <table class="Dcomment">
+       <th width="80%">评价内容</th>
+       <th width="20%" style="text-align:right">评价人</th>
+       <tr>
+       <td>
+        还不错，速度倒是挺速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快速度倒是挺快快...
+        <time>2016-05-31 22:30:39</time>
+       </td>
+       <td align="right">DEATHGHOST</td>
+       </tr>
+      </table>
+      <div class="TurnPage">
+         <a href="#">
+          <span class="Prev"><i></i>首页</span>
+         </a>
+         <a href="#"><span class="PNumber">1</span></a>
+         <a href="#"><span class="PNumber">2</span></a>
+         <a href="#">
+         <span class="Next">最后一页<i></i></span>
+        </a>
+       </div>
+     </div>
+    </div>
+    <!--case4-->
+    <div class="menutab">
+     <div class="cont_padding">
+     
+      <table width="888">
+       <th width="35%">买家</th>
+       <th width="20%">价格</th>
+       <th width="15%">数量</th>
+       <th width="30%">成交时间</th>
+       <tr height="40">
+        <td>d***t</td>
+        <td>￥59</td>
+        <td>1</td>
+        <td>2014-9-18 11:13:07</td>
+       </tr>
+      </table>
+     
+     </div>
+       <div class="TurnPage">
+         <a href="#">
+          <span class="Prev"><i></i>首页</span>
+         </a>
+         <a href="#"><span class="PNumber">1</span></a>
+         <a href="#"><span class="PNumber">2</span></a>
+         <a href="#">
+         <span class="Next">最后一页<i></i></span>
+        </a>
+       </div>
+   </div>
+  </article>
+  <!--ad&other infor-->
+  <aside>
+   <!--广告位或推荐位-->
+   <!-- <a href="#" title="广告位占位图片" target="_blank"><img src="/static/upload/2014912.jpg"></a> -->
+  </aside>
+ </section>
+</section>
+<!--End content-->
+<div class="F-link">
+  <span>友情链接：</span>
+  <a href="http://www.deathghost.cn" target="_blank" title="DeathGhost">DeathGhost</a>
+  <a href="http://www.17sucai.com/pins/15966.html" target="_blank" title="免费后台管理模板">绿色清爽版通用型后台管理模板免费下载</a>
+  <a href="http://www.17sucai.com/pins/17567.html" target="_blank" title="果蔬菜类模板源码">HTML5果蔬菜类模板源码</a>
+  <a href="http://www.17sucai.com/pins/14931.html" target="_blank" title="黑色的cms商城网站后台管理模板">黑色的cms商城网站后台管理模板</a>
+ </div>
+ <script>
+ 
+    var user_id = "<?php echo session('user_id');?>";
+    function add_cart(menu_id,shop_id,num)
+    {
+      if (confirm('是否加入购物车?')) 
+      {   //判断用户是否登录
+          if (user_id)
+          {     
+            $.get("{:url('index/shopping/add_menu')}",{user_id:user_id,menu_id:menu_id,shop_id:shop_id,num:1},function(data){
+                //判断用户是否已添加该商品
+                if (data)
+                {
+                  window.location.reload(); 
+                  $.get("{:url('index/shopping/add_menu')}",{user_id:user_id,menu_id:menu_id,shop_id:shop_id,num:1},function(data){
+
+                  },'json');
+                }      
+                else
+                {
+                  alert('商品已加入购物车');
+                }
+             },'json');
+          }
+        else
+        {
+          alert('您未登录,无法加入购物车');
+        }
+        
+      }
+    
+    }
+
+$(function(){   
+  $('.title-list li').click(function(){
+    var liindex = $('.title-list li').index(this);
+    $(this).addClass('on').siblings().removeClass('on');
+    $('.menutab-wrap div.menutab').eq(liindex).fadeIn(150).siblings('div.menutab').hide();
+    var liWidth = $('.title-list li').width();
+    $('.shopcontent .title-list p').stop(false,true).animate({'left' : liindex * liWidth + 'px'},300);
+  });
+  
+  $('.menutab-wrap .menutab li').hover(function(){
+    $(this).css("border-color","#ff6600");
+    $(this).find('p > a').css('color','#ff6600');
+  },function(){
+    $(this).css("border-color","#fafafa");
+    $(this).find('p > a').css('color','#666666');
+  });
+  });
+
+ 
+</script>
+    {include file="foot"}
+</body>
+</html>

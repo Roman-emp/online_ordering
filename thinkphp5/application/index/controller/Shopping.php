@@ -189,6 +189,7 @@ class Shopping extends Controller
 	//提交订单完成支付
 	public function complete_order()
 	{
+	
 		//echo json_encode(input());
 		//添加订单
 		//echo json_encode($this->orders->complete_order(input()));
@@ -202,7 +203,11 @@ class Shopping extends Controller
 		
 		if ($online_order && $add_address && $order_status)
 		{
-			echo json_encode(1);
+			$this->success('成功');
+		}
+		else
+		{
+			$this->error('失败');
 		}
 	}
 

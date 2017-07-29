@@ -1,0 +1,24 @@
+<!--_menu 作为公共模版分离出去-->
+<aside class="Hui-aside">
+	
+	<div class="menu_dropdown bk_2">
+		{foreach $list_node_url as $key => $value}
+		 
+			<dl id="menu-admin">
+			<dt><i class="Hui-iconfont">&#xe62d;</i>{$value['title']}<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			   
+			<dd>
+				<ul>
+					{foreach $list_node_url_child as $key => $va}
+					{if condition=" $value['id']  eq $va['pid']"}
+					<li><a href="{$va['url']}" title="{$va['title']}">{$va['title']}</a></li>
+					{/if}
+					{/foreach}
+					</ul>
+				</dd>
+			</dl>
+		{/foreach}		
+</div>
+</aside>
+<div class="dislpayArrow hidden-xs"><a class="pngfix" href="javascript:void(0);" onClick="displaynavbar(this)"></a></div>
+<!--/_menu 作为公共模版分离出去-->

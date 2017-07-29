@@ -1,0 +1,78 @@
+﻿{include file="head"}
+{include file="left"}
+
+<section class="Hui-article-box">
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页
+		<span class="c-gray en">&gt;</span>
+		文章管理
+		<span class="c-gray en">&gt;</span>
+		公司公告
+		<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a>
+	</nav>
+	<div class="Hui-article">
+		<article class="cl pd-20">
+		
+			<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="picture_add('添加图片','picture-add.html')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加图片</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+			<div class="mt-20">
+				<table class="table table-border table-bordered table-bg table-hover table-sort">
+					<thead>
+						<tr class="text-c">
+							<th width="40"><input name="" type="checkbox" value=""></th>
+							<th width="80">订单</th>
+							<th width="100">收货人</th>
+							<th width="100">收货地址</th>
+							<th>电话</th>
+							<th width="150">菜品</th>
+							<th width="150">下单时间</th>
+							<th width="60">订单状态</th>
+							<th width="100">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+					{foreach $order_detail as $value}	
+						<tr class="text-c">
+							<td><input name="" type="checkbox" value=""></td>
+							<td class="order_num">{$value['order_num']}</td>
+							<td>{$value['recieve_person']}</td>
+							<td>{$value['recieve_address_detail']}{$value['recieve_address']}</td>
+							<td class="text-l">{$value['user_tel']}</td>
+							{foreach $menu_name as $v}
+							<td class="text-c">{$v['menu_name']}</td>
+							{/foreach}
+							<td>{$value['create_time']}</td>
+							<td class="td-status"><span class="label label-success radius">{$value['order_status']}</span></td>
+							<td class="td-manage">
+								<a href="javscript:void(0);" onclick="send();">
+									<button>发货</button>
+								</a>
+							</td>
+						</tr>
+					{/foreach}	
+					</tbody>
+				</table>
+			</div>
+		</article>
+	</div>
+</section>
+
+{include file="footer"}
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/jquery.validate.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/validate-methods.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/jquery.validation/1.14.0/messages_zh.js"></script>   
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/webuploader/0.1.5/webuploader.min.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/ueditor/1.4.3/ueditor.config.js"></script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/ueditor/1.4.3/ueditor.all.min.js"> </script> 
+<script type="text/javascript" src="__PUBLIC_ADMIN__lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript">
+	function send()
+	{
+		var number = $('.order_num')
+		alert(number);
+	}
+</script>
+<!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>
